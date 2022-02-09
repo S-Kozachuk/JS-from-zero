@@ -1,0 +1,148 @@
+html {
+    box-sizing: border-box;
+}
+
+h1 {
+	font-size: 35px;
+}
+
+.color {
+    color: #FFD700;
+}
+
+.button {
+    padding: 15px 10px;
+    background: yellow;
+    border: 0px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.yellow-button {
+   font-size: 12px;
+   padding: 10px 20px;
+   background-color: yellow;
+}
+
+.lesson {
+    position: relative;
+    padding: 30px 0px 0px 0px;
+}
+
+.lesson__selected {
+    background-color: #794f45;
+    padding: 15px;
+    color: #fff;
+}
+
+.lesson__block {
+    margin: 0px auto;
+    width: 500px;
+    height: 300px;
+    padding: 15px;
+    border: 20px solid #7a956b;
+    background-color: #794f45;
+    overflow: auto;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.lesson__block p:not(:last-child) {
+    margin: 0px 0px 20px 0px;
+}
+
+.block {
+    margin-top: 20px;
+    padding: 15px;
+    max-width: 35%;
+    background: #E9967A;
+}
+
+.block__inner {
+    margin: 10px;
+    padding: 15px;
+    background: #66CDAA;
+}
+
+.block__inner-inner {
+    margin: 10px;
+    padding: 15px;
+    background: #FFE4B5;
+}
+
+.menu {
+   display: inline-block; 
+}
+
+.menu__button {
+    padding: 15px 10px;
+    background: yellow;
+    border: 0px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.menu._active .menu__list {
+    display: block;
+}
+
+.menu._active .menu__button span:first-child {
+    display: none;
+}
+
+.menu._active .menu__button span:last-child {
+    display: block;
+}
+
+.menu__button span:first-child {
+    display: block;
+}
+
+.menu__button span:last-child {
+    display: none;
+}
+
+
+.menu__list {
+    background-color: #77608d;
+    padding: 15px;
+}
+
+.menu__list li:not(:last-child) {
+    margin: 0px 0px 15px 0px;
+}
+
+.menu_link {
+    color: #fff;
+    font-size: 16px;
+}
+
+.menu_link:hover {
+    
+}
+
+a.link {
+    color: #FFE400;
+}
+
+.block-for-mouse {
+    display: grid;
+    /* изменить на сокращённую запись */
+    grid-template-rows: repeat(3, 1fr) ;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items:  center;
+    /* довести до квадрата */
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    background-color: #2a4d52a9;
+}
+
+.block-for-mouse span {
+   padding: 10px 15px;
+}
+
+
+
+

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru"><!-- parentElement -->
+    <head> 
+	    <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/main.css"/>
+        <title>JavaScript. Браузерное окружение. Работа с DOM.</title> 
+	</head>
+	<body>
+        <h1><!-- firstElementChild -->
+            <span class="color">JavaScript.</span>
+            Браузерное окружение.
+            Работа с <span class="color">DOM.</span>
+        </h1>
+        <h3>Урок 13</h3>
+        <div class="lesson">
+            <div data-size="1058" class="lesson__text">Текст</div>
+            <ul name="list" class="lesson__list">
+                <li class="lesson__item-list lesson__item-list_red">Пункт №1</li>
+                <li id="listItem" class="lesson__item-list">Пункт №2</li>
+                <li class="lesson__item-list">Пункт №3
+                    <ul class="lesson__sub-list">
+                        <li class="lesson__item-sub-list">Подпункт №1</li>
+                        <li data-item="85" class="lesson__item-sub-list">Подпункт №2</li>
+                        <li class="lesson__item-sub-list">Подпункт №3</li>
+                    </ul>
+                </li>
+                <li class="lesson__item-list lesson__item-list_blue">Подпункт №4</li>
+            </ul>
+            <!-- Методы вставки -->
+            <!-- lesson_list - это наш объект -->
+            
+            <!-- before -->
+            <ul class="lesson_list">
+                <!-- prepend -->
+                <li>Пункт №1</li>
+                <li>Пункт №2</li>
+                <li>Пункт №3</li>
+                <!-- append -->
+            </ul>
+            <!-- after -->
+            
+            <!-- 47:45 Методы вставки insertAdjacentHTML/Text/Element -->
+            <!-- lesson_list - это наш объект -->
+            
+            <!-- beforebegin -->
+            <ul class="lesson_list">
+                <!-- afterbegin -->
+                <li>Пункт №1</li>
+                <li>Пункт №2</li>
+                <li>Пункт №3</li>
+                <!-- beforeend -->
+            </ul>
+            <!-- afterend -->
+            
+        </div>
+        <!-- lastElementChild -->
+        
+        <a class="lesson__link" href="http://fls.guru">Я ссылка</a>
+      
+   <input type="text" class="lesson__input" value="Я инпут">
+	    <script src="js/script.js"></script>
+	</body>
+	<!-- nextElementSinling (null) -->
+ </html>

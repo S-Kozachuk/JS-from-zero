@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru"> 
+ 	<head> 
+  		<meta charset="utf-8"> 
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  		<link rel="stylesheet" href="css/main.css"> 
+  		<title>JavaScript события</title> 
+ 	</head> 
+ 	<body> 
+  		<h1>
+	  		<span class="color">JavaScript</span> события.
+		</h1> 
+  		<h2>Урок 15</h2> 
+  		<div class="lesson"> 
+			<!-- Использование атрибута HTML --> 
+			<!-- <button onclick="console.log('Клик')" type="button" class="button">Нажми меня</button> --> 
+			<!-- <button type="button" class="button">Нажми меня!</button> -->
+			
+			<!-- Всплытие и погружение --> 
+			<!--
+				<div class="block">Блок
+						<div class="block__inner">Блок второго уровня
+						<div class="block__inner-inner">Блок третьего уровня</div>
+						</div>   
+					</div>
+				--> 
+			<!-- Делегирование --> 
+			<!--
+			<button type="button" class="button"><span>Нажми на меня</span></button>
+			<button type="button" class="button">И на меня!</button>
+			<button type="button" class="button">И на меня!</button>
+			<button type="button" class="button">И на меня!</button>
+			--> 
+			<!-- Выпадающее меню (делегирование) --> 
+			<!--
+					<nav class="menu">
+						<button class="menu__button" type="button">
+							<span>Открыть меню</span>
+							<span>Закрыть меню</span>
+						</button>
+						<ul hidden class="menu__list">
+						<li><a href="" class="menu__link">Пункт №1</a></li>
+						<li><a href="" class="menu__link">Пункт №2</a></li>
+						<li><a href="" class="menu__link">Пункт №3</a></li>
+						<li><a href="" class="menu__link">Пункт №4</a></li> 
+						</ul>
+					</nav>
+					--> 
+				<!-- <a class="link" href="https://www.google.com">Google</a> --> 
+				<!-- 37:15 -->
+				<!-- 
+					<div class="block-for-mouse">
+						<span>Я дочерний SPAN</span>
+					</div>
+				-->
+				<!-- 38:25 -->
+				<!--
+					<div class="block-for-mouse">
+						<span>1</span>
+						<span>2</span>
+						<span>3</span>
+						<span>4</span>
+						<span>5</span>
+						<span>6</span>
+						<span>7</span>
+						<span>8</span>
+						<span>9</span>
+					</div>
+					—->
+			<! 44:60 Клавиатура -->
+           <div class="textarea">
+               <textarea autocomplete="off" maxlength="30" name="form[]" class="textarea__item"></textarea>
+               <div class="textarea__counter">Осталось <span></span> символов</div>
+           </div>
+      </div> 
+      <script src="js/script.js"></script>
+    </body>
+</html>
