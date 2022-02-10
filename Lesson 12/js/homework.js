@@ -27,7 +27,7 @@ console.log(arr.length);
 
 // Решение.
 // 2.1. Создание массива users с элементами "Ваня" и "Дима"
-/*
+
 let arrUsers = ['Ваня', 'Дима',];
 console.log (arrUsers);
 
@@ -51,16 +51,18 @@ console.log(arrUsers2);
 */
 
 // Второй вариант
-/*
+
 // удаление 1-ого эл. из массива arrUsers, запись значения удалённого эл. в перем. arrRemove
 arrRemove=arrUsers2.shift();
 // вывод массива без удалённого элемента
 console.log(arrUsers2);
 // вывод значения удалённого элемента - Ваня
 console.log(arrRemove);
-*/
+
 
 // 2.6. Добавить "Маша" и "Паша" в начало массива
+arrUsers2.unshift('Маша', 'Паша');
+console.log(arrUsers2);
 
 // Задача №3
 /*
