@@ -27,6 +27,7 @@ console.log(arr.length);
 
 // Решение.
 // 2.1. Создание массива users с элементами "Ваня" и "Дима"
+/*
 let arrUsers = ['Ваня', 'Дима',];
 console.log (arrUsers);
 
@@ -47,7 +48,7 @@ arrUsers2.splice(0,1);
 console.log(arrUsers2);
 
 // 2.6. Добавить "Маша" и "Паша" в начало массива
-
+*/
 
 // Задача №3
 /*
