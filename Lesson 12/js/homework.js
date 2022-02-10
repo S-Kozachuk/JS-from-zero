@@ -61,8 +61,15 @@ console.log(arrRemove);
 */
 
 // 2.6. Добавить "Маша" и "Паша" в начало массива
+// 1-й вариант, метод unshift
 /*
 arrUsers2.unshift('Маша', 'Паша');
+console.log(arrUsers2);
+*/
+
+// 2-й вариант, метод splice
+/*
+arrUsers2.splice(0, 0, 'Маша', 'Паша');
 console.log(arrUsers2);
 */
 
