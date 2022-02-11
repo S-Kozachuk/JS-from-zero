@@ -363,11 +363,20 @@ console.log(arrFour);
 Синтаксис arr.concat(arg1, arg2...), 
 где arg1, arg2... дополнительные значения (элементы) массива.
 */
+// 1-st variant. Create new array arrTwo & added arrOne array with new value 'Петя'.
 /*
 let arrOne = ['Ваня', 'Иштван', 'Оля',];
 let arrTwo = arrOne.concat('Петя'); // добавление нового аргумента
 console.log(arrTwo);
 */
+
+// 2-nd variant. Combining two arrays to new array.
+
+let arrOne = ['Ваня', 'Иштван', 'Оля',]; // 1-st array
+let arrTwo = ['Егор', 'Ильдар',]; // 2-nd array
+let arrThree = arrOne.concat(arrTwo); // combining two arrays
+console.log(arrThree); // 3-rd array, derivative two arrays
+
 
 // 16:10 Поиск в массиве
 /* 
