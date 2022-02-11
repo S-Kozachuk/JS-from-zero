@@ -396,20 +396,26 @@ console.log(arrThree); // 3-rd array, derivative two arrays
 с индекса from, и возвращает true, если поиск
 успешен. Или false, если не найдено ничего.
 */
-
+/*
 let arr = ['Ваня', 'Иштван', 'Оля',];
 
-// imdexOf
-console.log(arr.indexOf('Иштван'));
-console.log(arr.indexOf('Вася'));
+// indexOf
+console.log(arr.indexOf('Ваня'));
+console.log(arr.indexOf('Оля'));
 // поиск Иштвана, начиная со 2-ой позиции
-console.log(arr.indexOf('Иштван', 2));
+console.log(arr.indexOf('Иштван', 1));
+
+// indexOf
+console.log(arr.lastIndexOf('Ваня'));
+console.log(arr.lastIndexOf('Оля'));
+// поиск Вани, начиная со 1-ой позиции
+console.log(arr.lastIndexOf('Ваня', 1));
 
 // includes 
 console.log(arr.includes('Иштван'));
 console.log(arr.includes('Вася'));
-console.log(arr.includes('Иштван', 2));
-
+console.log(arr.includes('Иштван', 0));
+*/
 
 // 17:50 Методы find и findIndex
 /* 
