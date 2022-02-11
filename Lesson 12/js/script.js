@@ -366,30 +366,28 @@ console.log(arrFour);
 // 1-st variant. Create new array arrTwo & added arrOne array with new value 'Петя'.
 /*
 let arrOne = ['Ваня', 'Иштван', 'Оля',];
-let arrTwo = arrOne.concat('Петя'); // добавление нового аргумента
+let arrTwo = arrOne.concat('Петя'); // добавление нового аргумента (значения)
 console.log(arrTwo);
 */
 
 // 2-nd variant. Combining two arrays to new array.
-
+/*
 let arrOne = ['Ваня', 'Иштван', 'Оля',]; // 1-st array
 let arrTwo = ['Егор', 'Ильдар',]; // 2-nd array
 let arrThree = arrOne.concat(arrTwo); // combining two arrays
 console.log(arrThree); // 3-rd array, derivative two arrays
+*/
 
-
-// 16:10 Поиск в массиве
+// 16:10 Поиск в массиве (search in array)
 /* 
 Для поиска информации в массиве используются
 методы indexOf/lastIndexOf и includes 
 (полные аналоги строковым методам).
 
-1. arr.indexOf(item, from) - ищет item, 
-начиная с индекса from, и возвращает
-индекс (позицию) на котором был 
+1. arr.indexOf(item, from) - ищет item, начиная с индекса from,
+и возвращает индекс (позицию) на котором был 
 найдем искомый элемент 
-в противном случае возвращает
-- 1 (минус один).
+Если элемент не найден возвращает - 1 (минус один).
 
 2. arr.lastIndexOf(item, from)- тот же самый метод,
 но поиск идёт справа налево.
@@ -398,7 +396,7 @@ console.log(arrThree); // 3-rd array, derivative two arrays
 с индекса from, и возвращает true, если поиск
 успешен. Или false, если не найдено ничего.
 */
-/*
+
 let arr = ['Ваня', 'Иштван', 'Оля',];
 
 // imdexOf
@@ -411,7 +409,7 @@ console.log(arr.indexOf('Иштван', 2));
 console.log(arr.includes('Иштван'));
 console.log(arr.includes('Вася'));
 console.log(arr.includes('Иштван', 2));
-*/
+
 
 // 17:50 Методы find и findIndex
 /* 
