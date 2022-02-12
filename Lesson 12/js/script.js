@@ -419,6 +419,7 @@ console.log(arr.includes('Иштван', 0));
 
 // 17:50 Методы find и findIndex
 /* 
+This methods are working if only array's elements is objects!
 Поиск объектов в массиве с определённым условием. 
 Возвращают первый попавшийся элемент, удовлетворяющий условию.
 */
@@ -430,39 +431,37 @@ let result = arr.find(function(item, index, array) {
     2. если все итерации оказались ложными, возвращается undefined
 });
 */
-/*
+
 let arr = [
     { name: 'Вася', age: 36 },
     { name: 'Коля', age: 18 },
     { name: 'Оля', age: 'Не скажу' },
 ]
-*/
+
 // Функция поиска будет выполняться для каждого элемента массива
 /*
-У функции будут следующие аргументы:
+У функции могут быть следующие аргументы: 
 - item - элемент массива, заключён в { }
 - index - ключ элемента, его позицич
 - array - весь массив, целиком
 */
 /*
 let resultOne = arr.find(function (item, index, array) {
-   return item.age === 18;
+   return item.name === "Вася";
 });
 */
 // Такой же поиск, но помощью стрелочной функции
-// let resultOne = arr.find(item => item.age === 18);
+//let resultOne = arr.find(item => item.name === "Вася");
 
 // Вывод в консоль объекта, соответствующего условию (return item.age === 18;)
-// console.log(resultOne);
+//console.log(resultOne);
  
-/*
-метод findIndex делает то же самое, 
-но в качестве результата возращает 
-не сам элемент, а его индекс 
-(расположение в массиве)
+/* 
+Метод findIndex делает то же самое, но в качестве результата возращает 
+не сам элемент, а его индекс (расположение в массиве).
 */
-/*
-let resultTwo = arr.findIndex(item => item.age === 18);
+/* 
+let resultTwo = arr.findIndex(item => item.age === 'Не скажу');
 console.log(resultTwo);
 */
 
