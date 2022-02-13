@@ -549,15 +549,16 @@ console.log(arrTwo.sort());
 На основе вычислений определяются сортировки.
 */
 /*
-let arrTwo = [8, 22, 1, 22, 56,];
+let arrTwo = [8, 11, 6, 31];
 console.log(arrTwo);
 
 function compareNumeric(a, b){
     console.log(`Сравниваем ${a} и ${b}`);
     
+	// последовательность условий (if) не влияет на порядок сравнения
     if (a > b) return 1;
-    if (a == b) return 0;
     if (a < b) return -1;
+    if (a == b) return 0;
     
     // Упрощённый вариант: возврат значения вычисления (отриц. число, положительно, либо равно (0))
     //return a - b
@@ -568,7 +569,7 @@ function compareNumeric(a, b){
 Результатом выполнения метода sort совместно с функциией compareNumeric 
 будет правильно отсортированный массив.
 */
-//console.log(arrTwo.sort(compareNumeric));
+console.log(arrTwo.sort(compareNumeric));
 
 /*
 Ещё более лаконичный вариант сортировки, это использование стрелочной
