@@ -516,7 +516,7 @@ console.log(arrOne.sort());
 
 // Сортировка чисел
 /*
-let arrTwo = [2, 22, 1];
+let arrTwo = [8, 22, 1];
 console.log(arrTwo.sort());
 */
 /*
@@ -549,7 +549,7 @@ console.log(arrTwo.sort());
 На основе вычислений определяются сортировки.
 */
 /*
-let arrTwo = [8, 11, 6, 31];
+let arrTwo = [8, 22, 1];
 console.log(arrTwo);
 
 function compareNumeric(a, b){
@@ -569,7 +569,7 @@ function compareNumeric(a, b){
 Результатом выполнения метода sort совместно с функциией compareNumeric 
 будет правильно отсортированный массив.
 */
-console.log(arrTwo.sort(compareNumeric));
+//console.log(arrTwo.sort(compareNumeric));
 
 /*
 Ещё более лаконичный вариант сортировки, это использование стрелочной
