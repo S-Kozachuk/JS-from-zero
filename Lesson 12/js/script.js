@@ -612,6 +612,16 @@ console.log (result); // новый массив
 console.log (string); // new combo array
 */
 
+// Getting square roots from digits
+/*
+let numbers = [4, 9, 16, 64, 81, 7,];
+let roots = numbers.map(Math.sqrt);
+// Source array
+console.log(numbers);
+// Array with square  digits roots from 1-st(numbers) array
+console.log(roots);
+*/
+
 // 26:35 Метод split 
 /*
 Метод split преобразует строку
