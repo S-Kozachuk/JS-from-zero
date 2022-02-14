@@ -646,14 +646,15 @@ Reverse method of the split method
 Метод join преобразует массив в строку с заданным разделителем.
 Синтаксис: arr.join(glue) 
 */
-
-let arr = ['Ваня', 'Иштван', 'Оля',];
-let srt = arr.join(';');
-console.log(srt);
-
-// 2-ой вариант получения строки из массива (разделитель , изменить нельзя)
 /*
-let arrTwo = ['Ваня', 'Иштван', 'Оля'];
+let arr = ['Ваня', 'Иштван', 'Оля',];
+// By default separator is comma
+let srt = arr.join('-');
+console.log(srt);
+*/
+// 2-ой вариант получения строки из массива - объект String (разделитель указать нельзя всегда ,)
+/*
+let arrTwo = ['Ваня', ' Денис', ' Оля'];
 console.log(String(arrTwo));
 */
 
