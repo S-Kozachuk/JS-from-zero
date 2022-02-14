@@ -627,15 +627,14 @@ console.log(roots);
 Метод split преобразует строку в массив по заданному разделителю.
 Синтаксис: str. split(delin)
 */
-// Get string in variable str
-let str = 'Ваня,Иштван,Оля';
+/*
+// Get string in variable str.
+let str = 'Ваня, Иштван, Оля';
 // Transform sring to array, get result to new massive
 let arr = str.split(','); // в скобках указывается разделитель
 console.log(arr);
-
-/*
-Можно ограничить кол-во элементов, которые попадут в массив.
 */
+// Можно ограничить кол-во элементов, которые попадут в массив.
 /*
 let arrTwo = str.split(',', 2);
 console.log(arrTwo);
