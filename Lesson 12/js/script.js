@@ -591,6 +591,7 @@ console.log(arrOne.reverse());
 возвращает новый массив с результатами выполнения
 этой функции.
 */
+
 //let arr = [ 'Ваня', 'Иштван', 'Оля',];
 
 // Новая переменная с функцией и аргументами
@@ -600,12 +601,15 @@ let result = arr.map(function (item, index, array) {
 });
 */
 // In arrow function view
-//let result = arr.map(item => item[1]);
+//let result = arr.map(item => item [1]);
+//
+//let string = arr.map ((string) => string + " человек")
 
 // Console output: function work is create new array
 /*
 console.log (arr); // оригинальный массив
 console.log (result); // новый массив
+console.log (string); // new combo array
 */
 
 // 26:35 Метод split 
