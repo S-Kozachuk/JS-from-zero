@@ -675,7 +675,7 @@ console.log(typeof arr);
 Проверка Array is Array
 */
 /*
-if(Array.isArray(arr)) {
+if(Array.isArray(obj)) {
     console.log('Это массив');
 } else {
     console.log('Это не массив')
