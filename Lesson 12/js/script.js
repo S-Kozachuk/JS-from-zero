@@ -575,7 +575,6 @@ function compareNumeric(a, b){
 Ещё более лаконичный вариант сортировки, это использование стрелочной
 функции внутри метода sort.
 */
-
 //console.log(arrTwo.sort((a, b) => a - b));
 
 
