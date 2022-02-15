@@ -125,20 +125,29 @@ input.value(строка) или input.checked (boolean) для
 /*
 const mainForm = document.forms.main;
 
-const mainFormInpit = mainForm.name;
-const.mainFormTextarea = mainForm.nameTextarea;
+const mainFormInput = mainForm.nameInput;
+const mainFormTextarea = mainForm.nameTextarea;
 */
 
 // 6:00 Получение зачений из Input и textarea
 // Получение значение (содержимое) поля:
-console.log(mainFormInput.value);
+//console.log(mainFormInput.value);
 // Получить значение (содержимое) текстового поля:
-console.log(mainFormTextarea.value);
+//console.log(mainFormTextarea.value);
 
 
+// 7:05 Заполнение/изменение значения поля средствами JS.
+// Присовоение значения (содержимое) поля. Перезаписывает значение placeholder
+//mainFormInput.value = "До свидания";
+// Присвоение значения текстового поля (перезапись)
+//mainFormTextarea.value = "До встречи"
 
+// 7:30 Работа с другими типами тега input: radio, checkbox и file.
+const mainForm = document.forms.main;
 
-
+const mainFormRadioBtn = mainForm.nameRadio;
+const mainFormCheckBox = mainForm.nameCheck;
+const mainFormFile = mainForm.nameFile;
 
 
 

@@ -6,21 +6,24 @@
   		<link rel="stylesheet" href="css/main.css"> 
   		<title>JavaScript и формы</title> 
  	</head> 
- 	<body> 
-  		<h1>
-  		    <span class="color">JavaScript</span> и формы.
-		</h1> 
-  		<h2>Урок 16</h2> 
-  		<div class="lesson">
+ 	<body>
+ 	    <div class="wrapper">
+  		    <h1>
+  		        <span class="yellow">JavaScript</span> и формы.
+		    </h1> 
+  		    <h2>Урок 16</h2> 
+  		    <div class="lesson">
   		    <form name="main" class="main-form" action="#">
   		        <div class="main-form__column">
   		            <div class="main-form__item">
   		                <label for="input_1" class="main-form__label">Поле ввода</label>
-  		                <input value="" id="input_1" type="text" name="nameInput" class="main-form__input">
+  		                <input value="Привет!" id="input_1" type="text" name="nameInput" class="main-form__input"
+                        placeholder="Введите что-то" autocomplete="off">
   		            </div>
                     <div class="main-form__item">
   		                <label for="input_2" class="main-form__label">Текстовое поле ввода</label>
-  		                <textarea id="input_2" type="text" name="nameTextarea" class="main-form__text"></textarea>
+  		                <textarea id="input_2" type="text" name="nameTextarea" class="main-form__textarea" 
+  		                placeholder="Введите что-то" autocomplete="off">Я фрилансер</textarea>
   		            </div> 
   		        </div>
   		        <div class="main-form__column">
@@ -35,9 +38,30 @@
   		                    <label for="radio_2" class="main-form__inline-label">Кнопка №2</label>
   		                </div>
   		            </div>
-  		        </div>
+                <div class="main-form__item">
+							<input type="checkbox" name="nameCheck" class="main-form__radio" id="check_1">
+							<label for="check_1" class="main-form__inline-label">Чекбокс</label>
+						</div>
+						<div class="main-form__item">
+							<label for="file_1" class="main-form__label">Прикрепить файл</label>
+							<input id="file_1" name="nameFile" type="file">
+						</div>
+						<div class="main-form__item">
+							<label for="select_1" class="main-form__label">Список</label>
+							<select id="select_1" name="nameSelect" class="main-form__select">
+								<option value="1" selected>20</option>
+								<option value="2">30</option>
+								<option value="3">50</option>
+							</select>
+						</div>
+					</div>
+					<div class="main-form__column">
+						<button type="submit" class="main-form__button">Кнопка отправки формы</button>
+					</div>
+				</div>
   		    </form>
-        </div> 
+        </div>
+        </div>
         <script src="js/script.js"></script>
     </body>
 </html>
