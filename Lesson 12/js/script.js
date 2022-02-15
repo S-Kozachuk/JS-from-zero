@@ -817,7 +817,7 @@ item = 3 (значение четвёртого элемента массива)
 Если не указать начальное значение, то оно будет равно первому элементу массива (previousValue=Ваня).
 Работа метода начнётся со второго элемента (item = Дима).
 */
-
+/*
 let arrTwo = ['Ваня', 'Дима', 'Оля', 'Кирилл', 'Борис',];
 
 let reduceValueTwo = arrTwo.reduce(function (previousValue, item, index, array) {
@@ -826,12 +826,22 @@ let reduceValueTwo = arrTwo.reduce(function (previousValue, item, index, array) 
     return `${item}, ${previousValue}`;
 });
 console.log(`Пользователи: ${reduceValueTwo}`);
-
+*/
 
 // 37:00 Методы reduse/reduceRight
 /* 
-Работает аналогично обычному методу reduse,
-но проходит по массиву справо налево.
+Работает аналогично обычному методу reduse, 
+но проходит по массиву справо налево (в обратном порядке,с конца массива).
+*/
+/*
+let arrTwo = ['Ваня', 'Дима', 'Оля', 'Кирилл', 'Борис',];
+
+let reduceValueTwo = arrTwo.reduceRight(function (previousValue, item, index, array) {
+    console.log(previousValue);
+    console.log(item);
+    return `${item}, ${previousValue}`;
+});
+console.log(`Пользователи: ${reduceValueTwo}`);
 */
 
 // 37:10 Массив используем как массив
