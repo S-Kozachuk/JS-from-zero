@@ -658,7 +658,7 @@ document.addEventListener('keydown', function (event) {
 // 44:55 Автоповтор
 /*
 При нажатии у удержании клавиши возникает автоповтор: событие keydown 
-срабатывает свнова и снова. Когда клавишу отпускают,
+срабатывает снова и снова. Когда клавишу отпускают,
 срабатывает событие keyup. 
 Из этого следует, что ситуация при которой событие keydown происходит много раз,
 а событие keyup сорабатывает только однажды абсолютно нормальна.
@@ -673,6 +673,7 @@ document.addEventListener('keydown', function (event) {
 */
 
 // 45:44 Закрепление изученного на примере
+/*
 const txtItem = document.querySelector('.textarea__item');
 const txtItemLimit = txtItem.getAttribute('maxlength');
 const txtCounter = document.querySelector('.textarea__counter span');
@@ -689,21 +690,140 @@ function txtSetCounter() {
 	const txtCounterResult = txtItemLimit - txtItem.value.length;
 	txtCounter.innerHTML = txtCounterResult;
 }
+*/
 
+// 48:37 Модернизация выпадающего меню (21:25, 299 строка).
+/*
+const menuBody = document.querySelector('.menu');
 
-// 48:37 
+document.addEventListener("click", menu);
 
+function menu(event) {
+    if (event.target.closest('.menu__button')) {
+        menuBody.classList.toggle('_active');
+    }
+    if (!event.target.closest('.menu')) {
+        menuBody.classList.remove('_active');
+    }
+}
 
+document.addEventListener('keyup', function (event) {
+   // Получение кода клавиши Escape (нажать на клавиатуре)
+    if(event.code==='Escape'){
+        menuBody.classList.remove('_active');
+    }
+});
+*/
 
+// 49:40 Событие при прокрутке (scroll)
+/*
+Количество прокрученных пикселей по вертикали scrollY или pageYOffset (устарел).
+Количество прокрученных пикселей по горизонтали scrollX или pageXOffset (устарел).
+*/
+/*
+window.addEventListener('scroll', function (event) {
+    console.log(`${scrollY}px`);
+});
+*/
 
+// 50:40 Предотвращение прокрутки
+/*
+Прокрутку нельзя предотвратить используя метод event.preventDefault() в 
+обработчике scroll, из-за того что он срабатывает после того, как
+прокрутка уже произошла.
 
+Можно предотвратить прокрутку, используя event.preventDefault() на событии,
+которое вызывает прокрутку. Например на событии keydown для клавиш 
+pageUp и pageDown.
 
+Способов инмциализации прокрутки много. Наиболее надёжный - использовать CSS 
+(свойство overflow, значение hidden).
 
+*/
 
+// 51:15 Применение события прокрутки (scroll)
+/*
+Событие прокрутки (scroll) позволяет реагировать на прокрутку страницы или
+элемента. Благодаря этому можно реализовать множествл полезных сценариев.
 
+Например:
+- показать/скрыть дополнительные элементы управления или информации,
+основываясь на том, в какой части документа находится пользователь 
+(анимация при прокрутке или "ленивая" подгрузка).
+- подгрузить данные, когда пользователь прокручивает страницу вниз, до конца.
+Бесконечная прокрутка.
 
+Наиболее интересным решением подобных задач будет использование метода
+intersectionObserver. Он позволяет веб-приложениям асинхронно следить за 
+изменением пересечения элемента с его родителем или областью видимости
+документа.
+*/
 
+// 52:20 События загрузки страницы
+/*
+1. DOMContentLoaded - сработает, после полной загрузки браузером HTML. 
+Значит, что полностью построено DOM-дерево. Но внешние ресурсы, например изображения
+и файлы стилей могут быть всё ещё не загружены.
+2. load - означает, что браузер загрузил HTML и все внешние ресурсы (картинки, стили и т.д.)
+3. beforeunload / unload - срабатывают, когда пользователь покидает страницу (сайт)
+*/
 
+/*
+document.readyState - свойство, отслеживающее состояние загрузки.
 
+Имеет три возможных значения:
+"loading" - документ загружается;
+"interactive" - документ был полностью прочитан;
+"complete" - документ был полностью прочитан и 
+все ресурсы (например изображения) были загружены.
+*/
+
+// 53:25 Пример работы событий загрузки страницы
+/*
+В данном примере используются (навешиваются) 
+сразу несколько событий.
+*/
+// Событие DOMContentLoaded срабатывает на объекте document
+//document.addEventListener("DOMContentLoaded", readyDom);
+
+// Событие Load срабатывает на объекте window
+//window.addEventListener("load", readyLoad);
+/*
+function readyDom() {
+    const image = document.querySelector(".image");
+    console.log(document.readyState);
+    console.log('DOM загружен!');
+    console.log(image.offsetWidth);
+}
+function readyLoad() {
+    console.log(document.readyState);
+    const image = document.querySelector(".image");
+    console.log('Страница загружена!');
+    console.log(image.offsetWidth);
+}
+*/
+
+// 55:30 Событие beforeunLoad срабатывает на объекте window
+/*
+window.addEventListener("beforeunload", beforeUnLoad);
+
+function beforeUnLoad(event) {
+    // Отменить стандартное поведение браузера
+    event.preventDefault();
+    // Chrome требует установки возвратного (пустого) значения 
+    event.returnValue = '';
+}
+*/
+
+// 57:00 Событие unload срабатывает на объекте window
+/*
+Позволяет выполнять действия после того, как пользователь покинул
+страницу (вкладку) в браузере.
+Например отправка статистики в фоновом режиме.
+Подробнее: https://w3c.github.io/beacon
+*/
+window.addEventListener("unload", function (e) {
+    //navigator.sendBeacon(url, data)
+});
 
 
