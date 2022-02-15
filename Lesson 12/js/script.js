@@ -793,7 +793,7 @@ console.log(reduceValueOne);
 
 Шаг №1
 previousValue = 0 (как и указано в исходной функции)
-item = 5
+item = 5 (значение первого элемента массива)
 их сумма = 5 (результат работы item + previousValue)
 
 Шаг №2
