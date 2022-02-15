@@ -781,13 +781,13 @@ array - сам массив
 */
 
 // 34:25 Примеры использования методов reduce и reduceRight
-
+/*
 let arrOne = [5, 1, 8, 3];
 let reduceValueOne = arrOne.reduce(function(previousValue, item, index, array) {
     return item + previousValue;
 }, 0);
 console.log(reduceValueOne);
-
+*/
 /* 
 Подробное описание примера ^
 
@@ -814,12 +814,11 @@ item = 3 (значение четвёртого элемента массива)
 
 // 36:10 Без начального (initial) значения
 /*
-Если не указать начальное значение, то оно 
-будет равно первому элементу массива (previousValue=Ваня)
-Работа метода начнётся со второго элемента (item=Дима)
+Если не указать начальное значение, то оно будет равно первому элементу массива (previousValue=Ваня).
+Работа метода начнётся со второго элемента (item = Дима).
 */
-/*
-let arrTwo = ['Ваня', 'Дима', 'Оля',];
+
+let arrTwo = ['Ваня', 'Дима', 'Оля', 'Кирилл', 'Борис',];
 
 let reduceValueTwo = arrTwo.reduce(function (previousValue, item, index, array) {
     console.log(previousValue);
@@ -827,7 +826,7 @@ let reduceValueTwo = arrTwo.reduce(function (previousValue, item, index, array) 
     return `${item}, ${previousValue}`;
 });
 console.log(`Пользователи: ${reduceValueTwo}`);
-*/
+
 
 // 37:00 Методы reduse/reduceRight
 /* 
