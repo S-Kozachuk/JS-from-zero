@@ -756,11 +756,11 @@ function show(item){
 */
 
 // Синтаксис
-
+/*
 let value = arr.reduce(function(previousValue, item, index, array) {
     //...
 }, [initial]);
-
+*/
 /*
 Кроме уже известных аргументов item, index и array
 добавляется previousValue.
@@ -781,35 +781,35 @@ array - сам массив
 */
 
 // 34:25 Примеры использования методов reduce и reduceRight
-/*
-let arrOne = [1, 2, 3, 4];
+
+let arrOne = [5, 1, 8, 3];
 let reduceValueOne = arrOne.reduce(function(previousValue, item, index, array) {
     return item + previousValue;
 }, 0);
 console.log(reduceValueOne);
-*/
+
 /* 
 Подробное описание примера ^
 
 Шаг №1
 previousValue = 0 (как и указано в исходной функции)
-item = 1
-их сумма = 1 (результат работы item + previousValue)
+item = 5
+их сумма = 5 (результат работы item + previousValue)
 
 Шаг №2
-previousValue = 1 (результат работы предыдущего шага)
-item = 2 (значение второго элемента массива)
-их сумма = 3 (результат работы item + previousValue)
-
-Шаг №3
-previousValue = 3 (результат работы предыдущего шага)
-item = 3 (значение третьего элемента массива)
+previousValue = 5 (результат работы предыдущего шага)
+item = 1 (значение второго элемента массива)
 их сумма = 6 (результат работы item + previousValue)
 
-Шаг №4
+Шаг №3
 previousValue = 6 (результат работы предыдущего шага)
-item = 4 (значение четвёртого элемента массива)
-их сумма = 10 (результат работы item + previousValue)
+item = 8 (значение третьего элемента массива)
+их сумма = 14 (результат работы item + previousValue)
+
+Шаг №4
+previousValue = 14 (результат работы предыдущего шага)
+item = 3 (значение четвёртого элемента массива)
+их сумма = 17 (результат работы item + previousValue)
 */
 
 // 36:10 Без начального (initial) значения
