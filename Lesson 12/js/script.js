@@ -689,9 +689,9 @@ if(Array.isArray(obj)) {
 /*
 let arr = ['Ваня', 'Дима', 'Оля', 'Кирилл', 'Пётр',];
 console.log(arr.length);
-
+*/
 // Цикл FOR. Переменная i должна быть меньше длины массива.
-
+/*
 for (let i = 0; i < arr.length; i++) {
     console.log(arr[i]);
     // для вывода каждого значения массива, указать i в []
@@ -707,7 +707,7 @@ for (let i = 0; i < arr.length; i++) {
 Use if you need to get only items values
 */
 /*
-let arr = ['Ваня', 'Дима', 'Оля',];
+let arr = ['Ваня', 'Дима', 'Оля', 'Иван', 'Дарья',];
 
 for (let arrItem of arr) {
     console.log(arrItem);
