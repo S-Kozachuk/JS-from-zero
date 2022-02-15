@@ -704,7 +704,7 @@ for (let i = 0; i < arr.length; i++) {
 
 // 31:17 Цикл FOR...OF 
 /*
-Используется только для вывода значений
+Use if you need to get only items values
 */
 /*
 let arr = ['Ваня', 'Дима', 'Оля',];
