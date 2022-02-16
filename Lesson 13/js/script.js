@@ -581,10 +581,10 @@ console.log(list);
 const textElement = document.querySelector('.lesson__text');
 
 // Получаем содержимое объекта "как есть" вместе с HTML-объекта
-/*
+
 const textElementContent = textElement.innerHTML;
 console.log(textElementContent);
-*/
+
 
 // 35:45 Перезапись содержимого объекта
 // textElement.innerHTML = "Живи, а работай в свободное время";
