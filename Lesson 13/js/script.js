@@ -585,9 +585,8 @@ const textElement = document.querySelector('.lesson__text');
 const textElementContent = textElement.innerHTML;
 console.log(textElementContent);
 
-
 // 35:45 Перезапись содержимого объекта
-// textElement.innerHTML = "Живи, а работай в свободное время";
+//textElement.innerHTML = "Живи, а работай в свободное время";
 
 // 36:15 Дописывание содержимого объекта
 /*
