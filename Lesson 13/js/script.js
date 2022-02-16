@@ -610,19 +610,20 @@ console.log(textElement.innerHTML);
 */
 
 // 37:20 Получение и изменение объекта целиком с помощью outerHTML
+// Получаем объект
+const textElement = document.querySelector('.lesson__text');
 /*
 Получаем содержимое объекта "как есть" вместе с HTML,
 а также сам элемент.
 */
-/*
 const textElementContent = textElement.outerHTML;
 console.log(textElementContent);
-
+/*
 textElement.outerHTML = `<p>Живи, а работай в
     <span class="color">свободное</span> время!</p>`;
-*/
 
-// console.log(textElement.outerHTML);
+
+ console.log(textElement.outerHTML);
 
 /*
 При выводе в консоль пропадает .lesson__text 
