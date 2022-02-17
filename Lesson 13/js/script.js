@@ -640,11 +640,12 @@ textElement.outerHTML = `<p>Живи, а работай в
 
 // 38:45 Управление текстом элемента с помощью textContent 
 // Получаем объект
-/*
+
 const textElement = document.querySelector('.lesson__text');
+// Get a content using textContent method
 const textElementContent = textElement.textContent;
 console.log(textElementContent);
-*/
+
 /*
 Полезная возможность textContent - записывать
 текст "безопасным способом"
