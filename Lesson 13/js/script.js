@@ -614,7 +614,8 @@ console.log(textElement.innerHTML);
 const textElement = document.querySelector('.lesson__text');
 /*
 Получаем содержимое объекта "как есть" вместе с HTML,
-а также сам элемент.
+а также сам объект (.lesson__text) - его оболочку. Это главное отличие
+от метода innerHTML.
 */
 const textElementContent = textElement.outerHTML;
 console.log(textElementContent);
