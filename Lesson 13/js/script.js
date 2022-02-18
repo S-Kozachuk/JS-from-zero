@@ -689,10 +689,10 @@ console.log(getComment.data);
 
 // 41:25 Создание элементов и узлов
 // Create a new element (tag) with createElement method
-
+/*
 const newElement = document.createElement('div');
 console.log(newElement);
-
+*/
 
 // 41:50 Наполнение нового элемента
 /*
