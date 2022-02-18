@@ -705,11 +705,11 @@ newElement.innerHTML = `Живи, а работай в
 console.log(newElement);
 */
 
-// 42:10 Создание текстового узла
-/*
+// 42:10 Create a new text node
+
 const newText = document.createTextNode('Привет');
 console.log(newText);
-*/
+
 
 /*
 Созданные объекты находятся в константах,
