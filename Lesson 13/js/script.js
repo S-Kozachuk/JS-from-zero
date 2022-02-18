@@ -696,11 +696,14 @@ console.log(newElement);
 
 // 41:50 Fill the new element
 
-const newElement = document.createElement('div');
-newElement.innerHTML = `Живи, а работай в`
+// Create a new element (tag) with createElement method
+//const newElement = document.createElement('div');
+// Assign a new string with method innerHTML
+/*
+newElement.innerHTML = `Живи, а работай в
  <span class="color">свободное</span> время!`;
 console.log(newElement);
-
+*/
 
 // 42:10 Создание текстового узла
 /*
