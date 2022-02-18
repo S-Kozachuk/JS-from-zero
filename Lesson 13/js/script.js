@@ -718,23 +718,23 @@ console.log(newText);
 */
 
 // 42:35 Inserts method.
-// Получаем объект
-//const textElement = document.querySelector('.lesson__text');
+// Get an object in constant. See the html layout
+const textElement = document.querySelector('.lesson__text');
 
-// Создание нового элемента (тега)
-//const newElement = document.createElement('div');
-// Наполнение нового элемента
-//newElement.innerHTML =`Живи, а работай 
-//   <span class="color">свободное</span> время!`;
+// Creaate a new element (tag)
+const newElement = document.createElement('div');
+// Fill a new object
+newElement.innerHTML =`Живи, а работай 
+<span class="color">свободное</span> время!`;
 
-// Далее вставляем новый элемент...
-// перед объектом
-//textElement.before(newElement);
-// после объекта
+// Other variants
+// Insert the new element before object
+textElement.before(newElement);
+// After object
 //textElement.after(newElement);
-// внутрь и в начало объекта
+// Inside & to the beginning
 //textElement.prepend(newElement);
-// внутрь и в конец объекта
+// Inside & to the end
 //textElement.append(newElement);
 
 // 44:50 Вставка сразу нескольких фрагментов
