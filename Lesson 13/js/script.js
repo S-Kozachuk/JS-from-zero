@@ -694,13 +694,13 @@ const newElement = document.createElement('div');
 console.log(newElement);
 */
 
-// 41:50 Наполнение нового элемента
-/*
+// 41:50 Fill the new element
+
 const newElement = document.createElement('div');
 newElement.innerHTML = `Живи, а работай в`
  <span class="color">свободное</span> время!`;
 console.log(newElement);
-*/
+
 
 // 42:10 Создание текстового узла
 /*
