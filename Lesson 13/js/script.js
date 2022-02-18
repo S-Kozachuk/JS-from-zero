@@ -682,10 +682,10 @@ console.log(getComment);
 console.log(getComment.data);
 
 // 41:00 Изменение текстового узла\комментария
-/*
-getComment.data = 'Привет';
-console.log(getComment.data)
-*/
+
+getComment.data = 'Hello';
+console.log(getComment.data);
+
 
 // 41:25 Создание элементов и узлов
 // Создание нового элемента (тега)
