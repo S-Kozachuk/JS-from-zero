@@ -706,17 +706,18 @@ console.log(newElement);
 */
 
 // 42:10 Create a new text node
-
+/*
 const newText = document.createTextNode('Привет');
 console.log(newText);
-
+*/
 
 /*
 Созданные объекты находятся в константах,
-но не являются частью документа.
+но не являются частью html-документа.
+Как их вставить в html-документ?
 */
 
-// 42:35 Методы вставки.
+// 42:35 Inserts method.
 // Получаем объект
 //const textElement = document.querySelector('.lesson__text');
 
