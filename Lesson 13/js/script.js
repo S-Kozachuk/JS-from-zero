@@ -676,7 +676,7 @@ console.log(textElement.textContent);
 
 const textElement = document.querySelector('.lesson__text');
 const getComment = textElement.nextSibling;
-// New cooment
+
 console.log(getComment);
 // Для получения только текста комментария нужно добавить свойство data
 //console.log(getComment.data);
