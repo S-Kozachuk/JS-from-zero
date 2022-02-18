@@ -679,7 +679,7 @@ const getComment = textElement.nextSibling;
 
 console.log(getComment);
 // Для получения только текста комментария нужно добавить свойство data
-//console.log(getComment.data);
+console.log(getComment.data);
 
 // 41:00 Изменение текстового узла\комментария
 /*
