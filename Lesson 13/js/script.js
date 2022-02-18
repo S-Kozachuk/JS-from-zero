@@ -729,7 +729,7 @@ newElement.innerHTML =`Живи, а работай
 
 // Other variants
 // Insert the new element before object
-textElement.before(newElement);
+//textElement.before(newElement);
 // After object
 //textElement.after(newElement);
 // Inside & to the beginning
