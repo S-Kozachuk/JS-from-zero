@@ -673,19 +673,19 @@ console.log(textElement.textContent);
 
 // 40:15 Свойство data. Работа с текстовыми узлами или комментариями
 // Возвращает содержимое текстового узла или комментария.
-
+/*
 const textElement = document.querySelector('.lesson__text');
 const getComment = textElement.nextSibling;
-
-console.log(getComment);
+*/
+//console.log(getComment);
 // Для получения только текста комментария нужно добавить свойство data
-console.log(getComment.data);
+//console.log(getComment.data);
 
 // 41:00 Изменение текстового узла\комментария
-
+/*
 getComment.data = 'Hello';
 console.log(getComment.data);
-
+*/
 
 // 41:25 Создание элементов и узлов
 // Создание нового элемента (тега)
