@@ -770,7 +770,7 @@ textElement.insertAdjacentHTML(
 */
 
 /*
-Варианты параметров
+Варианты параметров (см. html layout, 45 string)
 "beforebegin" - вставить html непосредственно перед textElement,
 "afterbegin" - вставить html в начало textElement,
 "beforeend" - вставить html в конец textElement,
