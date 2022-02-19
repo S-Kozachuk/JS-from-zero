@@ -777,34 +777,34 @@ textElement.insertAdjacentHTML(
 "afterend" - вставить html непосредственно после textElement.
 */
 
-// 47:05 Дополнительные методы insertAdjacentText и insertAdjacentElement
-// Получаем объект
-//const textElement = document.querySelector('.lesson__text');
+// 47:05 Methods insertAdjacentText и insertAdjacentElement
+// Get an object in constant
+const textElement = document.querySelector('.lesson__text');
 
-// Вставляем текст
-/*
+// Insert text
+
 textElement.insertAdjacentText(
     'beforeend',
     `Живи, а работай в
     <span class="color">свободное</span> время!`
 )
-*/
+
 // Создание нового элемента (тега)
-//const newElement = document.createElement('div');
+const newElement = document.createElement('div');
 
 // Наполнение нового элемента
-/*
+
 newElement.innerHTML =`Живи, а работай 
     <span class="color">свободное</span> время!`;
-*/
+
 
 // Вставляем элемент
-/*
+
 textElement.insertAdjacentElement(
     'beforeend',
     newElement
 )
-*/
+
 /*
 На практике часто используется только метод insertAdjacentHTML.
 Потому, что для элементов и текста есть методы
@@ -813,7 +813,6 @@ append/prepend/before/after - они короче в написании.
 */
 
 // 48:10 Перенос элемента
-
 /*
 В JavaScript есть возможность вставлять не только новые узлы,
 но и переносить существующие.
