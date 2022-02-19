@@ -779,32 +779,32 @@ textElement.insertAdjacentHTML(
 
 // 47:05 Methods insertAdjacentText и insertAdjacentElement
 // Get an object in constant
-const textElement = document.querySelector('.lesson__text');
+//const textElement = document.querySelector('.lesson__text');
 
 // Insert text
-
+/*
 textElement.insertAdjacentText(
     'beforeend',
     `Живи, а работай в
     <span class="color">свободное</span> время!`
 )
-
+*/
 // Создание нового элемента (тега)
-const newElement = document.createElement('div');
+//const newElement = document.createElement('div');
 
 // Наполнение нового элемента
-
+/*
 newElement.innerHTML =`Живи, а работай 
     <span class="color">свободное</span> время!`;
-
+*/
 
 // Вставляем элемент
-
+/*
 textElement.insertAdjacentElement(
     'beforeend',
     newElement
 )
-
+*/
 /*
 На практике часто используется только метод insertAdjacentHTML.
 Потому, что для элементов и текста есть методы
