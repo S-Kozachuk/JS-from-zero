@@ -758,16 +758,16 @@ textElement.append(`Живи, а работай в
 // 45:45 Insert method insertAdjacentHTML
 
 // Get an object in constant
-const textElement = document.querySelector('.lesson__text');
+//const textElement = document.querySelector('.lesson__text');
 
 // Вставляем текст, html, элемент.
-
+/*
 textElement.insertAdjacentHTML(
     'afterend', // parametrs
     `<p>Живи, а работай в
     <span class="color">свободное</span> время!</p>`
 );
-
+*/
 
 /*
 Варианты параметров
