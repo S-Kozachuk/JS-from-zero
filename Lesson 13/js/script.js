@@ -724,10 +724,10 @@ const textElement = document.querySelector('.lesson__text');
 // Create a new element (tag)
 const newElement = document.createElement('div');
 // Fill a new object
-/*
+
 newElement.innerHTML =`Живи, а работай 
 <span class="color">свободное</span> время!`;
-*/
+
 // Other variants
 // Insert the new element before object
 //textElement.before(newElement);
@@ -738,22 +738,19 @@ newElement.innerHTML =`Живи, а работай
 // Inside & to the end
 //textElement.append(newElement);
 
-// 44:50 Вставка сразу нескольких фрагментов
+// 44:50 Insert multiple fragments at once
+//textElement.append(newElement, "Привет!");
 
-// Insert multiple objects at once
-textElement.append(newElement, "Привет!");
-
-// Можно вставлять строку
+// May insert string (as simple text)
 /*
 textElement.append(`Живи, а работай в
     <span class="color">свободное</span> время!`);
 */
 /*
-Особенность данных методов в том, что
-строки вставляются безопасным методом, как
-это делает textContent. Поэтому эти методы
-могут использоваться только для вставки DOM-узлов
-или текстовых фрагментов.
+Особенность данных методов в том, что строки вставляются 
+безопасным методом, как это делает textContent. 
+Поэтому эти методы могут использоваться только для
+вставки DOM-узлов или текстовых фрагментов.
 Как быть, если мы хотим вставить HTML код именно "как HTML"
 со всеми тегами и прочим как это делает innerHTML?
 */
