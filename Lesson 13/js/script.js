@@ -755,19 +755,19 @@ textElement.append(`Живи, а работай в
 со всеми тегами и прочим как это делает innerHTML?
 */
 
-// 45:45 Метод вставки insertAdjacentHTML
+// 45:45 Insert method insertAdjacentHTML
 
-// Получаем объект
-//const textElement = document.querySelector('.lesson__text');
+// Get an object in constant
+const textElement = document.querySelector('.lesson__text');
 
 // Вставляем текст, html, элемент.
-/*
+
 textElement.insertAdjacentHTML(
-    'afterend',
+    'afterend', // parametrs
     `<p>Живи, а работай в
     <span class="color">свободное</span> время!</p>`
 );
-*/
+
 
 /*
 Варианты параметров
