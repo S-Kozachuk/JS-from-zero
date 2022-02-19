@@ -719,15 +719,15 @@ console.log(newText);
 
 // 42:35 Inserts method.
 // Get an object in constant. See the html layout
-const textElement = document.querySelector('.lesson__text');
+//const textElement = document.querySelector('.lesson__text');
 
 // Create a new element (tag)
-const newElement = document.createElement('div');
+//const newElement = document.createElement('div');
 // Fill a new object
-
+/*
 newElement.innerHTML =`Живи, а работай 
 <span class="color">свободное</span> время!`;
-
+*/
 // Other variants
 // Insert the new element before object
 //textElement.before(newElement);
