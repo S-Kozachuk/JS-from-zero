@@ -719,10 +719,10 @@ console.log(newText);
 
 // 42:35 Inserts method.
 // Get an object in constant. See the html layout
-//const textElement = document.querySelector('.lesson__text');
+const textElement = document.querySelector('.lesson__text');
 
-// Creaate a new element (tag)
-//const newElement = document.createElement('div');
+// Create a new element (tag)
+const newElement = document.createElement('div');
 // Fill a new object
 /*
 newElement.innerHTML =`Живи, а работай 
@@ -739,7 +739,9 @@ newElement.innerHTML =`Живи, а работай
 //textElement.append(newElement);
 
 // 44:50 Вставка сразу нескольких фрагментов
-//textElement.append(newElement, "Привет!");
+
+// Insert multiple objects at once
+textElement.append(newElement, "Привет!");
 
 // Можно вставлять строку
 /*
