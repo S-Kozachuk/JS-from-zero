@@ -845,11 +845,12 @@ objects(node).
 /*
 const lessonBlock = document.querySelector('.lesson');
 lessonBlock.append(cloneTextElement);
+*/
 
-// 50:20 Удаление узлов
-// Получаем объект
+// 50:20 Deleting nodes
+// Get an object to textElemnt constant
 //const textElement = document.querySelector('.lesson__text');
-// Удаляем объект
+// Deleting object
 //textElement.remove();
 
 // 50:50 Стили и классы
