@@ -838,13 +838,13 @@ objects(node).
 const textElement = document.querySelector('.lesson__text');
 
 // Cloning without child elements
-const cloneTextElement = textElement.cloneNode();
+//const cloneTextElement = textElement.cloneNode();
 
 // Deep cloning with content
-//const cloneTextElement = textElement.cloneNode(true);
+const cloneTextElement = textElement.cloneNode(true);
 
 const lessonBlock = document.querySelector('.lesson');
-lessonBlock.prepend(cloneTextElement);
+lessonBlock.append(cloneTextElement);
 
 // 50:20 Удаление узлов
 // Получаем объект
