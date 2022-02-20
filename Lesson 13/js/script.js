@@ -862,12 +862,15 @@ Class edited is one of more often action in JavaScript.
 For classes managing are used className и classList properties.
 */
 
-// className property
+// The className property
+// Get element to constant
 //const element = document.querySelector('.lesson__item-list_red');
 
-// Get a class namr
-//const elementClassNames = element.className;
-//console.log(elementClassNames);
+// Get all classes name for this object (node)
+/*
+const elementClassNames = element.className;
+console.log(elementClassNames);
+*/
 
 // Rerecording class name 
 //element.className="red";
