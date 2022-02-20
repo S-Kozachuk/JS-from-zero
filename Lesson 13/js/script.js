@@ -826,7 +826,7 @@ append/prepend/before/after - они короче в написании.
 //const title = document.querySelector('h3');
 
 // Transfer title to the end of lesson lessonBlock
-//lessonBlock.append(title);
+//lessonBlock.prepend(title);
 
 // 49:10 Клонирование узлов cloneNode
 /*
