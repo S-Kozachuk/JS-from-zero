@@ -828,19 +828,19 @@ append/prepend/before/after - они короче в написании.
 // Transfer title to the end of lesson lessonBlock
 //lessonBlock.prepend(title);
 
-// 49:10 Клонирование узлов cloneNode
+// 49:10 Method cloneNode
 /*
-Метод применяется для клонирования, а не для
-переноса объекта (элемента).
+Method is use for cloning, but not for transfering
+objects(node).
 */
 
-//Получение объекта
+// Get an object to textElement constant
 //const textElement = document.querySelector('.lesson__text');
 
-// Клонирование без дочерних элементов
+// Cloning without child elements
 //const cloneTextElement = textElement.cloneNode();
 
-// Глубокое клонирование вместе с содержимым
+// Deep cloning with content
 //const cloneTextElement = textElement.cloneNode(true);
 
 //const lessonBlock = document.querySelector('.lesson');
