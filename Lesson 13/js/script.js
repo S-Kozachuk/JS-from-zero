@@ -835,16 +835,16 @@ objects(node).
 */
 
 // Get an object to textElement constant
-//const textElement = document.querySelector('.lesson__text');
+const textElement = document.querySelector('.lesson__text');
 
 // Cloning without child elements
-//const cloneTextElement = textElement.cloneNode();
+const cloneTextElement = textElement.cloneNode();
 
 // Deep cloning with content
 //const cloneTextElement = textElement.cloneNode(true);
 
-//const lessonBlock = document.querySelector('.lesson');
-//lessonBlock.append(cloneTextElement);
+const lessonBlock = document.querySelector('.lesson');
+lessonBlock.prepend(cloneTextElement);
 
 // 50:20 Удаление узлов
 // Получаем объект
