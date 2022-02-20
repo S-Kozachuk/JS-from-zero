@@ -853,33 +853,28 @@ lessonBlock.append(cloneTextElement);
 // Deleting object
 //textElement.remove();
 
-// 50:50 Стили и классы
-// Управление классами
-// Свойства className и classList
+// 50:50 Classes and styles (CSS)
+// Managing classes
 
+// Properties className и classList
 /*
-Изменение класса является одним из 
-наиболее частых действий в JavaScript.
+Class edited is one of more often action in JavaScript.
+For classes managing are used className и classList properties.
 */
 
-/*
-Для управления классами используются
-свойства className и classList.
-*/
-
-// Свойство className
+// className property
 //const element = document.querySelector('.lesson__item-list_red');
 
-// Получаем имена классов
+// Get a class namr
 //const elementClassNames = element.className;
 //console.log(elementClassNames);
 
-// Перезаписываем имя класса 
+// Rerecording class name 
 //element.className="red";
 
 /*
-Неудобство применения свойства classNameв том, что
-таким образом перезаписываются все классы.
+The class Name property is uncomfortably use,
+because all classes are re-recording.
 */
 
 // 52:08 Свойство classList 
