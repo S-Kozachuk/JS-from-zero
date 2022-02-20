@@ -849,7 +849,7 @@ lessonBlock.append(cloneTextElement);
 
 // 50:20 Deleting nodes
 // Get an object to textElemnt constant
-//const textElement = document.querySelector('.lesson__text');
+//const textElement = document.querySelector('.lesson__list');
 // Deleting object
 //textElement.remove();
 
