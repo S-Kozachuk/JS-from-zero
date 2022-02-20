@@ -812,20 +812,20 @@ append/prepend/before/after - они короче в написании.
 Они способны вставлять как узлы, так и текст.
 */
 
-// 48:10 Перенос элемента
+// 48:10 Elements transfer
 /*
 В JavaScript есть возможность вставлять не только новые узлы,
 но и переносить существующие.
 Все методы вставки автоматически удаляют узлы с прежних мест.
 */
 
-// Получение объекта
+// Get an object to lessonBlock constant
 //const lessonBlock = document.querySelector('.lesson');
 
-// Получение объекта
+// Get an object to title constant
 //const title = document.querySelector('h3');
 
-// Перенос title в конец блока lessonBlock
+// Transfer title to the end of lesson lessonBlock
 //lessonBlock.append(title);
 
 // 49:10 Клонирование узлов cloneNode
