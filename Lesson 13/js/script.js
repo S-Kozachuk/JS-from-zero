@@ -897,19 +897,19 @@ because all classes are re-recording.
 
 // 53:05 Example 
 // Get element to constant
-const element = document.querySelector('.lesson__item-list_red');
+//const element = document.querySelector('.lesson__item-list_red');
 
 // Added class .active
-element.classList.add('active');
+//element.classList.add('active');
 // Checking the class presence (conditional branching)
-
+/*
 if(element.classList.contains('active')) {
     console.log(`Element has a class active`);
 }
 else {
 	console.log(`Element didn't has a class active`);
 };
-
+*/
 
 // 53:45 Перечисление всех классов, метод for..of
 
