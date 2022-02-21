@@ -880,22 +880,19 @@ The class Name property is uncomfortably use,
 because all classes are re-recording.
 */
 
-// 52:08 Свойство classList 
-/*
-Специальный объект с методами для 
-добавления/удаления одного класса.
-*/
+// 52:08 The classList property
+// Special object with add/remove method for single class 
 
-// Получение элемента
+// Get an element to const
 //const element = document.querySelector('.lesson__item-list_red');
 
-// Добавить класс
+// Added class
 //element.classList.add('active');
-// Удалить класс
+// Remove class
 //element.classList.remove('active');
-// Добавить класс, если его нет, а если есть удалить
+// Add class if it no exist, or remove if exist 
 //element.classList.toggle('active');
-// Проверка наличия класса, возвращает true/false
+// Check the presence of class, returns true/false 
 //element.classList.contains('active');
 
 // 53:05 Практический пример 
