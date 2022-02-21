@@ -901,7 +901,7 @@ const element = document.querySelector('.lesson__item-list_red');
 
 // Added class .active
 element.classList.add('active');
-// Checking the class presence
+// Checking the class presence (conditional branching)
 
 if(element.classList.contains('active')) {
     console.log(`Element has a class active`);
