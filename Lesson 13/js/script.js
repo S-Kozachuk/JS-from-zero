@@ -920,7 +920,7 @@ all classes by for..of method
 //const element = document.querySelector('.lesson__item-list_red');
 // Add class .active
 //element.classList.add('active');
-// Iterating through the elements of an object, record to className variable
+// Iterating through the classes of an object, record to className variable
 /*
 for (let className of element.classList) {
     console.log(className);
