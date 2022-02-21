@@ -911,14 +911,12 @@ else {
 };
 */
 
-// 53:45 Перечисление всех классов, метод for..of
-
+// 53:45 Enumeration all classes, for..of method
 /* 
-Свойство classList является перебираемым,
-поэтому можно перечислить все классы при помощи
-метода for..of
+The classList property is enumeration, so can enumerated 
+all classes by for..of method
 */
-/*
+
 const element = document.querySelector('.lesson__item-list_red');
 
 element.classList.add('active');
@@ -926,7 +924,7 @@ element.classList.add('active');
 for (let className of element.classList) {
     console.log(className);
 }
-*/
+
 
 // 54:10 Управление стилями
 // Свойство style (element.style)
