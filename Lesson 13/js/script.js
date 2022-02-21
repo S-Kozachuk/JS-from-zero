@@ -927,15 +927,15 @@ for (let className of element.classList) {
 }
 */
 
-// 54:10 Управление стилями
-// Свойство style (element.style)
+// 54:10 Styles managing
+// The style property (element.style)
 
-// Получаем елемент
+// Get an object to element constant
 //const element = document.querySelector('.lesson__item-list_red');
 
 // Задаём стиль с помощью CSS свойства
+// Setting the style with CSS property: property "color", value "red"
 //element.style.color = "red";
-// CSS свойство color и значение red
 
 // 55:00 Для свойств, состоящих из нескольких свойств использутеся стиль camelCase
 // запись свойства margin-bottom
