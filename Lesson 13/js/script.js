@@ -917,14 +917,15 @@ The classList property is enumeration, so can enumerated
 all classes by for..of method
 */
 // Get element to constant
-const element = document.querySelector('.lesson__item-list_red');
+//const element = document.querySelector('.lesson__item-list_red');
 // Add class .active
-element.classList.add('active');
+//element.classList.add('active');
 // Iterating through the elements of an object, record to className variable
+/*
 for (let className of element.classList) {
     console.log(className);
 }
-
+*/
 
 // 54:10 Управление стилями
 // Свойство style (element.style)
