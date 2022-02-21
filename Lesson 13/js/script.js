@@ -939,9 +939,9 @@ element.style.color = "red";
 // 55:00 Use the camelCase style, if properties consisting from several words
 // Syntax examples.
 // Recording "margin-bottom" property
-element.style.marginBottom="30px";
+//element.style.marginBottom="30px";
 // Recording "z-index" property
-element.style.zIndex="10";
+//element.style.zIndex="10";
 // Waring! Every property writing separately.
 
 // 55:40 Получаем значение свойства
