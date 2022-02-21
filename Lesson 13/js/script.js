@@ -896,17 +896,20 @@ because all classes are re-recording.
 //element.classList.contains('active');
 
 // 53:05 Example 
-// Получаем елемент
-//const element = document.querySelector('.lesson__item-list_red');
+// Get element to constant
+const element = document.querySelector('.lesson__item-list_red');
 
-// Добавляем класс 
-//element.classList.add('active');
-// Проверяем наличие класса
-/*
+// Added class .active
+element.classList.add('active');
+// Checking the class presence
+
 if(element.classList.contains('active')) {
-    console.log(`У element есть класс active`);
+    console.log(`Element has a class active`);
 }
-*/
+else {
+	console.log(`Element didn't has a class active`);
+};
+
 
 // 53:45 Перечисление всех классов, метод for..of
 
