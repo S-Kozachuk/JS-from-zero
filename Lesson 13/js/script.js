@@ -895,8 +895,7 @@ because all classes are re-recording.
 // Check the presence of class, returns true/false 
 //element.classList.contains('active');
 
-// 53:05 Практический пример 
-
+// 53:05 Example 
 // Получаем елемент
 //const element = document.querySelector('.lesson__item-list_red');
 
