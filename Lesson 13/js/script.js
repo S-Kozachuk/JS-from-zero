@@ -931,11 +931,10 @@ for (let className of element.classList) {
 // The style property (element.style)
 
 // Get an object to element constant
-//const element = document.querySelector('.lesson__item-list_red');
+const element = document.querySelector('.lesson__item-list_red');
 
-// Задаём стиль с помощью CSS свойства
 // Setting the style with CSS property: property "color", value "red"
-//element.style.color = "red";
+element.style.color = "red";
 
 // 55:00 Для свойств, состоящих из нескольких свойств использутеся стиль camelCase
 // запись свойства margin-bottom
