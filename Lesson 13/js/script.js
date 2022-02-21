@@ -936,12 +936,13 @@ const element = document.querySelector('.lesson__item-list_red');
 // Setting the style with CSS property: property "color", value "red"
 element.style.color = "red";
 
-// 55:00 Для свойств, состоящих из нескольких свойств использутеся стиль camelCase
-// запись свойства margin-bottom
-//element.style.marginBottom="30px";
-// запись свойства z-index
-//element.style.zIndex="10";
-// Каждое свойство пишется отдельно
+// 55:00 Use the camelCase style, if properties consisting from several words
+// Syntax examples.
+// Recording "margin-bottom" property
+element.style.marginBottom="30px";
+// Recording "z-index" property
+element.style.zIndex="10";
+// Waring! Every property writing separately.
 
 // 55:40 Получаем значение свойства
 // Работает только при условии записи в атрибуте style
