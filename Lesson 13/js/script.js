@@ -949,7 +949,7 @@ element.style.zIndex = "10";
 console.log(element.style.marginBottom);
 
 // 56:10 Сброс стиля.
-//element.stуle.marginBottom = ""
+element.stуle.marginBottom = "";
 // ^ Присвоить пустое значение строки. После этого свойство пропадёт.
 
 // 56:20 Полная перезапись стилей
