@@ -945,8 +945,7 @@ element.style.zIndex = "10";
 // Waring! Every property writing separately (to new string).
 
 // 55:40 Get property value
-// Работает только при условии записи в атрибуте style
-// Work if condition record in style attribute  
+// Work if condition record in style attribute (in html)
 console.log(element.style.marginBottom);
 
 // 56:10 Сброс стиля.
