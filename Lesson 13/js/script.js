@@ -947,7 +947,7 @@ element.style.zIndex = "10";
 // 55:40 Get property value
 // Работает только при условии записи в атрибуте style
 // Work if condition record in style attribute  
-сonsole.log(element.style.marginBottom);
+console.log(element.style.marginBottom);
 
 // 56:10 Сброс стиля.
 //element.stуle.marginBottom = ""
