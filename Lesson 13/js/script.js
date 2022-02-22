@@ -939,14 +939,15 @@ element.style.color = "red";
 // 55:00 Use the camelCase style, if properties consisting from several words
 // Syntax examples.
 // Recording "margin-bottom" property
-element.style.marginBottom="30px";
+element.style.marginBottom = "30px";
 // Recording "z-index" property
-element.style.zIndex="10";
-// Waring! Every property writing separately.
+element.style.zIndex = "10";
+// Waring! Every property writing separately (to new string).
 
-// 55:40 Получаем значение свойства
+// 55:40 Get property value
 // Работает только при условии записи в атрибуте style
-//сonsole.log(element.style.marginBottom);
+// Work if condition record in style attribute  
+сonsole.log(element.style.marginBottom);
 
 // 56:10 Сброс стиля.
 //element.stуle.marginBottom = ""
