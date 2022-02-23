@@ -955,18 +955,18 @@ After that, property will disappear.
 */
 //element.style.marginBottom = "";
 
-// 56:20 Полная перезапись стилей
+// 56:20 Complete styles rewriting 
 // style.cssText
 
-// Получаем элемент
-//const element = document.querySelector('.lesson__item-list_red');
-// Новые параметры
-/*
+// Get an element to constant
+const element = document.querySelector('.lesson__item-list_red');
+// New parameters
 element.style.cssText =`
     margin-bottom: 30px;
-    color: red;
+    color: green;
+	font-weight: 700;
 `;
-*/
+
 /*
 Минус такого подхода в том, что cssText 
 полностью перезаписывает все CSS-свойства,
