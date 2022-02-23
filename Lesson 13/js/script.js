@@ -974,26 +974,26 @@ overwrites all CSS properties, that were previously in the style
 attribute.
 */
  
-// 57:10 Вычисление стилей. getComputedStyle(element, [pseudo])
- 
-// Получаем элемент
-//const element = document.querySelector('.lesson__item-list_red');
+// 57:10 Calculating styles. 
+// Method getComputedStyle(element, [pseudo]) 
+// Get an element to constant
+const element = document.querySelector('.lesson__item-list_red');
 
-// Получение значения свойства (варианты)
-// 1.Только если оно записано в атрибуте style
-//console.log(element.style.contAins)
+// Get a value properties (variants)
+// 1.Only if it is written in the style attribute (or get empty string)
+console.log(element.style.fontSize);
 
-// 2.Стиль элемента
-/*
+// 2.Element style
+// Return calculating styles (style attribute doesn't presence in html) 
 const elementStyle = getComputedStyle(element);
 console.log(elementStyle.fontSize);
-*/
 
-// 3.Стиль псевдоэлемента
-/*
+
+// 3.Get a pseudo element style
+
 const elementBeforeStyle = getComputedStyle(element, "::before");
 console.log(elementBeforeStyle.backgroundColor);
-*/
+
 
 // 58:45 Получение конкретного значения 
 /*
