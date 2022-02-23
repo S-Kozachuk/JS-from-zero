@@ -961,16 +961,16 @@ After that, property will disappear.
 // Get an element to constant
 const element = document.querySelector('.lesson__item-list_red');
 // New parameters
-element.style.cssText =`
-    margin-bottom: 30px;
+element.style.cssText = `
+	margin-bottom: 30px;
     color: green;
 	font-weight: 700;
-`;
+	`;
 
 /*
-Минус такого подхода в том, что cssText 
-полностью перезаписывает все CSS-свойства,
-которые были до этого в атрибуте style
+Disadvantage of this approach, is that cssText completely
+overwrites all CSS properties, that were previously in the style
+attribute.
 */
  
 // 57:10 Вычисление стилей. getComputedStyle(element, [pseudo])
