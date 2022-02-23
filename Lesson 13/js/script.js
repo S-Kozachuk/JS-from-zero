@@ -959,8 +959,9 @@ After that, property will disappear.
 // style.cssText
 
 // Get an element to constant
-const element = document.querySelector('.lesson__item-list_red');
+//const element = document.querySelector('.lesson__item-list_red');
 // New parameters
+/*
 element.style.cssText = `
 	margin-bottom: 30px;
     color: green;
