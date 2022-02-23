@@ -931,29 +931,29 @@ for (let className of element.classList) {
 // The style property (element.style)
 
 // Get an object to element constant
-const element = document.querySelector('.lesson__item-list_red');
+//const element = document.querySelector('.lesson__item-list_red');
 
 // Setting the style with CSS property: property "color", value "red"
-element.style.color = "red";
+//element.style.color = "red";
 
 // 55:00 Use the camelCase style, if properties consisting from several words.
 // Syntax examples.
 // Recording "margin-bottom" property
-element.style.marginBottom = "30px";
+//element.style.marginBottom = "30px";
 // Recording "z-index" property
-element.style.zIndex = "10";
+//element.style.zIndex = "10";
 // Waring! Every property writing separately (to new string).
 
 // 55:40 Get property value
 // Work if condition record in style attribute (in html)
-console.log(element.style.marginBottom);
+//console.log(element.style.marginBottom);
 
 // 56:10 Style reset.
 /*
 Add empty value, if need to reset element style. 
 After that, property will disappear.
 */
-//element.stуle.marginBottom = "";
+//element.style.marginBottom = "";
 
 // 56:20 Полная перезапись стилей
 // style.cssText
