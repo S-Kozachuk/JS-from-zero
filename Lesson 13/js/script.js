@@ -936,7 +936,7 @@ const element = document.querySelector('.lesson__item-list_red');
 // Setting the style with CSS property: property "color", value "red"
 element.style.color = "red";
 
-// 55:00 Use the camelCase style, if properties consisting from several words
+// 55:00 Use the camelCase style, if properties consisting from several words.
 // Syntax examples.
 // Recording "margin-bottom" property
 element.style.marginBottom = "30px";
@@ -948,9 +948,12 @@ element.style.zIndex = "10";
 // Work if condition record in style attribute (in html)
 console.log(element.style.marginBottom);
 
-// 56:10 Сброс стиля.
-element.stуle.marginBottom = "";
-// ^ Присвоить пустое значение строки. После этого свойство пропадёт.
+// 56:10 Style reset.
+/*
+Add empty value, if need to reset element style. 
+After that, property will disappear.
+*/
+//element.stуle.marginBottom = "";
 
 // 56:20 Полная перезапись стилей
 // style.cssText
