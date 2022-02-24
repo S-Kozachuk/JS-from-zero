@@ -977,7 +977,7 @@ attribute.
 // 57:10 Calculating styles. 
 // Method getComputedStyle(element, [pseudo]) 
 // Get an element to constant
-const element = document.querySelector('.lesson__item-list_red');
+//const element = document.querySelector('.lesson__item-list_red');
 
 // Get a value properties (variants)
 // 1.Only if it is written in the style attribute (or get empty string)
@@ -985,7 +985,7 @@ const element = document.querySelector('.lesson__item-list_red');
 
 // 2.Element style
 // Return calculating styles (style attribute doesn't presence in html) 
-const elementStyle = getComputedStyle(element);
+//const elementStyle = getComputedStyle(element);
 //console.log(elementStyle.fontSize);
 
 // 3.Get a pseudo element style
@@ -1001,9 +1001,9 @@ need to write exact (full) name.
 */
 
 // Getting exact value 
-console.log(elementStyle.paddingBottom);
+//console.log(elementStyle.paddingBottom);
 // Getting the unpredictsble record
-console.log(elementStyle.padding); 
+//console.log(elementStyle.padding); 
 // ^ In the FireFox will be empty string (empty string)
 
 /*
@@ -1011,22 +1011,22 @@ Work with CSS properties values using getComputedStyle
 method is only possible in read mode.
 */
 
-// 59:20 Нюансы (лайфхакм) работы со стилями.
+// 59:20 Nuances of working with styles
 
-// Получаем элемент
-//const element = document.querySelector('.lesson__item-list_red');
+// Getting an element to constant "element"
+const element = document.querySelector('.lesson__item-list_red');
 
-// Стиль элемента
-/*
+// Element style
+
 const elementStyle = getComputedStyle(element);
-console.log(elementStyle.paddingLeft);
-*/
+console.log(elementStyle.paddingBottom);
 
-// Получаем число
-/*
-const paddingLeft = parseInt(elementStyle.paddingLeft);
-console.log(paddingLeft);
-*/
+
+// Getting number
+
+const paddingBottom = parseInt(elementStyle.paddingBottom);
+console.log(paddingBottom);
+
 
 // Важно не забывать про единицы измерения
 //element.style.marginleft = 20;
