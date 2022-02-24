@@ -931,74 +931,78 @@ for (let className of element.classList) {
 // The style property (element.style)
 
 // Get an object to element constant
-const element = document.querySelector('.lesson__item-list_red');
+//const element = document.querySelector('.lesson__item-list_red');
 
 // Setting the style with CSS property: property "color", value "red"
-element.style.color = "red";
+//element.style.color = "red";
 
-// 55:00 Use the camelCase style, if properties consisting from several words
+// 55:00 Use the camelCase style, if properties consisting from several words.
 // Syntax examples.
 // Recording "margin-bottom" property
-//element.style.marginBottom="30px";
+//element.style.marginBottom = "30px";
 // Recording "z-index" property
-//element.style.zIndex="10";
-// Waring! Every property writing separately.
+//element.style.zIndex = "10";
+// Waring! Every property writing separately (to new string).
 
-// 55:40 Получаем значение свойства
-// Работает только при условии записи в атрибуте style
-//сonsole.log(element.style.marginBottom);
+// 55:40 Get property value
+// Work if condition record in style attribute (in html)
+//console.log(element.style.marginBottom);
 
-// 56:10 Сброс стиля.
-//element.stуle.marginBottom = ""
-// ^ Присвоить пустое значение строки. После этого свойство пропадёт.
+// 56:10 Style reset.
+/*
+Add empty value, if need to reset element style. 
+After that, property will disappear.
+*/
+//element.style.marginBottom = "";
 
-// 56:20 Полная перезапись стилей
+// 56:20 Complete styles rewriting 
 // style.cssText
 
-// Получаем элемент
+// Get an element to constant
 //const element = document.querySelector('.lesson__item-list_red');
-// Новые параметры
+// New parameters
 /*
-element.style.cssText =`
-    margin-bottom: 30px;
-    color: red;
-`;
-*/
+element.style.cssText = `
+	margin-bottom: 30px;
+    color: green;
+	font-weight: 700;
+	`;
+
 /*
-Минус такого подхода в том, что cssText 
-полностью перезаписывает все CSS-свойства,
-которые были до этого в атрибуте style
+Disadvantage of this approach, is that cssText completely
+overwrites all CSS properties, that were previously in the style
+attribute.
 */
  
-// 57:10 Вычисление стилей. getComputedStyle(element, [pseudo])
- 
-// Получаем элемент
-//const element = document.querySelector('.lesson__item-list_red');
+// 57:10 Calculating styles. 
+// Method getComputedStyle(element, [pseudo]) 
+// Get an element to constant
+const element = document.querySelector('.lesson__item-list_red');
 
-// Получение значения свойства (варианты)
-// 1.Только если оно записано в атрибуте style
-//console.log(element.style.contAins)
+// Get a value properties (variants)
+// 1.Only if it is written in the style attribute (or get empty string)
+console.log(element.style.fontSize);
 
-// 2.Стиль элемента
-/*
+// 2.Element style
+// Return calculating styles (style attribute doesn't presence in html) 
 const elementStyle = getComputedStyle(element);
 console.log(elementStyle.fontSize);
-*/
 
-// 3.Стиль псевдоэлемента
-/*
+
+// 3.Get a pseudo element style
+
 const elementBeforeStyle = getComputedStyle(element, "::before");
 console.log(elementBeforeStyle.backgroundColor);
-*/
 
-// 58:45 Получение конкретного значения 
+
+// 58:45 Getting a specific (exact) value
 /*
 Что бы получить конкретное значение свойства,
 следует писать его точное (полное) название.
 */
 
 // Получение точного значения 
-//console.log(elementStyle.paddingLeft);
+//console.log(elementSty	le.paddingLeft);
 // Получаем не предсказуемую запись
 //console.log(elementStyle.padding); 
 // ^ В FireFox будет пустая строка (empty string)
