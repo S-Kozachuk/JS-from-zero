@@ -981,19 +981,19 @@ const element = document.querySelector('.lesson__item-list_red');
 
 // Get a value properties (variants)
 // 1.Only if it is written in the style attribute (or get empty string)
-console.log(element.style.fontSize);
+//onsole.log(element.style.fontSize);
 
 // 2.Element style
 // Return calculating styles (style attribute doesn't presence in html) 
 const elementStyle = getComputedStyle(element);
-console.log(elementStyle.fontSize);
+//console.log(elementStyle.fontSize);
 
 
 // 3.Get a pseudo element style
-
+/*
 const elementBeforeStyle = getComputedStyle(element, "::before");
 console.log(elementBeforeStyle.backgroundColor);
-
+*/
 
 // 58:45 Getting a specific (exact) value
 /*
@@ -1001,10 +1001,11 @@ If want get a specific value of properties,
 need to write exact (full) name.
 */
 
-// Получение точного значения 
-//console.log(elementSty	le.paddingLeft);
-// Получаем не предсказуемую запись
-//console.log(elementStyle.padding); 
+// Получение точного значения
+// Getting exact value 
+console.log(elementStyle.paddingLeft);
+// Getting the unpredictsble record
+console.log(elementStyle.padding); 
 // ^ В FireFox будет пустая строка (empty string)
 
 /*

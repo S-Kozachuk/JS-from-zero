@@ -5,3 +5,7 @@ h1 {
 .color {
     color: #FFD700;
 }
+
+.lesson__item-list_red {
+	padding-bottom: 20px;
+}	
