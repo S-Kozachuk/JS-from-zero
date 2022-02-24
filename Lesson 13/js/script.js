@@ -997,8 +997,8 @@ console.log(elementBeforeStyle.backgroundColor);
 
 // 58:45 Getting a specific (exact) value
 /*
-Что бы получить конкретное значение свойства,
-следует писать его точное (полное) название.
+If want get a specific value of properties,
+need to write exact (full) name.
 */
 
 // Получение точного значения 
