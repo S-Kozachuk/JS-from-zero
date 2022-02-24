@@ -988,7 +988,6 @@ const element = document.querySelector('.lesson__item-list_red');
 const elementStyle = getComputedStyle(element);
 //console.log(elementStyle.fontSize);
 
-
 // 3.Get a pseudo element style
 /*
 const elementBeforeStyle = getComputedStyle(element, "::before");
@@ -1001,16 +1000,15 @@ If want get a specific value of properties,
 need to write exact (full) name.
 */
 
-// Получение точного значения
 // Getting exact value 
-console.log(elementStyle.paddingLeft);
+console.log(elementStyle.paddingBottom);
 // Getting the unpredictsble record
 console.log(elementStyle.padding); 
-// ^ В FireFox будет пустая строка (empty string)
+// ^ In the FireFox will be empty string (empty string)
 
 /*
-Работа со значениями CSS свойств с помощью getComputedStyle
-возможна только в режиме чтения.
+Work with CSS properties values using getComputedStyle
+method is only possible in read mode.
 */
 
 // 59:20 Нюансы (лайфхакм) работы со стилями.
