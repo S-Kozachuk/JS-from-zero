@@ -1024,6 +1024,7 @@ method is only possible in read mode.
 /*
 Method getComputedStyle use for get a current value of property.
 */
+// Examples
 // Getting an element to constant "element"
 const element = document.querySelector('.lesson__item-list_red');
 
