@@ -980,10 +980,10 @@ attribute.
 //const element = document.querySelector('.lesson__item-list_red');
 
 // Get a value properties (variants)
-// 1.Only if it is written in the style attribute (or get empty string)
-//onsole.log(element.style.fontSize);
+// 1. Only if it is written in the style attribute (or get empty string)
+//console.log(element.style.fontSize);
 
-// 2.Element style
+// 2. Element style
 // Return calculating styles (style attribute doesn't presence in html) 
 //const elementStyle = getComputedStyle(element);
 //console.log(elementStyle.fontSize);
