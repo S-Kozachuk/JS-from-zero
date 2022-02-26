@@ -1034,13 +1034,14 @@ const elementStyle = getComputedStyle(element);
 console.log(elementStyle.paddingBottom);
 
 
-// Getting number
+// Getting number (use the parseInt function)
 
 const paddingBottom = parseInt(elementStyle.paddingBottom);
 console.log(paddingBottom);
 
 
 // Важно не забывать про единицы измерения
+// It is important not to be to forget units of measurement
 //element.style.marginleft = 20;
 // ^ в этом случае ничего не сработает
 //element.style.marginleft = "20px";
