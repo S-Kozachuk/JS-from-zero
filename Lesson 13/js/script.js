@@ -1010,23 +1010,32 @@ need to write exact (full) name.
 Work with CSS properties values using getComputedStyle
 method is only possible in read mode.
 */
+// Example
+// Get an element to constant "element"
+//const element = document.querySelector('.lesson__item-list_red');
+
+// Element style
+//const elementStyle = getComputedStyle(element);
+
+// Only-read property (show a error message in console)
+//elementStyle.paddingLeft = "50px";
 
 // 59:20 Nuances of working with styles
 
 // Getting an element to constant "element"
-const element = document.querySelector('.lesson__item-list_red');
+//const element = document.querySelector('.lesson__item-list_red');
 
 // Element style
-
+/*
 const elementStyle = getComputedStyle(element);
 console.log(elementStyle.paddingBottom);
-
+*/
 
 // Getting number
-
+/*
 const paddingBottom = parseInt(elementStyle.paddingBottom);
 console.log(paddingBottom);
-
+*/
 
 // Важно не забывать про единицы измерения
 //element.style.marginleft = 20;
