@@ -1002,7 +1002,7 @@ need to write exact (full) name.
 
 // Getting exact value 
 //console.log(elementStyle.paddingBottom);
-// Getting the unpredictsble record
+// Getting the unpredictable record
 //console.log(elementStyle.padding); 
 // ^ In the FireFox will be empty string (empty string)
 
