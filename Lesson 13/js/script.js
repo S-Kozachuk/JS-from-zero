@@ -1021,21 +1021,23 @@ method is only possible in read mode.
 //elementStyle.paddingLeft = "50px";
 
 // 59:20 Nuances of working with styles
-
+/*
+Method getComputedStyle use for get a current value of property.
+*/
 // Getting an element to constant "element"
-//const element = document.querySelector('.lesson__item-list_red');
+const element = document.querySelector('.lesson__item-list_red');
 
 // Element style
-/*
+
 const elementStyle = getComputedStyle(element);
 console.log(elementStyle.paddingBottom);
-*/
+
 
 // Getting number
-/*
+
 const paddingBottom = parseInt(elementStyle.paddingBottom);
 console.log(paddingBottom);
-*/
+
 
 // Важно не забывать про единицы измерения
 //element.style.marginleft = 20;
