@@ -1058,7 +1058,7 @@ As a result, if we can solve the problem using CSS,
 by manipulating classes, then that's what we need to do.
 */
 
-// 1:01:15 Атрибуты и свойства DOM-элементов.
+// 1:01:15 Attributes & properties of DOM-elements.
 /*
 У разных DOM-элементов могут быть разные свойства.
 Например у тега <а> есть свойства, связанные со ссылками.
