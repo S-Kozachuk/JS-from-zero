@@ -1026,26 +1026,24 @@ Method getComputedStyle use for get a current value of property.
 */
 // Examples
 // Getting an element to constant "element"
-const element = document.querySelector('.lesson__item-list_red');
+//const element = document.querySelector('.lesson__item-list_red');
 
 // Element style
-
+/*
 const elementStyle = getComputedStyle(element);
 console.log(elementStyle.paddingBottom);
-
+*/
 
 // Getting number (use the parseInt function)
-
+/*
 const paddingBottom = parseInt(elementStyle.paddingBottom);
 console.log(paddingBottom);
-
-
-// Важно не забывать про единицы измерения
+*/
 // It is important not to be to forget units of measurement
 //element.style.marginleft = 20;
-// ^ в этом случае ничего не сработает
-//element.style.marginleft = "20px";
-// ^ что бы стиль появился нужно записывать число как строку с единицей измерения
+// ^ in this case, nothing will work
+//element.style.marginLeft = "50px";
+// ^ Record figure as string with unit of measurement, if style to appear.
 
 // 1:00:30 Стили и классы
 /*
