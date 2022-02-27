@@ -1047,7 +1047,7 @@ console.log(paddingBottom);
 
 // 1:00:30 Classes and styles
 /*
-From JavaScript we can managing classes and styles of object.
+From JavaScript we can managing both classes and styles of object.
 Classes managing is more priority task then styles.
 
 You should manipulate the "style" property only
