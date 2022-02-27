@@ -1045,18 +1045,17 @@ console.log(paddingBottom);
 //element.style.marginLeft = "50px";
 // ^ Record figure as string with unit of measurement, if style to appear.
 
-// 1:00:30 Стили и классы
+// 1:00:30 Classes and styles
 /*
-Из JavaScript можем управлять классами и стилями объекта.
+From JavaScript we can managing classes and styles of object.
+Classes managing is more priority task then styles.
 
-Управление классами более приоритетная задача.
+You should manipulate the "style" property only
+if the classes can no longer help. 
+For example, when object coordinates is changed of the moment ("on the fly").
 
-Манипулировать свойством style следует только в том
-случае, если классы уже не могут помочь. 
-Например, при изменении координат объектов на лету.
-
-В итоге, если мы можем решить задачу с помощью CSS,
-путём манипуляции с классами, то так и нужно делать.
+As a result, if we can solve the problem using CSS,
+by manipulating classes, then that's what we need to do.
 */
 
 // 1:01:15 Атрибуты и свойства DOM-элементов.
