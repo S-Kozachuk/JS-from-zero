@@ -1085,11 +1085,11 @@ console.log(link.value);
 console.dir(link);
 */
 
-// 1:03:00 Abitraty properties (non-standart).
-const lessonText = document.querySelector('.lesson__text');
+// 1:03:00 Arbitrary properties (non-standart).
+//const lessonText = document.querySelector('.lesson__text');
 
 // Checking the attribute presence.
-lessonText.hasAttribute('name');
+//lessonText.hasAttribute('name');
 // Get the attribute value.
 //lessonText.getAttribute('name');
 // Setting the attribute value.
