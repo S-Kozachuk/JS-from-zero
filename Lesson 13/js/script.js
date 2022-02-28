@@ -1097,7 +1097,7 @@ console.dir(link);
 // Removing attribute.
 //lessonText.removeAttribute('name');
 
-// 1:04:00 Example
+// 1:04:00 Example of using attributes
 // Get an element to constant "lessonText"
 //const lessonText = document.querySelector('.lesson__text');
 // Setting the attribute value
