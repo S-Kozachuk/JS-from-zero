@@ -1085,7 +1085,7 @@ console.log(link.value);
 console.dir(link);
 */
 
-// 1:03:00 Arbitrary properties (non-standart).
+// 1:03:00 Arbitrary attributes (non-standart).
 //const lessonText = document.querySelector('.lesson__text');
 
 // Checking the attribute presence.
@@ -1097,12 +1097,12 @@ console.dir(link);
 // Removing attribute.
 //lessonText.removeAttribute('name');
 
-// 1:04:00 Пример
-// Получение элемента
+// 1:04:00 Example
+// Get an element to constant "lessonText"
 //const lessonText = document.querySelector('.lesson__text');
-// Установвка значения атрибута
+// Setting the attribute value
 //lesson__text.setAttribute('some-attribute', 'some-value');
-// Проверяем наличие атрибута
+// Checking the attribute presence
 /*
 if(lessonText.hasAttribute('some-attribute')) {
 console.log('some-attribute существует!');
