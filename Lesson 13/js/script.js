@@ -1060,9 +1060,9 @@ by manipulating classes, then that's what we need to do.
 
 // 1:01:15 Attributes & properties of DOM-elements.
 /*
-У разных DOM-элементов могут быть разные свойства.
-Например у тега <а> есть свойства, связанные со ссылками.
-А у тега <input> - свойства, связанные полем ввода и т.д.
+Different DOM-elements may have different properties.
+For example, the tag <a> has propertis associated with links.
+And the <input> tag has properties, associated with the	input field, etc.
 
 У HTML-тегов могут быть атрибуты. Когда браузер парсит (сканирует)
 HTML, что бы создать DOM-объекты для тегов, он распознаёт 
