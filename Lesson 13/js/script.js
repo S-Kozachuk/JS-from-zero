@@ -1085,16 +1085,16 @@ console.log(link.value);
 console.dir(link);
 */
 
-// 1:03:00 Произвольные атрибуты
-//const lessonText = document.querySelector('.lesson__text');
+// 1:03:00 Abitraty properties (non-standart).
+const lessonText = document.querySelector('.lesson__text');
 
-// Проверяем наличие атрибута.
-//lessonText.hasAttribute('name');
-// Получаем значение атрибута.
+// Checking the attribute presence.
+lessonText.hasAttribute('name');
+// Get the attribute value.
 //lessonText.getAttribute('name');
-// Устанавливаем значение атрибута.
+// Setting the attribute value.
 //lessonText.setAttribute('name', "value");
-// Удаляем атрибут.
+// Removing attribute.
 //lessonText.removeAttribute('name');
 
 // 1:04:00 Пример
