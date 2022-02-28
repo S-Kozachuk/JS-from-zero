@@ -1076,14 +1076,14 @@ const link = document.querySelector('.lesson__link');
 const input = document.querySelector('.lesson__input');
 
 console.log(link.href);
-console.log(input.href);
+console.log(input.href); // input field haven't a href property (return undefined)
 
 console.log(input.value);
 console.log(link.value);
-*/
 
-// Получение полного списка доступных свойств
-//console.dir(link);
+// Getting a full list of available properties (see the a.lesson_link object)
+console.dir(link);
+*/
 
 // 1:03:00 Произвольные атрибуты
 //const lessonText = document.querySelector('.lesson__text');
