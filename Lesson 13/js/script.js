@@ -1064,11 +1064,12 @@ Different DOM-elements may have different properties.
 For example, the tag <a> has propertis associated with links.
 And the <input> tag has properties, associated with the	input field, etc.
 
-У HTML-тегов могут быть атрибуты. Когда браузер парсит (сканирует)
-HTML, что бы создать DOM-объекты для тегов, он распознаёт 
-стандартные атрибуты и создаёт DOM-свойства для них.
+HTML-tags can have attributes. 
+When browser is parsing (scanning) HTML,
+to create a DOM-objects for tag, his recognizing a standarts attributes 
+and creatig DOM-properties for them.
 
-Каждый DOM-узел принадлежит соответствующему встроенному классу.
+Each DOM-node belongs to a corresponding built-in class.
 */
 /*
 const link = document.querySelector('.lesson__link');
