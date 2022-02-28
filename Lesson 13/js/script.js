@@ -1101,7 +1101,7 @@ console.dir(link);
 // Get an element to constant "lessonText"
 //const lessonText = document.querySelector('.lesson__text');
 // Setting the attribute value
-//lesson__text.setAttribute('some-attribute', 'some-value');
+//lessonText.setAttribute('some-attribute', 'some-value');
 // Checking the attribute presence
 /*
 if(lessonText.hasAttribute('some-attribute')) {
