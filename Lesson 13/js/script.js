@@ -1118,6 +1118,7 @@ This statement also works in reverse (with some exceptions).
 
 // Example
 
+// Get an object to constant "input"
 const input = document.querySelector('.lesson__input');
  
 input.setAttribute('id', '123');
