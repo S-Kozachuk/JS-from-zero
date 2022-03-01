@@ -1119,16 +1119,20 @@ This statement also works in reverse (with some exceptions).
 // Example
 
 // Get an object to constant "input"
-const input = document.querySelector('.lesson__input');
+//const input = document.querySelector('.lesson__input');
 // Assigning the "id" attribute with the value "132"
+/*
 input.setAttribute('id', '123');
 console.log(input.id);
+*/
 // Changed value
+/*
 input.id = "980";
 console.log (input.getAttribute('id'));
+*/
 	
 
-// 1:06:00 Тестирование со свойством value
+// 1:06:00 Test with value property
 //const input = document.querySelector('.lesson__input');
 /*
 input.setAttribute('value', 'Привет!');
