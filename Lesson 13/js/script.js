@@ -1120,10 +1120,10 @@ This statement also works in reverse (with some exceptions).
 
 // Get an object to constant "input"
 const input = document.querySelector('.lesson__input');
- 
+// Assigning the "id" attribute with the value "132"
 input.setAttribute('id', '123');
 console.log(input.id);
-
+// Changed value
 input.id = "980";
 console.log (input.getAttribute('id'));
 	
