@@ -1132,15 +1132,15 @@ console.log (input.getAttribute('id'));
 */
 	
 
-// 1:06:00 Test with value property
-//const input = document.querySelector('.lesson__input');
-/*
+// 1:06:00 Test with value property (exception)
+const input = document.querySelector('.lesson__input');
+// Set attribute to object "input"
 input.setAttribute('value', 'Привет!');
 console.log(input.value);
 
 input.value = "Как дела?";
-console.log(input.getAttribute('value'));
-*/
+console.log(input.getAttribute('value')); // not update
+
 
 // 1:06:26 Нестандартные атрибуты, dataset
 /*
