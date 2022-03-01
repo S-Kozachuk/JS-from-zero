@@ -1111,22 +1111,21 @@ console.log('some-attribute существует!');
 
 // 1:05:00 Sync between attributes & properties
 /*
-Для обращения к тому или иному свойству применяются
-При изменении стандартного атрибута, соответствующее
-свойство обновляется автоматически.
-Это утверждение работает и в обратном порядке (за некоторыми исключениями).
+The property can be accessed via attribute access methods. 
+If standard attribute are changing, appropriate property is update automatically.
+This statement also works in reverse (with some exceptions).
 */
 
-// Пример
-/*
+// Example
+
 const input = document.querySelector('.lesson__input');
  
 input.setAttribute('id', '123');
 console.log(input.id);
 
-input.id = "321";
+input.id = "980";
 console.log (input.getAttribute('id'));
-*/
+	
 
 // 1:06:00 Тестирование со свойством value
 //const input = document.querySelector('.lesson__input');
