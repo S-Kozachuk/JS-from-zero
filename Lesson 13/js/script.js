@@ -1173,13 +1173,14 @@ then in JavaScript it would be worth specifying name in the lowerCamelCase style
 // Example: data-size-value
 //console.log(lessonText.dataset.sizeValue);
 
-// 1:07:00 Полезные свойства
-//const link = document.querySelector(".lesson__link");
+// 1:07:00 Useful properties
+const link = document.querySelector(".lesson__link");
 
-// Получение тега элемента
-//console.log(link.tagName);
+// Getting a tag of element
+console.log(link.tagName);
 
 // Скрыть/показать элемента
+// Hide/show element
 //console.log(link.hidden);
 //link.hidden = true;
 
