@@ -1143,31 +1143,33 @@ input.value = "Как дела?";
 console.log(input.getAttribute('value')); // not update
 */
 
-// 1:06:26 Нестандартные атрибуты, dataset
+// 1:06:26  No standard attributes, dataset
 /*
-Ранее мы уже использовали нестандартные атрибуты,
-но по ряду причин это рискованно.
+Previously, we have already used non-standard attributes.
+But for a number of reasons it is risky.
 
-Все атрибуты, начинающиеся с префикса «-data»,
-зарезервированы для использования программистами.
-Они доступны в свойстве dataset.
+Early, we use no-standard attributes. But to 
+
+All attributes starting with the prefix «data-»,
+are reserved for use by programmers.
+They are availibe in the dataset property. 
 */
 
-// Получаем элемент
-//const lessonText = document.querySelector('.lesson__text');
+// Get an element to constant "lessonText"
+const lessonText = document.querySelector('.lesson__text');
 
-// Получаем data-атрибут
-//console.log(lessonText.dataset.size);
+// Getting data-attribute
+console.log(lessonText.dataset.size);
 
-// Перезаписываем data-атрибут
-//lessonText.dataset.size = "5810";
-//console.log(lessonText.dataset.size);
+// Overwriting data-attribute
+lessonText.dataset.size = "5810";
+console.log(lessonText.dataset.size);
 /*
-Если бы имя data-атрибута состояло из 2-х и более слов, 
-то в JavaScript стоило бы указывать имя в стиле lowerCamelCase.
+If the name data-attribute consisted from two or more words,
+then in JavaScript it would be worth specifying name in the lowerCamelCase style.
 */
-//data-size-value
-//console.log(lessonText.dataset.sizeValue);
+// data-size-value
+console.log(lessonText.dataset.sizeValue);
 
 // 1:07:00 Полезные свойства
 //const link = document.querySelector(".lesson__link");
