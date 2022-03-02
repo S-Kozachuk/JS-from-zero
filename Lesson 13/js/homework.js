@@ -9,10 +9,11 @@
 // Solution
 // The 1-st method
 // Get attribute to constant "data"
-const data = document.querySelector('[data-say-hi]');
+//const data = document.querySelector('[data-say-hi]');
 // Get a value from attribute
-const result = data.getAttribute('data-say-hi');
-console.log(result);
+//const result = data.getAttribute('data-say-hi');
+// Output(reading) value from this attribute
+//console.log(result);
 
 // The 2-nd method
 
