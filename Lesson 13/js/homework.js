@@ -16,7 +16,10 @@
 //console.log(result);
 
 // The 2-nd method
-
+/*
+const data = document.querySelector('[data-say-hi]');
+console.log(data.data);
+*/
 
 // Alternative variant (look a string 674)
 
