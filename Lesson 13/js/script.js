@@ -1175,10 +1175,10 @@ then in JavaScript it would be worth specifying name in the lowerCamelCase style
 
 // 1:07:00 Useful properties
 // Getting an element .lesson__link to constant "link"
-const link = document.querySelector(".lesson__link");
+//const link = document.querySelector(".lesson__link");
 
 // Getting a tag of element (in upper case)
-console.log(link.tagName);
+//console.log(link.tagName);
 
 // Hide/show element
 //link.hidden = true;
