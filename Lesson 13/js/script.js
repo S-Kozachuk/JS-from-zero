@@ -1156,20 +1156,22 @@ They are availibe in the dataset property.
 */
 
 // Get an element to constant "lessonText"
-const lessonText = document.querySelector('.lesson__text');
+//const lessonText = document.querySelector('.lesson__text');
 
 // Getting data-attribute
-console.log(lessonText.dataset.size);
+//console.log(lessonText.dataset.size);
 
 // Overwriting data-attribute
+/*
 lessonText.dataset.size = "5810";
 console.log(lessonText.dataset.size);
+*/
 /*
 If the name data-attribute consisted from two or more words,
 then in JavaScript it would be worth specifying name in the lowerCamelCase style.
 */
-// data-size-value
-console.log(lessonText.dataset.sizeValue);
+// Example: data-size-value
+//console.log(lessonText.dataset.sizeValue);
 
 // 1:07:00 Полезные свойства
 //const link = document.querySelector(".lesson__link");
