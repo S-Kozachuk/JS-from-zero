@@ -5,8 +5,7 @@
 Получить в переменную элемент с атрибутом data-say-hi
 и прочитать значение этого атрибута.
 */
-<div data-say-hi="yes">Привет!</div>
-
+//<div data-say-hi="yes">Привет!</div>
 /*
 const data = document.querySelector('')
 */
@@ -42,6 +41,6 @@ list.insert.AdjacentHTML(
     <li>Пункт №1</li>
     <li>Пункт №2</li>
 </ul>
-
+*/
 
 
