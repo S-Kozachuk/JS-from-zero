@@ -342,7 +342,7 @@ CSS - селектору.
 //const elemsEight = document.querySelectorAll('[data-item]');
 //console.log(elemsEight);
 
-// 21:40 Поиск по атрибуту со значением (в скобках)ф
+// 21:40 Поиск по атрибуту со значением (в скобках)
 //const elemsNine = document.querySelectorAll('[data-item="85"]')
 //console.log(elemsNine);
 

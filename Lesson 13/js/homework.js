@@ -6,9 +6,19 @@
 и прочитать значение этого атрибута.
 */
 //<div data-say-hi="yes">Привет!</div>
-/*
-const data = document.querySelector('')
-*/
+// Solution
+// The 1-st method
+// Get attribute to constant "data"
+const data = document.querySelector('[data-say-hi]');
+// Get a value from attribute
+const result = data.getAttribute('data-say-hi');
+console.log(result);
+
+// The 2-nd method
+
+
+// Alternative variant (look a string 674)
+
 // Задача №2.
 // Получить в переменную элемент с текстом Йончи
 /*
