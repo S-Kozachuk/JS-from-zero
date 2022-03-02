@@ -1174,14 +1174,14 @@ then in JavaScript it would be worth specifying name in the lowerCamelCase style
 //console.log(lessonText.dataset.sizeValue);
 
 // 1:07:00 Useful properties
+// Getting an element .lesson__link to constant "link"
 const link = document.querySelector(".lesson__link");
 
-// Getting a tag of element
+// Getting a tag of element (in upper case)
 console.log(link.tagName);
 
-// Скрыть/показать элемента
 // Hide/show element
-//console.log(link.hidden);
 //link.hidden = true;
+//console.log(link.hidden);
 
 
