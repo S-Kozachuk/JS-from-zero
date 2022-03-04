@@ -26,10 +26,11 @@ console.log(dataElem.dataset.order);
 // Get element to variable with "Yonchi" text
 /*
 <ul>
-    <li>Корчи</li>
-    <li>Йончи</li>
+	<li>Корчи</li>
+	<li>Йончи</li>
 </ul>
 */
+// Решение задачи. Task solution.
 
 // Задача №3.
 // Получить в переменную коллекцию элементов с классом Like
