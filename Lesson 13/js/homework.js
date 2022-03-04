@@ -84,13 +84,13 @@ console.log(like);
 // Where add <li>Текс</li> элемент?
 
 // JS
-
+/*
 const list = document.querySelectorAll('ul');
 list.insertAdjacentHTML(
     'beforeend',
     '<li>Текст</li>'
 );
-
+*/
 
 // HTML
 /*
