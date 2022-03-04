@@ -361,7 +361,7 @@ const elems = document.querySelectorAll('li');
 console.log(elems[2]);
 */
 
-// 22:20 Т.к. elems - коллекция, значи её можно перебрать.
+// 22:20 Т.к. elems - коллекция, значит её можно перебрать.
 /*
 for (const item of elems) {
     console.log(item);

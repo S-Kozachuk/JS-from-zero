@@ -6,7 +6,7 @@
 и прочитать значение этого атрибута.
 */
 //<div data-say-hi="yes">Привет!</div>
-// Solution
+// Решение. Solution.
 // The 1-st method
 // Get attribute to constant "data"
 //const data = document.querySelector('[data-say-hi]');
@@ -31,6 +31,37 @@ console.log(dataElem.dataset.order);
 </ul>
 */
 // Решение задачи. Task solution.
+// Первый способ. First method.
+// Получение в константу list 14-ого элемента списка (сквозной посик)
+const list = document.querySelectorAll('li')[14];
+// Используя свойство outerHTML получаю html-разметку элмента + содержимое.
+const yonchi = list.outerHTML;
+console.log(yonchi);
+/* 
+Нужно получить именно елемент, а не просто его содержимое (content)
+*/
+
+// Нестандартный вариант решения 2-ой задачи
+/*
+Там во втором задании нужно элемент с текстом целиком в переменную получить, насколько я понял (с тегами и контентом).
+Я такую функцию прикольную сделал:
+
+const yonchiElem = tagFinder("li","Йончи");
+function tagFinder(tagName, text)
+{
+	let result;
+	const element = document.querySelectorAll(`${tagName}`);
+	for (let name of element)
+	{
+		if (name.textContent == `${text}`)
+			result = name;
+	}
+	return result;
+}
+console.log(yonchiElem);
+
+Вбиваешь нужный тег и текст и она возвращает тебе элемент))
+*/
 
 // Задача №3.
 // Получить в переменную коллекцию элементов с классом Like
@@ -39,6 +70,7 @@ console.log(dataElem.dataset.order);
 <div class="subscribe"></div>
 <div class="like subscribe"></div>
 */
+
 // Задача №4
 //Куда добавится элемент <li>Текст</li>?
 
