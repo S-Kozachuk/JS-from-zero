@@ -74,6 +74,10 @@ console.log(yonchiElem);
 <div class="like subscribe"></div>
 */
 // Решение задачи. Task solution.
+/*
+const like = document.querySelectorAll('.like');
+console.log(like);
+*/
 
 // Задача №4
 //Куда добавится элемент <li>Текст</li>?
