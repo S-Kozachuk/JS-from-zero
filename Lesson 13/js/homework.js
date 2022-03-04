@@ -65,13 +65,15 @@ console.log(yonchiElem);
 Вбиваешь нужный тег и текст и она возвращает тебе элемент))
 */
 
-// Задача №3.
+// Задача №3. Task number 3.
 // Получить в переменную коллекцию элементов с классом Like
+// Get in variable collection of elements with like class
 /*
 <div class="like"></div>
 <div class="subscribe"></div>
 <div class="like subscribe"></div>
 */
+// Решение задачи. Task solution.
 
 // Задача №4
 //Куда добавится элемент <li>Текст</li>?
