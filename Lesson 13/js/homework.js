@@ -16,17 +16,10 @@
 //console.log(result);
 
 // The 2-nd method (2-ой способ)
-
+/*
 const dataElem = document.querySelector('[data-order]');
 console.log(dataElem.dataset.order);
-
-/*
-Пример от другого пользователя
-сonst elemOne = document.querySelector('[data-say-hi]');
-
-console.log(elemOne.dataset.sayHi);
 */
-// Alternative variant (look a string 674)
 
 // Задача №2.
 // Получить в переменную элемент с текстом Йончи
