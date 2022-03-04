@@ -21,8 +21,9 @@ const dataElem = document.querySelector('[data-order]');
 console.log(dataElem.dataset.order);
 */
 
-// Задача №2.
+// Задача №2. Task number 2.
 // Получить в переменную элемент с текстом Йончи
+// Get element to variable with "Yonchi" text
 /*
 <ul>
     <li>Корчи</li>
