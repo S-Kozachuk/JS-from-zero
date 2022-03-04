@@ -79,8 +79,9 @@ const like = document.querySelectorAll('.like');
 console.log(like);
 */
 
-// Задача №4
-//Куда добавится элемент <li>Текст</li>?
+// Задача №4. Task number 4.
+// Куда добавится элемент <li>Текст</li>?
+// Where add <li>Текс</li> элемент?
 
 // JS
 /*
