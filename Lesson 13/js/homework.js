@@ -31,7 +31,6 @@ console.log(dataElem.dataset.order);
 </ul>
 */
 // Решение задачи. Task solution.
-// Первый способ. First method.
 // Важно. Нужно получить именно елемент, а не просто его содержимое (content).
 // Получение в константу list 14-ого элемента списка (сквозной посик)
 //const list = document.querySelectorAll('li')[14];
@@ -41,29 +40,6 @@ const yonchi = list.outerHTML;
 console.log(yonchi);
 */
 
-// Нестандартный вариант решения 2-ой задачи отдугого пользователя 
-/*
-"Там во втором задании нужно элемент с текстом целиком в переменную получить, насколько я понял (с тегами и контентом).
-Я такую функцию прикольную сделал:"
-*/
-/*
-const yonchiElem = tagFinder("li","Йончи");
-function tagFinder(tagName, text)
-{
-	let result;
-	const element = document.querySelectorAll(`${tagName}`);
-	for (let name of element)
-	{
-		if (name.textContent == `${text}`)
-			result = name;
-	}
-	return result;
-}
-console.log(yonchiElem);
-*/
-/*
-Вбиваешь нужный тег и текст и она возвращает тебе элемент))
-*/
 
 // Задача №3. Task number 3.
 // Получить в переменную коллекцию элементов с классом Like
