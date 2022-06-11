@@ -8,9 +8,11 @@
 Это область доступная для работы, от левого края браузера
 до полосы прокрутки (при наличии).
 */
-
+// Getting the html tag
 const mainElement = document.documentElement;
+// Getting the window width
 const mainElementWidth = mainElement.clientWidth;
+// Getting the window height
 const mainElementHeight = mainElement.clientHeight;
 
 /*
@@ -19,7 +21,7 @@ const mainElementHeight = mainElement.clientHeight;
 досупная для работы.
 */
 
-
+console.log(mainElement);
 console.log(mainElementWidth);
 console.log(mainElementHeight);
 
