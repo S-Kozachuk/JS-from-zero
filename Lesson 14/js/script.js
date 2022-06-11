@@ -8,21 +8,21 @@
 Это область доступная для работы, от левого края браузера
 до полосы прокрутки (при наличии).
 */
-/*
+
 const mainElement = document.documentElement;
 const mainElementWidth = mainElement.clientWidth;
 const mainElementHeight = mainElement.clientHeight;
-*/
+
 /*
 ^^^
 В этих константах будет содержаться ширина и высота,
 досупная для работы.
 */
 
-/*
+
 console.log(mainElementWidth);
 console.log(mainElementHeight);
-*/
+
 // ^^^ Выводим в консоль
 
 
@@ -351,10 +351,10 @@ console.log(getItemTopDocumentCoord);
 
 // 31:30 Получение объекта по координатам
 // document.elementFromPoint(x, y);
-
+/*
 const elem = document.elementFromPoint(400, 100);
 
 console.log(elem);
-
+*/
 
 
