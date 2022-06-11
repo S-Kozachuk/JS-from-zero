@@ -28,13 +28,18 @@ console.log(mainElementHeight);
 // ^^^ Выводим в консоль
 
 
-// 1:45 Ширина и высота окна с учётом полосы прокрутки
+// 1:45 Ширина и высота окна (window) с учётом ширины полосы прокрутки
 /*
 const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
 
 console.log(windowWidth);
 console.log(windowHeight);
+*/
+/*
+Чаще всего используются свойства clientWidth и clientHeight 
+для объекта documentElement т.к. для работы обычно используются
+именно доступны размеры окна (без полосы прокрутки). 
 */
 
 // 2:40 Ширина и высота документа (включая прокрученную часть)
