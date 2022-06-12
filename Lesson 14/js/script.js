@@ -59,7 +59,7 @@ console.log(scrollWidth);
 console.log(scrollHeigh);
 */
 
-// 3:50 Getting the value of scroled pixels. Only read.
+// 3:50 Getting the value of scrolled pixels. Only read.
 /*
 const windowScrollTop = window.pageYOffset;
 const windowScrollLeft = window.pageXOffset;
