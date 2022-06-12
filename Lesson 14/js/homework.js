@@ -1,13 +1,13 @@
-// Домашняя работа. Home work.
+// Home work.
 
-// Задача №1.
-// Узнать ширину полосы прокрутки.
-
+// Task №1.
+// Getting the width of the scroll bar
+/*
 const fullWidth = window.innerWidth;
 const userWidth = document.documentElement.clientWidth;
 let scrollWidth = fullWidth - userWidth;
 console.log(scrollWidth+'px');
-
+*/
 // Задача №2.
 /*
 Браузер должен прокрутить страницу на 100px вниз,

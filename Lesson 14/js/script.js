@@ -9,22 +9,22 @@
 до полосы прокрутки (при наличии).
 */
 // Getting the html tag
-const mainElement = document.documentElement;
+// const mainElement = document.documentElement;
 // Getting the window width
-const mainElementWidth = mainElement.clientWidth;
+// const mainElementWidth = mainElement.clientWidth;
 // Getting the window height
-const mainElementHeight = mainElement.clientHeight;
+// const mainElementHeight = mainElement.clientHeight;
 
 /*
 ^^^
 В этих константах будет содержаться ширина и высота,
 досупная для работы.
 */
-
+/*
 console.log(mainElement);
 console.log(mainElementWidth);
 console.log(mainElementHeight);
-
+*/
 // ^^^ Выводим в консоль
 
 
@@ -43,21 +43,21 @@ console.log(windowHeight);
 */
 
 // 2:40 Ширина и высота документа (включая прокрученную часть)
-/*
+
 let scrollWidth = Math.max(
     document.body.scrollWidth, document.documentElement.scrollWidth,
     document.body.offsetWidth, document.documentElement.offsetWidth,
     document.body.clientWidth, document.documentElement.clientWidth
 );
 let scrollHeigh = Math.max(
-    document.body.scrollHeigh, document.documentElement.scrollHeigh,
-    document.body.offsetHeigh, document.documentElement.offsetHeigh,
-    document.body.clientHeigh, document.documentElement.clientHeigh
+    document.body.scrollHeight, document.documentElement.scrollHeight,
+    document.body.offsetHeight, document.documentElement.offsetHeight,
+    document.body.clientHeight, document.documentElement.clientHeight
 );
 
 console.log(scrollWidth);
 console.log(scrollHeigh);
-*/
+
 
 // 3:50 Получение кол-ва прокрученных пикселей. Только для чтения.
 /*
