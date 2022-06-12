@@ -43,7 +43,7 @@ console.log(windowHeight);
 */
 
 // 2:40 Ширина и высота документа (включая прокрученную часть)
-
+/*
 let scrollWidth = Math.max(
     document.body.scrollWidth, document.documentElement.scrollWidth,
     document.body.offsetWidth, document.documentElement.offsetWidth,
@@ -57,9 +57,9 @@ let scrollHeigh = Math.max(
 
 console.log(scrollWidth);
 console.log(scrollHeigh);
+*/
 
-
-// 3:50 Получение кол-ва прокрученных пикселей. Только для чтения.
+// 3:50 Getting the value of scroled pixels. Only read.
 /*
 const windowScrollTop = window.pageYOffset;
 const windowScrollLeft = window.pageXOffset;
@@ -68,10 +68,9 @@ console.log(windowScrollTop);
 console.log(windowScrollLeft);
 */
 /*
-Важно!
-Свойства работают только для чтения. Нельзя
-передать "своё" свойство для управления
-прокруткой страницы.
+Waring!
+Properties is power only read. Can't get
+the own property for manage page scroll.
 */
 
 // 5:10 Управление прокруткой страницы
