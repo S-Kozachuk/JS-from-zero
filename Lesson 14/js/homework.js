@@ -19,7 +19,9 @@ Use a setTimeout (make delay)
 */
 
 const allPage = document.getElementsByTagName('body');
-
+const buttons = document.querySelectorAll('yellow-button');
+console.log(buttons);
+/*
 function setElementScrollBy() {
     allPage.scrollBy({
         bottom: 20,
@@ -29,6 +31,8 @@ function setElementScrollBy() {
 }
 
 console.log (setElementScrollBy())
+*/
+
 
 // Задача №3.
 /*
