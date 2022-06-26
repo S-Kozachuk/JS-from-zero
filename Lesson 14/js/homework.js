@@ -8,14 +8,27 @@ const userWidth = document.documentElement.clientWidth;
 let scrollWidth = fullWidth - userWidth;
 console.log(scrollWidth+'px');
 */
-// Задача №2.
+
+// Task №2.
 /*
 Браузер должен прокрутить страницу на 100px вниз,
 спустя секунду после открытия страницы.
 
 Solved.
-Use a setTimeout
+Use a setTimeout (make delay)
 */
+
+const allPage = document.getElementsByTagName('body');
+
+function setElementScrollBy() {
+    allPage.scrollBy({
+        bottom: 20,
+        left: 0,
+        behavior: "smooth"
+    });
+}
+
+console.log (setElementScrollBy())
 
 // Задача №3.
 /*
