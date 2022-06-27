@@ -15,12 +15,13 @@ console.log(scrollWidth+'px');
 спустя секунду после открытия страницы.
 
 Solved.
-Use a setTimeout (make delay)
+Use a setTimeout (make delay) and scrollTo (6:55)
 */
-
+/*
 const allPage = document.getElementsByTagName('body');
 const buttons = document.querySelectorAll('yellow-button');
 console.log(buttons);
+*/
 /*
 function setElementScrollBy() {
     allPage.scrollBy({

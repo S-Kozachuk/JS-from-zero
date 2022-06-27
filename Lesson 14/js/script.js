@@ -60,13 +60,13 @@ console.log(scrollHeigh);
 */
 
 // 3:50 Getting the value of scrolled pixels. Only read.
-/*
+
 const windowScrollTop = window.pageYOffset;
 const windowScrollLeft = window.pageXOffset;
 
 console.log(windowScrollTop);
 console.log(windowScrollLeft);
-*/
+
 /*
 Waring!
 Properties is power only read. Can't get
