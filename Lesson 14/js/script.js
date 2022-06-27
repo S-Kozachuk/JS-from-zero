@@ -60,13 +60,13 @@ console.log(scrollHeigh);
 */
 
 // 3:50 Getting the value of scrolled pixels. Only read.
-
+/*
 const windowScrollTop = window.pageYOffset;
 const windowScrollLeft = window.pageXOffset;
 
 console.log(windowScrollTop);
 console.log(windowScrollLeft);
-
+*/
 /*
 Waring!
 Properties is power only read. Can't get
@@ -78,13 +78,13 @@ the own property for manage page scroll.
 Метод scrollBy(x,y) прокручивает страницу
 относительно её текущего положения.
 */
-/*
+
 function setScrollBy() {
     window.scrollBy(0, 50);
     const windowScrollTop = window.pageYOffset;
     console.log(windowScrollTop);
 }
-*/
+
 // ^^^ Прокрутка на 50 px вниз (по вертикали)
 
 // 6:55 Метод scrollTo (pageX, pageY)
