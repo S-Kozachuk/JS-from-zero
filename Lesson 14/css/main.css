@@ -6,15 +6,28 @@ h1 {
 	font-size: 35px;
 }
 
+a {
+	text-decoration: none;
+	color: black;
+}
+
 .color {
     color: #FFD700;
 }
 
 .yellow-button {
-   font-size: 12px;
-   padding: 10px 20px;
-   background-color: yellow;
+	padding: 10px 20px;
+   	font-size: 12px;
+	font-weight: 700;
+	background-color: yellow;
+	cursor: pointer;
 }
+
+.yellow-button:hover {
+	background-color: #f0f02f;
+}
+
+
 
 .lesson {
     position: relative;
@@ -43,7 +56,6 @@ h1 {
     margin: 0px 0px 20px 0px;
 }
 
-.
 
 
 
