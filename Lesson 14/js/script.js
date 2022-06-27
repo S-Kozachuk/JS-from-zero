@@ -78,12 +78,15 @@ the own property for manage page scroll.
 Метод scrollBy(x,y) прокручивает страницу
 относительно её текущего положения.
 */
+let btnOne = document.querySelector('.btn-one');
 
 function setScrollBy() {
     window.scrollBy(0, 50);
     const windowScrollTop = window.pageYOffset;
     console.log(windowScrollTop);
 }
+
+btnOne.addEventListener('click', setScrollBy());
 
 // ^^^ Прокрутка на 50 px вниз (по вертикали)
 
