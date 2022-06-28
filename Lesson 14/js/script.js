@@ -78,6 +78,7 @@ the own property for manage page scroll.
 Метод scrollBy(x,y) прокручивает страницу
 относительно её текущего положения.
 */
+/*
 let btnOne = document.querySelector('.btn-one');
 
 function setScrollBy() {
@@ -89,7 +90,7 @@ function setScrollBy() {
 btnOne.addEventListener('click',()=> {
 	setScrollBy();
 });
-
+*/
 // ^^^ Прокрутка на 50 px вниз (по вертикали)
 
 // 6:55 Метод scrollTo (pageX, pageY)
@@ -99,22 +100,33 @@ btnOne.addEventListener('click',()=> {
 Также можно использовать метод window.scroll(),
 они идентичны.
 */
-/*
+
+let btnTwo = document.querySelector('.btn-two');
+
 function setScrollTo() {
     window.scrollTo(0, 50);
     const windowScrollTop = window.pageYOffset;
     console.log(windowScrollTop);
 }
 
+
+
 function setScrollToOptions(){
     window.scrollTo({
-        top: 500,
+        top: 50,
         left: 0,
         behavior: "smooth"
         // ^^^ тип пркрутки, варианты значений: smooth, instant, auto (по умолчанию)
     });
+	const windowScrollTop = window.pageYOffset;
+    console.log(windowScrollTop);
 }
-*/
+
+btnTwo.addEventListener('click',()=>{
+	setScrollToOptions();
+})
+
+
 // Опции не работают в браузере Safari
 
 
