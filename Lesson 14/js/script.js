@@ -86,7 +86,9 @@ function setScrollBy() {
     console.log(windowScrollTop);
 }
 
-btnOne.addEventListener('click', setScrollBy());
+btnOne.addEventListener('click',()=> {
+	setScrollBy();
+});
 
 // ^^^ Прокрутка на 50 px вниз (по вертикали)
 
