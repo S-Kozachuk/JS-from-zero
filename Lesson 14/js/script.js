@@ -121,7 +121,7 @@ function setScrollToOptions(){
         top: 500,
         left: 0,
         behavior: "smooth"
-        // ^^^ тип пркрутки, варианты значений: smooth, instant, auto (по умолчанию)
+        // ^^^ тип прокрутки, варианты значений: smooth, instant, auto (по умолчанию)
     });
 	const windowScrollTop = window.pageYOffset;
     console.log(windowScrollTop);
