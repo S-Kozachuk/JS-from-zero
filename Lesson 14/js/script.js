@@ -105,8 +105,8 @@ let btnTwo = document.querySelector('.btn-two');
 
 function setScrollTo() {
     window.scrollTo(0, 50);
-    const windowScrollTop = window.pageYOffset;
-    console.log(windowScrollTop);
+    const windowScrollTo = window.pageYOffset;
+    console.log(windowScrollTo);
 }
 
 btnTwo.addEventListener('click',()=>{
