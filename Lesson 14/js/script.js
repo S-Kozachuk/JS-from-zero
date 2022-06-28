@@ -109,11 +109,16 @@ function setScrollTo() {
     console.log(windowScrollTop);
 }
 
+btnTwo.addEventListener('click',()=>{
+	setScrollTo();
+});
 
+
+let btnThree = document.querySelector('.btn-three');
 
 function setScrollToOptions(){
     window.scrollTo({
-        top: 50,
+        top: 500,
         left: 0,
         behavior: "smooth"
         // ^^^ тип пркрутки, варианты значений: smooth, instant, auto (по умолчанию)
@@ -122,7 +127,7 @@ function setScrollToOptions(){
     console.log(windowScrollTop);
 }
 
-btnTwo.addEventListener('click',()=>{
+btnThree.addEventListener('click',()=>{
 	setScrollToOptions();
 })
 
