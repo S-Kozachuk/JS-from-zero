@@ -137,14 +137,11 @@ btnThree.addEventListener('click',()=>{
 
 // 9:35 Метод scrollIntoView
 /*
-Вызов elem.scrollIntoView(top) прокручивает страницу,
-что бы elem оказался вверху. 
+Вызов elem.scrollIntoView(top) прокручивает страницу, что бы elem оказался вверху. 
 У него есть один аргумент:
-
 - если top = true(по умолчанию), то страница будет прокручена,
-что бы elem появился в верхней части окна.
+что бы elem появился в верхней части окна. Параметр можюно не указывать
 Верхний край элемента совмещён с верхней частью окна.
-
 - если top = false, то страница будет прокручена, что бы elem
 появился внизу.
 Нижний край элемента совмещён с нижним краем окна.
@@ -153,24 +150,45 @@ const btnFour = document.querySelector('.btn-four');
 const btnFive = document.querySelector('.btn-five');
 const btnSix = document.querySelector('.btn-six');
 
+// Default value (true)
+function setScrollIntoView() {
+    const lessonSelected = document.querySelector('.lesson__selected');
+    lessonSelected.scrollIntoView();
+}
+
+btnFour.addEventListener('click',()=>{
+	setScrollIntoView();
+});
+
+// False value
 function setScrollIntoView(top) {
     const lessonSelected = document.querySelector('.lesson__selected');
     lessonSelected.scrollIntoView(top);
 }
 
-btnFour.addEventListener('click', ()=>{
-	setScrollIntoView();
+btnFive.addEventListener('click',()=>{
+	setScrollIntoView(false);
 });
 
-// Расширенный вариант записи (с параметрами)
-/*
-function setScrollIntoViewOptions(top) {
-    const lessonSelected = document.querySelector('.lessonSelected');
+// Additional record (with parameters)
+
+function setScrollIntoViewOptions() {
+    const lessonSelected = document.querySelector('.lesson__selected');
     lessonSelected.scrollIntoView({
-    // Значения: "start", "center", "end" или "nearest". По умолчанию ""
+    	// Value: "start", "center", "end" или "nearest". By default ""
+		block: "center",
+		// Value: "start", "center", "end" или "nearest". По умолчанию ""
+		inline: "nearest",
+		// Value: "auto" or "smooth". By default "auto".
+		behavior: "smooth"
     });
 }
-*/
+
+btnSix.addEventListener('click',()=>{
+	setScrollIntoViewOptions();
+})
+
+
 
 // 12:35 Запрет прокрутки окна браузера
 /*
