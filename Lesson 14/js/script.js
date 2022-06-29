@@ -100,7 +100,7 @@ btnOne.addEventListener('click',()=> {
 Также можно использовать метод window.scroll(),
 они идентичны.
 */
-
+/*
 let btnTwo = document.querySelector('.btn-two');
 
 function setScrollTo() {
@@ -130,7 +130,7 @@ function setScrollToOptions(){
 btnThree.addEventListener('click',()=>{
 	setScrollToOptions();
 })
-
+*/
 
 // Опции не работают в браузере Safari
 
@@ -149,12 +149,12 @@ btnThree.addEventListener('click',()=>{
 появился внизу.
 Нижний край элемента совмещён с нижним краем окна.
 */
-/*
+
 function setScrollIntoView(top) {
     const lessonSelected = document.querySelector('.lessonSelected');
     lessonSelected.scrollIntoView(top);
 }
-*/
+
 // Расширенный вариант записи (с параметрами)
 /*
 function setScrollIntoViewOptions(top) {
