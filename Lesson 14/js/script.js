@@ -149,11 +149,18 @@ btnThree.addEventListener('click',()=>{
 появился внизу.
 Нижний край элемента совмещён с нижним краем окна.
 */
+const btnFour = document.querySelector('.btn-four');
+const btnFive = document.querySelector('.btn-five');
+const btnSix = document.querySelector('.btn-six');
 
 function setScrollIntoView(top) {
-    const lessonSelected = document.querySelector('.lessonSelected');
+    const lessonSelected = document.querySelector('.lesson__selected');
     lessonSelected.scrollIntoView(top);
 }
+
+btnFour.addEventListener('click', ()=>{
+	setScrollIntoView();
+});
 
 // Расширенный вариант записи (с параметрами)
 /*
