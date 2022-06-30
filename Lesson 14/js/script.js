@@ -145,12 +145,16 @@ btnThree.addEventListener('click',()=>{
 - если top = false, то страница будет прокручена, что бы elem
 появился внизу.
 Нижний край элемента совмещён с нижним краем окна.
+
+Didn't work in Safari browser
 */
+/*
 const btnFour = document.querySelector('.btn-four');
 const btnFive = document.querySelector('.btn-five');
 const btnSix = document.querySelector('.btn-six');
-
+*/
 // Default value (true)
+/*
 function setScrollIntoView() {
     const lessonSelected = document.querySelector('.lesson__selected');
     lessonSelected.scrollIntoView();
@@ -159,8 +163,10 @@ function setScrollIntoView() {
 btnFour.addEventListener('click',()=>{
 	setScrollIntoView();
 });
+*/
 
 // False value
+/*
 function setScrollIntoView(top) {
     const lessonSelected = document.querySelector('.lesson__selected');
     lessonSelected.scrollIntoView(top);
@@ -169,15 +175,15 @@ function setScrollIntoView(top) {
 btnFive.addEventListener('click',()=>{
 	setScrollIntoView(false);
 });
-
+*/
 // Additional record (with parameters)
-
+/*
 function setScrollIntoViewOptions() {
     const lessonSelected = document.querySelector('.lesson__selected');
     lessonSelected.scrollIntoView({
-    	// Value: "start", "center", "end" или "nearest". By default ""
+    	// Value: "start", "center", "end" или "nearest". By default "start"
 		block: "center",
-		// Value: "start", "center", "end" или "nearest". По умолчанию ""
+		// Value: "start", "center", "end" или "nearest". By default "nearest"
 		inline: "nearest",
 		// Value: "auto" or "smooth". By default "auto".
 		behavior: "smooth"
@@ -187,7 +193,7 @@ function setScrollIntoViewOptions() {
 btnSix.addEventListener('click',()=>{
 	setScrollIntoViewOptions();
 })
-
+*/
 
 
 // 12:35 Запрет прокрутки окна браузера
