@@ -196,13 +196,20 @@ btnSix.addEventListener('click',()=>{
 */
 
 
-// 12:35 Запрет прокрутки окна браузера
-/*
+// 12:35 Block scroll of browser window
+
+
+const 
+
 function setEnableDisableScroll() {
     //document.body.style.overflow = "hidden";
     document.body.classList.toggle('scroll-lock');
 }
-*/
+
+btnSix.addEventListener('click',()=>{
+	setScrollIntoViewOptions();
+})
+
 /*
 Важно!
 Для прокрутки страницы из JavaScript её
