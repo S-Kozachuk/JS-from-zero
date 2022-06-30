@@ -199,15 +199,15 @@ btnSix.addEventListener('click',()=>{
 // 12:35 Block scroll of browser window
 
 
-const 
+const scrollLock = document.querySelector('.btn-lock');
 
 function setEnableDisableScroll() {
-    //document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden";
     document.body.classList.toggle('scroll-lock');
 }
 
-btnSix.addEventListener('click',()=>{
-	setScrollIntoViewOptions();
+scrollLock.addEventListener('click',()=>{
+	setEnableDisableScroll();
 })
 
 /*

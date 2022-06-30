@@ -11,6 +11,10 @@ a {
 	color: black;
 }
 
+body.scroll-lock {
+	overflow: hidden;
+}
+
 .color {
     color: #FFD700;
 }
