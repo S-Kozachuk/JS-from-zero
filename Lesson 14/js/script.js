@@ -197,8 +197,7 @@ btnSix.addEventListener('click',()=>{
 
 
 // 12:35 Block scroll of browser window
-
-
+/*
 const scrollLock = document.querySelector('.btn-lock');
 
 function setEnableDisableScroll() {
@@ -209,16 +208,13 @@ function setEnableDisableScroll() {
 scrollLock.addEventListener('click',()=>{
 	setEnableDisableScroll();
 })
-
+*/
 /*
 Важно!
-Для прокрутки страницы из JavaScript её
-DOM должен быть полностью построен.
-Например, если попытаться прокрутить
-страницу из скрипта, размещённого 
+Для прокрутки страницы из JavaScript её DOM должен быть полностью построен.
+Например, если попытаться прокрутить страницу из скрипта, размещённого 
 в <head>, это не сработает.
-Поэтому скрипты нужно подключать в самой нижней
-части html-документа.
+Поэтому скрипты нужно подключать в самой нижней части html-документа.
 */
 
 
