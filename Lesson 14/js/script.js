@@ -219,20 +219,21 @@ scrollLock.addEventListener('click',()=>{
 
 // 14:05 Single elements on page
 
+// 14:40 Metrics of elements on page
+// Get an object
+const block = document.querySelector('.lesson__block');
+console.log(block);
 
-// 14:40 Метрики элементов на странице
-//Получаем объект
-//const block = document.querySelector('.lesson__block');
+// Object position
+// Properties: offsetParent, offsetLeft и offsetTop
 
-// Позиция объекта
-// Свойства offsetParent, offsetLeft и offsetTop
 
-/*
-Получаем родительский элемент
-относительно которого позиционирован 
-наш объект 
-*/
-//const elementOffsetParent = block.offsetParent;
+// Getting the parent element relative to which the object is positioned
+const elementOffsetParent = block.offsetParent;
+console.log(elementOffsetParent);
+
+const elementOffsetLeft = block.offsetLeft;
+console.log(elementOffsetLeft);
 
 /*
 Это будет ближайщий предок, который 
