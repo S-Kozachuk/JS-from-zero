@@ -284,9 +284,10 @@ console.log(elementClientTop);
 console.log(elementClientLeft);
 */
 
-// 21:00 Размеры объекта без рамок и полосы прокрутки
+// 21:00 Object measurement without frame and scrolling line"
 // clientWidth и clientHeight
 /*
+const block = document.querySelector('.lesson__block');
 const elementClientWidth = block.clientWidth;
 const elementClientHeight = block.clientHeight;
 
@@ -294,11 +295,11 @@ console.log(elementClientWidth);
 console.log(elementClientHeight);
 */
 /*
-Из чего состоит общая ширина (offsetWidth) объекта?
-offsetWidth(500px) - рамка слева(20px) + рамка справа(20px) + полоса прокрутки(17px) = 443px
+What is the total width (offsetWidth) of the object?
+offsetWidth(500px) - left frame (20px) + right frame (20px) + scroll bar (17px) = 443px
 */
 
-// 22:20 Размеры объекта c учётом невидимой области
+// 22:20 Object dimensions with invisible area
 // scrollWidth и scrollHeight
 /*
 Методы scrollWidth и scrollHeigh возвращают размеры объекта,
