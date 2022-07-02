@@ -239,11 +239,11 @@ This wil be a closest parent, satisfying the following conditions:
 console.log(elementOffsetParent);
 
 /*
-Ситуации в которых offsetParent равно null:
-1. Для скрытых элементов
-(с - свойством display: none или когда его нет в документе).
-2. Для элементов <body> и <html>.
-3. Для элементов с position: fixed.
+Situation, in which offsetParent is null:
+1. For hidden elements
+(with display property: none or when it is not in the document).
+2. For <body> and <html> elements.
+3. For elements with "position: fixed" property.
 */
 
 // 17:35 Свойства offsetParent, offsetLeft и offsetTop
