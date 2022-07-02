@@ -226,26 +226,17 @@ console.log(block);
 
 // Object position
 // Properties: offsetParent, offsetLeft и offsetTop
-
-
 // Getting the parent element relative to which the object is positioned
 const elementOffsetParent = block.offsetParent;
-console.log(elementOffsetParent);
-
-const elementOffsetLeft = block.offsetLeft;
-console.log(elementOffsetLeft);
 
 /*
-Это будет ближайщий предок, который 
-удовлетворяет следующим условиям:
-
-1. Является CSS-позиционированным
-(CSS-свойство position равно absolute, relative, fixed или sticky)
-2. или теги <td>, <th>, <table> 
-3. или <body>
+This wil be a closest parent, satisfying the following conditions:
+1. Is CSS-positioned
+(the CSS-property position is equal to absolute, relative, fixed or sticky)
+2. or tags <td>, <th>, <table> 
+3. or <body>
 */
-
-//comsole.log(elementOffsetParent);
+console.log(elementOffsetParent);
 
 /*
 Ситуации в которых offsetParent равно null:
