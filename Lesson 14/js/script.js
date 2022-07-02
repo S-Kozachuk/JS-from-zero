@@ -300,14 +300,14 @@ offsetWidth(500px) - left frame (20px) + right frame (20px) + scroll bar (17px) 
 */
 
 // 22:20 Object dimensions with invisible area
-// scrollWidth и scrollHeight
+// scrollWidth and scrollHeight
 /*
-Методы scrollWidth и scrollHeigh возвращают размеры объекта,
-включающие в себя прокручиваемую (невидимую) область.
-В остальном данные методы работают так же как clientWidth и clientHeight.
-Т.е. возвращают размеры объекта без учёта рамок и полосы прокрутки.
+Properties scrollWidth and scrollHeight returned objects, including
+scrollable (invisible) area. Otherwise, they work the same way clientWidth 
+and clientHeight properties.
 */
 /*
+const block = document.querySelector('.lesson__block');
 const elementScrollWidth = block.scrollWidth;
 const elementScrollHeight = block.scrollHeight;
 
