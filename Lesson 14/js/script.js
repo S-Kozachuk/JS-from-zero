@@ -221,13 +221,15 @@ scrollLock.addEventListener('click',()=>{
 
 // 14:40 Metrics of elements on page
 // Get an object
+/*
 const block = document.querySelector('.lesson__block');
 console.log(block);
+*/
 
 // Object position
 // Properties: offsetParent, offsetLeft и offsetTop
 // Getting the parent element relative to which the object is positioned
-const elementOffsetParent = block.offsetParent;
+// const elementOffsetParent = block.offsetParent;
 
 /*
 This wil be a closest parent, satisfying the following conditions:
@@ -236,7 +238,7 @@ This wil be a closest parent, satisfying the following conditions:
 2. or tags <td>, <th>, <table> 
 3. or <body>
 */
-console.log(elementOffsetParent);
+// console.log(elementOffsetParent);
 
 /*
 Situation, in which offsetParent is null:
@@ -248,27 +250,27 @@ Situation, in which offsetParent is null:
 
 // 17:35 Property: offsetParent, offsetLeft и offsetTop
 // Getting the element position relative to the ancestor
-
+/*
 const elementOffsetLeft = block.offsetLeft;
 const elementOffsetTop = block.offsetTop;
 
 console.log (elementOffsetLeft);
 console.log (elementOffsetTop);
+*/
 
+// 19:00 Overall object dimensions.
+// Getting an object
+const block = document.querySelector('.lesson__block');
 
-// 19:00 Получение общих размеров.
-// Получаем объект
-//const block = document.querySelector('.lesson__block');
+// Getting an object dimensions (with border and indents)
 
-// Получение размеров объекта (включая рамку и отступы)
-/*
 const elementOffsetWidth = block.offsetWidth;
 const elementOffsetHeight = block.offsetHeight;
 
 console.log (elementOffsetWidth);
 console.log (elementOffsetHeight);
-*/
-// ! Метрики для не отображаемых объектов равны нулю
+
+// For not displayed objects metrics is equal zero
 
 
 // 20:00 Отступы внутренней части элемента от внешней
