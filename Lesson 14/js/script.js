@@ -260,22 +260,23 @@ console.log (elementOffsetTop);
 
 // 19:00 Overall object dimensions.
 // Getting an object
-const block = document.querySelector('.lesson__block');
+// const block = document.querySelector('.lesson__block');
 
 // Getting an object dimensions (with border and indents)
-
+/*
 const elementOffsetWidth = block.offsetWidth;
 const elementOffsetHeight = block.offsetHeight;
 
 console.log (elementOffsetWidth);
 console.log (elementOffsetHeight);
-
+*/
 // For not displayed objects metrics is equal zero
 
 
-// 20:00 Отступы внутренней части элемента от внешней
-// clinetTop и clientLeft
+// 20:00 Indents from internal element part to external (frame width)
+// clinetTop and clientLeft properties
 /*
+const block = document.querySelector('.lesson__block');
 const elementClientTop = block.clientTop;
 const elementClientLeft = block.clientLeft;
 
