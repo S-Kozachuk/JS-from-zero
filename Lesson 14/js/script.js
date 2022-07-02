@@ -246,15 +246,15 @@ Situation, in which offsetParent is null:
 3. For elements with "position: fixed" property.
 */
 
-// 17:35 Свойства offsetParent, offsetLeft и offsetTop
-//Получение позиции элемента относительно предка (offsetParent)
-/*
+// 17:35 Property: offsetParent, offsetLeft и offsetTop
+// Getting the element position relative to the ancestor
+
 const elementOffsetLeft = block.offsetLeft;
 const elementOffsetTop = block.offsetTop;
 
 console.log (elementOffsetLeft);
 console.log (elementOffsetTop);
-*/
+
 
 // 19:00 Получение общих размеров.
 // Получаем объект
