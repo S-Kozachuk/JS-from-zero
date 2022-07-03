@@ -340,7 +340,7 @@ const block = document.querySelector('.lesson__block');
 
 function setElementScrollBy() {
     block.scrollBy({
-        top: 20,
+        top: 18,
         left: 0,
         behavior: "smooth"
     })
