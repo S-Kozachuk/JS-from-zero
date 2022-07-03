@@ -341,7 +341,7 @@ const scrollBtn = document.querySelector('.btn-seven');
 
 function setElementScrollBy() {
     block.scrollBy({
-        top: 150,
+        top: 20,
         left: 0,
         behavior: "smooth"
     });
