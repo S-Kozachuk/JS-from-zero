@@ -315,6 +315,7 @@ console.log(elementScrollWidth);
 console.log(elementScrollHeight);
 */
 
+
 // 23:00 Scrolled area dimensions
 // Properties scrollLeft и scrollTop
 /*
@@ -328,15 +329,15 @@ console.log(elementScrollTop);
 */
 
 
-// 24:00 Управление прокруткой объекта
+// 24:00 Object scrolling control
 /*
-Методы управления прокруткой scrollBy, scrollTo
-и scrollIntoView работают и для объекта с полосой прокрутки.
+Control object methods scrollBy, scrollTo & scrollIntoView 
+are working for objects with scroll bar.
 */
 
-// Получение объекта
-//const block = document.querySelector('.lesson__block');
-/*
+// Getting an object to const
+const block = document.querySelector('.lesson__block');
+
 function setElementScrollBy() {
     block.scrollBy({
         top: 20,
@@ -344,7 +345,8 @@ function setElementScrollBy() {
         behavior: "smooth"
     })
 }
-*/
+
+
 
 // 25:10 Координаты
 /*
