@@ -315,18 +315,17 @@ console.log(elementScrollWidth);
 console.log(elementScrollHeight);
 */
 
-// 23:00 Размеры прокрученной области
-// scrollLeft и scrollTop
+// 23:00 Scrolled area dimensions
+// Properties scrollLeft и scrollTop
 /*
-const elementScrollWidth = block.scrollLeft;
-const elementScrollHeight = block.scrollTop;
+const block = document.querySelector('.lesson__block');
+block.scrollTop = 65;
+const elementScrollLeft = block.scrollLeft;
+const elementScrollTop = block.scrollTop;
 
 console.log(elementScrollLeft);
 console.log(elementScrollTop);
 */
-
-// block.scrollTop = 150;
-// ^^^ кроме чтения можно задавать нужное значение
 
 
 // 24:00 Управление прокруткой объекта
