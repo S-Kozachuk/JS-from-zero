@@ -376,17 +376,14 @@ scrollBtn.addEventListener('click',()=>{
 */
 
 
-// 26:20 Координаты относительно окна браузера.
-// Метод getBoundingClientRect
+// 26:20 Coordinates relative browser window.
+// Method getBoundingClientRect
 
-// Получение объекта
-//const item = document.querySelector('.lesson__item');
-// Получение координат относительно окна браузера
-/*
+// Getting an object
+const item = document.querySelector('.lesson__item');
+// Getting coordinates relative browser window
 const getItemCoords = item.getBoundingClientRect();
-
 console.log(getItemCoords);
-*/
 
 
 // 28:35 Получение конкретной координаты относительно окна браузера

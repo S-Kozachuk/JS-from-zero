@@ -59,6 +59,11 @@ body.scroll-lock {
     margin: 0px 0px 20px 0px;
 }
 
+.lesson__item {
+	padding: 2px 20px;
+	display: inline-block;
+	background-color: #f3ea71;
+}
 
 
 
