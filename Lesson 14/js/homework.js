@@ -17,25 +17,25 @@ console.log(scrollWidth+'px');
 Solved.
 Use a setTimeout (make delay) and scrollTo (6:55)
 */
+//
+// Standard version
 /*
-const allPage = document.getElementsByTagName('body');
-const buttons = document.querySelectorAll('yellow-button');
-console.log(buttons);
+setTimeout(()=>{
+	window.scrollTo(0,100);
+	console.log('Shift')
+}, 5000);
 */
-/*
-function setElementScrollBy() {
-    allPage.scrollBy({
-        bottom: 20,
-        left: 0,
-        behavior: "smooth"
-    });
-}
 
-console.log (setElementScrollBy())
-*/
+// Extension version
+
+setTimeout(()=> {
+		window.scrollTo({
+			top: 100,
+			left: 0,
+			behavior: "smooth"
+		},  1000);
+});
 
 
 // Задача №3.
-/*
-Получить координаты любых трёх элементов на странице.
-*/
+// Получить координаты любых трёх элементов на странице.
