@@ -376,33 +376,33 @@ scrollBtn.addEventListener('click',()=>{
 */
 
 
-// 26:20 Coordinates relative browser window.
+// 26:20 Coordinates relative browser window (1-st coordinate system)
 // Method getBoundingClientRect
 
 // Getting an object
-const item = document.querySelector('.lesson__item');
+//const item = document.querySelector('.lesson__item');
 // Getting coordinates relative browser window
+/*
 const getItemCoords = item.getBoundingClientRect();
 console.log(getItemCoords);
-
+*/
 
 // 28:35 Getting a specific coordinate relative browser window in const
-
+/*
 const getItemLeftCoord = item.getBoundingClientRect().top;
-
 console.log(getItemLeftCoord);
+*/
 
-
-// 30:00 Координаты относительно документа
+// 30:00 Coordinates relative document. 2-nd coordinate system
 // getBoundingClientRect
 
-// Получаем объект
-//const item = document.querySelector('.lesson__item');
+// Getting an object
+const item = document.querySelector('.lesson__item');
 
-// Получение координаты относительно окна браузера
-//const getItemTopCoords = item.getBoundingClientRect().top;
+// Getting a coordinates relative browser window
+const getItemTopCoords = item.getBoundingClientRect().top;
 
-// Получение конкретной координаты относительно документа
+// Getting a specific coordinate relative document 
 /*
 const getItemTopDocumentCoord = getItemTopCoord + window.pageYOffset;
 
