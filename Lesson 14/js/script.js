@@ -336,6 +336,7 @@ are working for objects with scroll bar.
 */
 
 // Getting an object to const
+/*
 const block = document.querySelector('.lesson__block');
 const scrollBtn = document.querySelector('.btn-seven');
 
@@ -350,7 +351,7 @@ function setElementScrollBy() {
 scrollBtn.addEventListener('click',()=>{
 	setElementScrollBy();
 });
-
+*/
 
 // 25:10 Координаты
 /*
