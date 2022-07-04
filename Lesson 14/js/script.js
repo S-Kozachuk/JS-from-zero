@@ -397,26 +397,24 @@ console.log(getItemLeftCoord);
 // getBoundingClientRect
 
 // Getting an object
-const item = document.querySelector('.lesson__item');
+// const item = document.querySelector('.lesson__item');
 
 // Getting a coordinates relative browser window
-const getItemTopCoord = item.getBoundingClientRect().top;
+// const getItemTopCoord = item.getBoundingClientRect().top;
 
 // Getting a specific coordinate relative document 
-
-const getItemTopDocumentCoord = getItemTopCoord + window.pageYOffset;
-
+// const getItemTopDocumentCoord = getItemTopCoord + window.pageYOffset;
+/*
 console.log(getItemTopCoord);
 console.log(getItemTopDocumentCoord);
+*/
 
-
-
-// 31:30 Получение объекта по координатам
+// 31:30 Getting an object by coordinates
 // document.elementFromPoint(x, y);
-/*
+
 const elem = document.elementFromPoint(400, 100);
 
 console.log(elem);
-*/
+
 
 
