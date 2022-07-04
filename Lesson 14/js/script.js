@@ -400,15 +400,15 @@ console.log(getItemLeftCoord);
 const item = document.querySelector('.lesson__item');
 
 // Getting a coordinates relative browser window
-const getItemTopCoords = item.getBoundingClientRect().top;
+const getItemTopCoord = item.getBoundingClientRect().top;
 
 // Getting a specific coordinate relative document 
-/*
+
 const getItemTopDocumentCoord = getItemTopCoord + window.pageYOffset;
 
 console.log(getItemTopCoord);
 console.log(getItemTopDocumentCoord);
-*/
+
 
 
 // 31:30 Получение объекта по координатам
