@@ -411,10 +411,10 @@ console.log(getItemTopDocumentCoord);
 
 // 31:30 Getting an object by coordinates
 // document.elementFromPoint(x, y);
-
-const elem = document.elementFromPoint(400, 100);
+/*
+const elem = document.elementFromPoint(400, 7);
 
 console.log(elem);
-
+*/
 
 
