@@ -386,12 +386,11 @@ const getItemCoords = item.getBoundingClientRect();
 console.log(getItemCoords);
 
 
-// 28:35 Получение конкретной координаты относительно окна браузера
-/*
-const getItemLeftCoord = item.getBoundingClientRect().left;
+// 28:35 Getting a specific coordinate relative browser window in const
+
+const getItemLeftCoord = item.getBoundingClientRect().top;
 
 console.log(getItemLeftCoord);
-*/
 
 
 // 30:00 Координаты относительно документа
