@@ -51,5 +51,18 @@ function scrollPage(){
 setTimeout(scrollPage, 10000);
 */
 
-// Задача №3.
-// Получить координаты любых трёх элементов на странице.
+// Task №3.
+// Getting coordinates any threes elements on page
+const firstElem = document.querySelector('.color');
+const secondElem = document.querySelector('.btn-two');
+const thirdElem = document.querySelector('.btn-seven');
+console.log(firstElem);
+console.log(secondElem);
+console.log(thirdElem);
+
+const getElemCoordsOne = firstElem.getBoundingClientRect();
+console.log(getElemCoordsOne);
+const getElemCoordsTwo = secondElem.getBoundingClientRect();
+console.log(getElemCoordsTwo);
+const getElemCoordsThree = thirdElem.getBoundingClientRect();
+console.log(getElemCoordsThree);
