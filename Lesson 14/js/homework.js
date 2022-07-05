@@ -26,16 +26,30 @@ setTimeout(()=>{
 }, 5000);
 */
 
-// Extension version
-
+// Extension version (arrow function)
+/*
 setTimeout(()=> {
 		window.scrollTo({
 			top: 100,
 			left: 0,
 			behavior: "smooth"
-		},  1000);
-});
+		});
+}, 5000);
+*/
 
+// Extension version (named function)
+/*
+function scrollPage(){
+	window.scrollTo ({
+		top: 100,
+		left: 0,
+		behavior: "smooth"
+	});
+	console.log('Scrolling down');
+};
+
+setTimeout(scrollPage, 10000);
+*/
 
 // Задача №3.
 // Получить координаты любых трёх элементов на странице.
