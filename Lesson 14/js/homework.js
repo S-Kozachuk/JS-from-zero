@@ -71,3 +71,6 @@ console.log(getElemCoordsThree);
 
 // Tasks from learn.javascript.ru
 // Link: https://learn.javascript.ru/coordinates
+document.onclick = function(e){
+	coords.innerHTML = e.clientX + ':' + e.clientY;
+};
