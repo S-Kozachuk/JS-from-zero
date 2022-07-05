@@ -76,4 +76,7 @@ document.onclick = function(e){
 };
 
 // left top outside corner
-
+const firstTriangle = document.querySelector('.trl-one');
+const getLeftTopCorner = firstTriangle.getBoundingClientRect();
+const getItemLeftCorner = getLeftTopCorner + window.pageXOffset;
+console.log(getItemLeftCorner);
