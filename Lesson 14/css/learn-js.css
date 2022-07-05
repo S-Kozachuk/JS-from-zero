@@ -14,3 +14,30 @@ body {
 	background-color: #00FF00;
 	font: 10px/1.2 monospace;
 }
+
+.triangle {
+	position: relative;
+	width: 0;
+	height: 0;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-left: 20px solid red;
+	text-indent: -20px;
+	font: 12px/1 monospace;
+}
+
+.trl-one {
+
+}
+
+.trl-two {
+
+}
+
+.trl-three {
+
+}
+
+.trl-four {
+
+}
