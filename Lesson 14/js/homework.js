@@ -74,3 +74,6 @@ console.log(getElemCoordsThree);
 document.onclick = function(e){
 	coords.innerHTML = e.clientX + ':' + e.clientY;
 };
+
+// left top outside corner
+
