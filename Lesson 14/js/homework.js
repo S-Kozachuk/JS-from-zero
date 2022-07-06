@@ -75,16 +75,25 @@ document.onclick = function(e){
 	coords.innerHTML = e.clientX + ':' + e.clientY;
 };
 
+const field = document.querySelector('#field').getBoundingClientRect();
+console.log(field);
+
 // left top outside corner
 const firstTriangle = document.querySelector('.trl-one');
 // Getting coordinates of the 1-st triangle
-const leftTopCornerX = firstTriangle.getBoundingClientRect().right;
-const leftTopCornerY = Math.floor(firstTriangle.getBoundingClientRect().y + 6);
-// console.log(leftTopCornerX +':'+ Math.floor(leftTopCornerY + 6));
-console.log(leftTopCornerX +':'+ leftTopCornerY);
+
+
+function consoleOutput() {
+	const leftTopCornerX = firstTriangle.getBoundingClientRect().right;
+	const leftTopCornerY = Math.floor(firstTriangle.getBoundingClientRect().y + 6);
+	console.log(leftTopCornerX +':'+ leftTopCornerY);
+};
+
+document.addEventListener('click', consoleOutput);
 
 // Right bottom outside corner
-
+/*
 const secondTriangle = document.querySelector('.trl-two');
 const rightBottomCornerX = secondTriangle.getBoundingClientRect().right;
 console.log(rightBottomCorner);
+*/
