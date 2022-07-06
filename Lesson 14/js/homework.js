@@ -77,6 +77,8 @@ document.onclick = function(e){
 
 // left top outside corner
 const firstTriangle = document.querySelector('.trl-one');
+// Getting coordinates of the 1-st triangle
 const getLeftTopCorner = firstTriangle.getBoundingClientRect();
-const getItemLeftCorner = getLeftTopCorner + window.pageXOffset;
-console.log(getItemLeftCorner);
+console.log(getLeftTopCorner);
+// Right bottom outside corner
+const secondTriangle = document.querySelector('.trl-two')
