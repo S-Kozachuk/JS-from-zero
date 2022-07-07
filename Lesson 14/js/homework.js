@@ -72,11 +72,10 @@ console.log(getElemCoordsThree);
 // Tasks from learn.javascript.ru
 // Link: https://learn.javascript.ru/coordinates
 
-
 let coords = document.getElementById('coords');
 let field = document.getElementById('field');
 let elemCoords = field.getBoundingClientRect();
-console.log(elemCoords);
+let coordsOut = document.getElementById('output');
 
 document.onclick = function(e){
 	coords.innerHTML = e.clientX + ':' + e.clientY;
@@ -86,10 +85,15 @@ let answer1 = [elemCoords.left, elemCoords.top];
 let answer2 = [elemCoords.right, elemCoords.bottom];
 let answer3 = [elemCoords.left + field.clientLeft, elemCoords.top + field.clientTop];
 let answer4 = [elemCoords.right - field.clientLeft, elemCoords.bottom -field.clientTop];
-let clientTop = field.clientTop;
-let clientTopEl = elemCoords.top;
-let fr = field.clientLeft;
+
+/*
+resultArr.forEach((item)=> {
+	coordsOut.innerHTML += `${ item} <br>`;
+});
+*/
+console.log(elemCoords);
 console.log(answer1, answer2, answer3, answer4);
-console.log(clientTop, clientTopEl);
-console.log(fr)
+
+// console.log(resultArr)
+// coordsOut.innerHTML = 'Poit 1: ' + answer1 + ' Point 2: ' + answer2;
 
