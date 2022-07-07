@@ -109,5 +109,11 @@ console.log(elemCoords);
 let answer1 = [elemCoords.left, elemCoords.top];
 let answer2 = [elemCoords.right, elemCoords.bottom];
 let answer3 = [elemCoords.left + field.clientLeft, elemCoords.top + field.clientTop];
-console.log(answer1, answer2, answer3);
+let answer4 = [elemCoords.right - field.clientLeft, elemCoords.bottom -field.clientTop];
+let clientTop = field.clientTop;
+let clientTopEl = elemCoords.top;
+let fr = field.clientLeft;
+console.log(answer1, answer2, answer3, answer4);
+console.log(clientTop, clientTopEl);
+console.log(fr)
 
