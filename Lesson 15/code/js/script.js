@@ -580,7 +580,7 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 // 41:10 Перетаскивание Drag`n`Drop
 
 const gragField = document.querySelector('.drag-field');
-const gragItem = document.querySelector('.drag-field_item');
+const gragItem = document.querySelector('.drag-field__item');
 
 gragItem.addEventListener('mousedown', function (event) {
     
@@ -624,7 +624,8 @@ gragItem.addEventListener('mousedown', function (event) {
 		if (
 			currentY + gragItemSizes.height <= gragFieldSizes.bottom &&
 			currentY >= gragFieldSizes.top
-		) {gragItem.style.top = `${currentY}px`; 
+		) {
+			gragItem.style.top = `${currentY}px`; 
 		} else {
 			if (currentY + gragItemSizes.height > gragFieldSizes.bottom) {
 				gragItem.style.top = `${gragFieldSizes.bottom - gragItemSizes.height}px`;
