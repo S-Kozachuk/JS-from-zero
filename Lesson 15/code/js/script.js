@@ -594,7 +594,7 @@ gragItem.addEventListener('mousedown', function (event) {
     let gragFieldSizes = {
         left: gragField.getBoundingClientRect().left + scrollX,
         top: gragField.getBoundingClientRect().top + scrollY,
-        right: gragField.getBoundingClientRect().left + scrollX + gragField
+        right: gragField.getBoundingClientRect().left + scrollX + gragField,
         bottom: gragField.getBoundingClientRect().top + scrollY + gragField
     }
     
@@ -602,18 +602,40 @@ gragItem.addEventListener('mousedown', function (event) {
     gragItem.style.zIndex = 1000;
     document.body.append(gragItem);
     
-    moveItem(event.pageX,.event.pageY);
+    moveItem(event.pageX, event.pageY);
     
     function moveItem(pageX, pageY) {
         let currentX = pageX - coordsItemX;
-        let currenY = pageY - coordsItemY;
+        let currentY = pageY - coordsItemY;
         
-        if ()
+        if (
+			currentX + gragItemSizes.width <= gragFieldSizes.right && 
+			currentX >= gragFieldSizes.left
+		) {
+			gragItem.style.left = `${currenX}px`;
+		} else {
+			if (currentX + gragItemSizes.width > gragFieldSizes.right) {
+				gragItem.style.left = `${gragFieldSizes.right - gragItemSizes.width}px`;
+			}
+			if (currentX < gragFieldSizes.left) {
+				gragItem.style.Left = `${gragFieldSizes.left}px`;
+			}
+		}
+		if (
+			currentY + gragItemSizes.height <= gragFieldSizes.bottom &&
+			currentY >= gragFieldSizes.top
+		) {gragItem.style.top = `${currentY}px`;
+		} else {
+			if (currentY + gragItemSizes.height > gragFieldSizes.bottom) {
+				gragItem.style.top = `${gragFieldSizes.bottom - gragItemSizes.height}px`;
+			}
+			if (currentY < gragFieldSizes.top) {
+				gragItem.style.top = `${gragFieldSizes.top}px`;
+			}
+		}
     }
     
 })
-
-// Дополнить код из исходника 41:20
 
 
 // 41:53 События клавиатуры
