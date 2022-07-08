@@ -594,8 +594,8 @@ gragItem.addEventListener('mousedown', function (event) {
     let gragFieldSizes = {
         left: gragField.getBoundingClientRect().left + scrollX,
         top: gragField.getBoundingClientRect().top + scrollY,
-        right: gragField.getBoundingClientRect().left + scrollX + gragField,
-        bottom: gragField.getBoundingClientRect().top + scrollY + gragField
+        right: gragField.getBoundingClientRect().left + scrollX + gragField.offsetWidth,
+        bottom: gragField.getBoundingClientRect().top + scrollY + gragField.offsetHeight
     }
     
     gragItem.style.position = 'absolute';
@@ -624,8 +624,8 @@ gragItem.addEventListener('mousedown', function (event) {
 		if (
 			currentY + gragItemSizes.height <= gragFieldSizes.bottom &&
 			currentY >= gragFieldSizes.top
-		) {gragItem.style.top = `${currentY}px`;} 
-		else {
+		) {gragItem.style.top = `${currentY}px`; 
+		} else {
 			if (currentY + gragItemSizes.height > gragFieldSizes.bottom) {
 				gragItem.style.top = `${gragFieldSizes.bottom - gragItemSizes.height}px`;
 			}
@@ -652,17 +652,23 @@ gragItem.addEventListener('mousedown', function (event) {
 				currentDroppable.classList.remove('_active');
 				gragItem.classList.remove('_active');
 			}
+			currentDroppable = droppableBelow;
+			if (currentDroppable) {
+				currentDroppable.classList.add('_active');
+				gragItem.classList.add('_active');
+			}		
 		}
 	}
 	document.addEventListener('mousemove', onDragItem);
 
 	document.addEventListener('mouseup', function (event){
 		document.removeEventListener('mousemove', onDragItem);
-		}, {'once': true});
-	});
-	gragItem.addEventListener('dragstart', function (event) {
-		event.preventDefault();
-	});
+	}, {'once': true});
+});
+
+gragItem.addEventListener('dragstart', function (event) {
+	event.preventDefault();
+});
 
 
 // 41:53 События клавиатуры

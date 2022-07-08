@@ -488,7 +488,7 @@ blockForMouse.addEventListener("mouseout", function (event) {
 //-------------------------
 
 // Перетаскивание Drag`n`Drop
-/*
+
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field__item');
 
@@ -579,7 +579,7 @@ gragItem.addEventListener("mousedown", function (event) {
 gragItem.addEventListener("dragstart", function (event) {
 	event.preventDefault();
 });
-*/
+
 
 
 //===================================================
