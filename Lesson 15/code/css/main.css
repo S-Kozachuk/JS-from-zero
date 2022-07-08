@@ -143,6 +143,30 @@ a.link {
    padding: 10px 15px;
 }
 
-
-
+.drag-field {
+	width: 200px;
+	height: 200px;
+	background-color: #7a956b;
+	position: relative;
+}
+.drag-field__item {
+	width: 40px;
+	height: 40px;
+	cursor: grab;
+	background-color: #77608d;
+}
+.drag-field__item._active {
+}
+.drag-field__point {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	background-color: #45553d;
+	transition: all 0.3s ease 0s;
+}
+.drag-field__point._active {
+	box-shadow: inset 0px 0px 10px 5px #333f2d;
+}
 

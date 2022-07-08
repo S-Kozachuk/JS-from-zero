@@ -578,7 +578,7 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 */
 
 // 41:10 Перетаскивание Drag`n`Drop
-/*
+
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field_item');
 
@@ -614,7 +614,7 @@ gragItem.addEventListener('mousedown', function (event) {
 })
 
 // Дополнить код из исходника 41:20
-*/
+
 
 // 41:53 События клавиатуры
 /*
