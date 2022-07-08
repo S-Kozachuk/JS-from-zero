@@ -612,7 +612,7 @@ gragItem.addEventListener('mousedown', function (event) {
 			currentX + gragItemSizes.width <= gragFieldSizes.right && 
 			currentX >= gragFieldSizes.left
 		) {
-			gragItem.style.left = `${currenX}px`;
+			gragItem.style.left = `${currentX}px`;
 		} else {
 			if (currentX + gragItemSizes.width > gragFieldSizes.right) {
 				gragItem.style.left = `${gragFieldSizes.right - gragItemSizes.width}px`;
@@ -624,8 +624,8 @@ gragItem.addEventListener('mousedown', function (event) {
 		if (
 			currentY + gragItemSizes.height <= gragFieldSizes.bottom &&
 			currentY >= gragFieldSizes.top
-		) {gragItem.style.top = `${currentY}px`;
-		} else {
+		) {gragItem.style.top = `${currentY}px`;} 
+		else {
 			if (currentY + gragItemSizes.height > gragFieldSizes.bottom) {
 				gragItem.style.top = `${gragFieldSizes.bottom - gragItemSizes.height}px`;
 			}
@@ -634,8 +634,35 @@ gragItem.addEventListener('mousedown', function (event) {
 			}
 		}
     }
-    
-})
+
+	let currentDroppable = null;
+
+	function onDragItem(event) {
+		moveItem(event.pageX, event.pageY);
+
+		gragItem.hidden = true;
+		let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
+		gragItem.hidden = false;
+
+		if (!elemBelow) return;
+		let droppableBelow = elemBelow.closest('.drag-field__point');
+
+		if (currentDroppable !== droppableBelow) {
+			if (currentDroppable) {
+				currentDroppable.classList.remove('_active');
+				gragItem.classList.remove('_active');
+			}
+		}
+	}
+	document.addEventListener('mousemove', onDragItem);
+
+	document.addEventListener('mouseup', function (event){
+		document.removeEventListener('mousemove', onDragItem);
+		}, {'once': true});
+	});
+	gragItem.addEventListener('dragstart', function (event) {
+		event.preventDefault();
+	});
 
 
 // 41:53 События клавиатуры
