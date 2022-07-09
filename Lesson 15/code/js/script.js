@@ -878,8 +878,9 @@ function beforeUnLoad(event) {
 Например отправка статистики в фоновом режиме.
 Подробнее: https://w3c.github.io/beacon
 */
+/*
 window.addEventListener("unload", function (e) {
     //navigator.sendBeacon(url, data)
 });
-
+*/
 
