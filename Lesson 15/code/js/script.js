@@ -591,6 +591,7 @@ gragItem.addEventListener('mousedown', function (event) {
         width: gragItem.offsetWidth,
         height: gragItem.offsetHeight
     }
+	
     let gragFieldSizes = {
         left: gragField.getBoundingClientRect().left + scrollX,
         top: gragField.getBoundingClientRect().top + scrollY,
