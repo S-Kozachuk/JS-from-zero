@@ -1,4 +1,4 @@
-// Урок 15. Метод addEventListener, делегирование, события.
+// Lesson 15. Method addEventListener, dlegation, events.
 
 // 00:15 
 /*
@@ -578,7 +578,7 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 */
 
 // 41:10 Drag`n`Drop (dragging)
-
+/*
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field__item');
 
@@ -671,7 +671,7 @@ gragItem.addEventListener('mousedown', function (event) {
 gragItem.addEventListener('dragstart', function (event) {
 	event.preventDefault();
 });
-
+*/
 
 // 41:53 События клавиатуры
 /*
