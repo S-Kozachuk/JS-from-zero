@@ -42,22 +42,21 @@ const button = document.querySelector('.button');
 // использую обработчик событий onclick
 
 // 1-st code variant (with events handler .onclick)
-
+/*
 button.onclick = function () {
     console.log('Click');
 }
-
+*/
 // 2-nd code variant (as single fuction)
-
 /*
 function showConsole() {
-    console.log('Клик!');
+    console.log('Click!');
 }
-// событию onClick присваивается название функции вместо вызова самой функции.
 button.onclick = showConsole;
+*/
 // далее функция вызывается при появлении события onclick
 // Важно, имя функции при вызове без круглых скобок! В противном случае скобки быдут вызывать функцию.
-*/
+
 
 // 3:05
 /*
