@@ -38,18 +38,17 @@
 */
 
 // Добавление в константу button объекта (кнопки) с классом button
-//const button = document.querySelector('.button');
+const button = document.querySelector('.button');
 // использую обработчик событий onclick
 
-// 1-й вариант кода
-/*
-button.onclick = function () {
-    console.log('Клик!');
-}
-*/
+// 1-st code variant (with events handler .onclick)
 
-// 2-й вариант кода
-// исполняемый код "вынесен" в отдельную функцию
+button.onclick = function () {
+    console.log('Click');
+}
+
+// 2-nd code variant (as single fuction)
+
 /*
 function showConsole() {
     console.log('Клик!');
