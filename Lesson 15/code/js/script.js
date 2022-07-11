@@ -38,8 +38,9 @@
 */
 
 // Добавление в константу button объекта (кнопки) с классом button
+// Added oblect button in const with button class
 const button = document.querySelector('.button');
-// использую обработчик событий onclick
+//  used oclick event handler
 
 // 1-st code variant (with events handler .onclick)
 /*
