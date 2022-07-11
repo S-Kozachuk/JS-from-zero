@@ -201,21 +201,22 @@ const button = document.querySelector('.button');
 
 function showConsole (event) {
     // Event type
-    console.log (event.type);
-    // Объект на котором сработал обработчик
-    //console.log (event.target);
-    // Объект к которому назначен обработчик
-    //console.log (event.currentTarget);
-    // Положение курсора по оси X
-    //console.log (event.clientX);
-    // Положение курсора по оси Y
-    //console.log (event.clientY);
+    // console.log (event.type);
+    // Object which handler was triggered
+    //  console.log (event.target);
+    // Object which handler was assigned
+    // console.log (event.currentTarget);
+    // Coursor position in X axis
+    // console.log (event.clientX);
+    // Coursor position in Y axis
+	// conole.log (event.clientY);
     
     // Все детали события
-    console.log(event);
+    // console.log(event);
 }
 
-button.addEventListener("click", showConsole);
+// button.addEventListener("click", showConsole);
+// button.addEventListener('mouseenter', showConsole);
 
 
 // 12:49 Всплытие и погружение
