@@ -89,7 +89,7 @@ button.onclick = function (){
 помощи специальных методов addEventListener и removeEventListener.
 Эти методы не перезаписывают друг друга.
 
-Синтаксис: 
+Syntax: 
 element.addEventListener(event, handler[, options]);
 */
 
@@ -97,15 +97,15 @@ element.addEventListener(event, handler[, options]);
 const button = document.querySelector('.button');
 
 button.addEventListener("click", function (e) {
-     console.log('Клик!');
+     console.log('Click');
 });
 button.addEventListener("click", function (e) {
-     console.log('Клак!');
-});
+     console.log('Push!');
+}, {once: true});
 */
 
-// 5:15 Перенос обработчика в отдельную функцию
-/*
+// 5:15 Move handler to separate function
+
 const button = document.querySelector('.button');
 
 function showConsole() {
@@ -113,7 +113,7 @@ function showConsole() {
 }
 
 button.addEventListener("click", showConsole);
-*/
+
 
 // 5:50 метод removeEventListener - назначение и применение
 /*
