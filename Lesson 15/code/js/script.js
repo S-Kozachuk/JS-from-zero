@@ -105,17 +105,17 @@ button.addEventListener("click", function (e) {
 */
 
 // 5:15 Move handler to separate function
-
+/*
 const button = document.querySelector('.button');
 
 function showConsole() {
-    console.log("Клик");
+    console.log("Click");
 }
 
 button.addEventListener("click", showConsole);
+*/
 
-
-// 5:50 метод removeEventListener - назначение и применение
+// 5:50 Method removeEventListener - prupose and application 
 /*
 Когда мы добавляем обработчик, используя метод addEventListener
 на какой-либо объект мы как-будто вешаем на него "прослушку"
@@ -135,7 +135,7 @@ button.addEventListener("click", showConsole);
 const button = document.querySelector('.button');
 
 function showConsole() {
-    console.log('Клик');
+    console.log('Press!');
     button.removeEventListener("click", showConsole);
 }
 
