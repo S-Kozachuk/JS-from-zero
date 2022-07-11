@@ -37,9 +37,8 @@
 использовать методы, размещаемые в отдельном JS-файле (т.е. здесь).
 */
 
-// Добавление в константу button объекта (кнопки) с классом button
 // Added oblect button in const with button class
-const button = document.querySelector('.button');
+// const button = document.querySelector('.button');
 //  used oclick event handler
 
 // 1-st code variant (with events handler .onclick)
@@ -48,15 +47,15 @@ button.onclick = function () {
     console.log('Click');
 }
 */
-// 2-nd code variant (as single fuction)
+// 2-nd code variant (as single fucntion)
+// Fucntion is calling if onclick event
 /*
 function showConsole() {
     console.log('Click!');
 }
 button.onclick = showConsole;
 */
-// далее функция вызывается при появлении события onclick
-// Важно, имя функции при вызове без круглых скобок! В противном случае скобки быдут вызывать функцию.
+// No used a circle brackets
 
 
 // 3:05
@@ -70,11 +69,17 @@ button.onclick = showConsole;
 const button = document.querySelector('.button');
 
 button.onclick = function () {
-    console.log('Клик!');
+    console.log('Click!');
 }
 
 button.onclick = function () {
-    console.log('Клак!');
+    console.log('Clack!');
+}
+*/
+// Outoput on window
+/*
+button.onclick = function (){
+	alert('Victory!');
 }
 */
 
