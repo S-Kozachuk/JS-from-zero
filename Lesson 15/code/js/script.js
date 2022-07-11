@@ -83,7 +83,7 @@ button.onclick = function (){
 }
 */
 
-// 3:45 Обработчик событий addEventListener/removeEventListener
+// 3:45 Events handler addEventListener/removeEventListener
 /* 
 Существует основной способ назначения обработчиков при
 помощи специальных методов addEventListener и removeEventListener.
