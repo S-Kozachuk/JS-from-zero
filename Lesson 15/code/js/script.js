@@ -184,7 +184,7 @@ button.addEventListener("click", showConsole, options);
 только с помощью этого метода.
 */
 
-// 9:40 Объект события
+// 9:40 Event object
 /*
 Для правильной обработки события могут понадобиться
 некоторые детали (подробности) того, что произошло.
@@ -196,12 +196,12 @@ button.addEventListener("click", showConsole, options);
 в него детали (параметры) и передаёт его в качестве аргумента функции - обработчику.
 */
 
-/*
+
 const button = document.querySelector('.button');
 
 function showConsole (event) {
-    // Тип события
-    //console.log (event.type);
+    // Event type
+    console.log (event.type);
     // Объект на котором сработал обработчик
     //console.log (event.target);
     // Объект к которому назначен обработчик
@@ -216,7 +216,7 @@ function showConsole (event) {
 }
 
 button.addEventListener("click", showConsole);
-*/
+
 
 // 12:49 Всплытие и погружение
 /*
