@@ -142,7 +142,7 @@ function showConsole() {
 button.addEventListener("click", showConsole);
 */
 
-// 7:25 Метод addEventListener - опции (параметры)
+// 7:25 Method addEventListener - options (parameters)
 /*
 У метода addEventListener есть некоторые параметры.
 Существует два способа записи (синтаксиса).
@@ -154,8 +154,8 @@ button.addEventListener("click", showConsole);
 после вызова функции. Используются фигурные скобки.
 Пример (параметры записаны в строку):
 button.addEventListener("click", showConsole, {"capture": false});
-
 */
+// First record method
 /*
 const options ={
     "capture": false, // фаза, на которой должен сработать обработчик 
@@ -164,11 +164,12 @@ const options ={
     "passive": false // если true, то указывает, что обработчик
     // никогда не вызовет preventDefault()
 }
-
+*/
+/*
 const button = document.querySelector('.button');
 
 function showConsole() {
-    console.log('Клик');
+    console.log('Click');
 }
 
 button.addEventListener("click", showConsole, options);
