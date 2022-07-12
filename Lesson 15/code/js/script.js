@@ -272,27 +272,28 @@ blockInnerInner.addEventListener("click", function (event) {
 Всплытие и перехват событий позволяет реализовать 
 один из самых важных приёмов разработки - делегирование.
 */
-// 1-й вариант, стандартный.
+// 1-st variant, standard.
 /*
-Навешивание обработчика на каждый объект (в этом примере - кнопку)
+Навешивание обработчика на каждый объект (in this example - on button)
 */
 /*
 const button = document.querySelectorAll('.button');
+console.log(button)
 
 function showConsole() {
-    console.log('Ура!');
+    console.log('Hurray!');
 }
 
 button.forEach(buttonItem => {
     buttonItem.addEventListener("click", showConsole);
 }); 
 */
-//2-ой вариант, делегирование.
+// 2-nd variant, delegation (to common parent)
 /*
 const lesson = document.querySelector('.lesson');
 
 function showConsole() {
-    console.log('Ура!');
+    console.log('Hurray!');
 }
 
 lesson.addEventListener("click", function (event) {
@@ -302,8 +303,8 @@ lesson.addEventListener("click", function (event) {
 }); 
 */
 
-// 21:25 Выпадающее меню (делегирование)
-/*
+// 21:25 Drop-down menu (delegation)
+
 const menuBody = document.querySelector('.menu');
 
 document.addEventListener("click", menu);
@@ -316,7 +317,7 @@ function menu(event) {
         menuBody.classList.remove('_active');
     }
 }
-*/
+
 /*
 Разобраться с принципом работы метода closest.
 Почему в данном примере метод closet проверяет 
