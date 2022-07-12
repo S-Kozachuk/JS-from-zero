@@ -232,16 +232,16 @@ const blockInnerInner = document.querySelector('.block__inner-inner');
 
 block.addEventListener("click", function (event) {
     console.log('Click on block!');
-	event.stopPropagation();
     // console.log(event.target); 
 });
 
 blockInner.addEventListener("click", function (event) {
-    console.log('Click on 2-nd level block!');
+	console.log('Click on 2-nd level block!');
 });
 
 blockInnerInner.addEventListener("click", function (event) {
 	console.log('Click on 3-td level block!');
+	// event.stopPropagation();
 });
 
 
