@@ -197,13 +197,13 @@ button.addEventListener("click", showConsole, options);
 */
 
 
-const button = document.querySelector('.button');
+// const button = document.querySelector('.button');
 
-function showConsole (event) {
+// function showConsole (event) {
     // Event type
     // console.log (event.type);
     // Object which handler was triggered
-    //  console.log (event.target);
+    // console.log (event.target);
     // Object which handler was assigned
     // console.log (event.currentTarget);
     // Coursor position in X axis
@@ -213,11 +213,14 @@ function showConsole (event) {
     
     // Все детали события
     // console.log(event);
-}
+// }
 
 // button.addEventListener("click", showConsole);
 // button.addEventListener('mouseenter', showConsole);
 
+btn.onmouseup = function() {
+	console.log('Thank you');
+};
 
 // 12:49 Всплытие и погружение
 /*
