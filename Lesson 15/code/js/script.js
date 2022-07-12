@@ -229,7 +229,7 @@ const blockInnerInner = document.querySelector('.block__inner-inner');
 Когда на элементе происходит событие, обработчики сначала срабатывают на нём, 
 затем на его родителе, затем выше и так далее, по цепочке предков.
 */
-
+/*
 block.addEventListener("click", function (event) {
     console.log('Click on block!');
     // console.log(event.target); 
@@ -243,21 +243,21 @@ blockInnerInner.addEventListener("click", function (event) {
 	console.log('Click on 3-td level block!');
 	// event.stopPropagation();
 });
+*/
 
-
-// 15:40 Погружение
-//Для того чтобы что-то всплыло оно должно сначало погрузиться :)
+// 15:40 Diving
+// Before something is ascent, it must a diving
 /*
 block.addEventListener("click", function (event) {
-    console.log('Клик на блок!');
+    console.log('Click on block!');
     //console.log(event.target);
-}, { "capture": true });
+}, { "capture": false});
 
 blockInner.addEventListener("click", function (event) {
-    console.log('Клик на блок второго уровня!');
+    console.log('Click on 2-nd level block');
 });
 blockInnerInner.addEventListener("click", function (event) {
-    console.log('Клик на блок третьего уровня!');
+    console.log('Click on 3-rd level block!');
     // Метод для остановки "всплытия"
     //event.stopPropagation();
 });
@@ -267,7 +267,7 @@ blockInnerInner.addEventListener("click", function (event) {
 Как правило события обрабатываются во время всплытия.
 */
 
-// 17:42 Делегирование событий
+// 17:42 Events delegation
 /*
 Всплытие и перехват событий позволяет реализовать 
 один из самых важных приёмов разработки - делегирование.
