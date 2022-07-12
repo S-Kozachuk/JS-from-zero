@@ -108,6 +108,10 @@ h1 {
     padding: 15px;
 }
 
+ul {
+	list-style-type: none;
+}
+
 .menu__list li:not(:last-child) {
     margin: 0px 0px 15px 0px;
 }
