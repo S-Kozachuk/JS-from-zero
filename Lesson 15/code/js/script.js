@@ -218,16 +218,12 @@ button.addEventListener("click", showConsole, options);
 // button.addEventListener("click", showConsole);
 // button.addEventListener('mouseenter', showConsole);
 
-btn.onmouseup = function() {
-	console.log('Thank you');
-};
+// 12:49 Ascent and dive
 
-// 12:49 Всплытие и погружение
-/*
 const block = document.querySelector('.block');
 const blockInner = document.querySelector('.block__inner');
 const blockInnerInner = document.querySelector('.block__inner-inner');
-*/
+
 // Всплытие
 /*
 Когда на элементе происходит событие, обработчики сначала срабатывают на нём, 
