@@ -224,25 +224,26 @@ const block = document.querySelector('.block');
 const blockInner = document.querySelector('.block__inner');
 const blockInnerInner = document.querySelector('.block__inner-inner');
 
-// Всплытие
+// Ascent
 /*
 Когда на элементе происходит событие, обработчики сначала срабатывают на нём, 
 затем на его родителе, затем выше и так далее, по цепочке предков.
 */
-/*
+
 block.addEventListener("click", function (event) {
-    console.log('Клик на блок!');
-    //console.log(event.target);
+    console.log('Click on block!');
+	event.stopPropagation();
+    // console.log(event.target); 
 });
 
 blockInner.addEventListener("click", function (event) {
-    console.log('Клик на блок второго уровня!');
+    console.log('Click on 2-nd level block!');
 });
 
 blockInnerInner.addEventListener("click", function (event) {
-    console.log('Клик на блок третьего уровня!');
+	console.log('Click on 3-td level block!');
 });
-*/
+
 
 // 15:40 Погружение
 //Для того чтобы что-то всплыло оно должно сначало погрузиться :)
