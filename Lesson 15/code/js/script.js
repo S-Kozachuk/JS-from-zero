@@ -555,7 +555,7 @@ blockForMouse.addEventListener("mouseout", function (event) {
 });
 */
 
-// 40:40 Замена событий на mouseenter и mouseleave
+// 40:40 Changing events on mouseenter and mouseleave
 /*
 При использовании событий mouseenter и mouseleave 
 переходы внутри элемента на дочерние объекты и обратно не считаются и не учитываются.
@@ -581,7 +581,7 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 */
 
 // 41:10 Drag`n`Drop (dragging)
-/*
+
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field__item');
 
@@ -666,7 +666,7 @@ gragItem.addEventListener('mousedown', function (event) {
 	}
 	document.addEventListener('mousemove', onDragItem);
 
-	document.addEventListener('mouseup', function (event){
+	document.addEventListener('mouseup', function (){
 		document.removeEventListener('mousemove', onDragItem);
 	}, {'once': true});
 });
@@ -674,7 +674,7 @@ gragItem.addEventListener('mousedown', function (event) {
 gragItem.addEventListener('dragstart', function (event) {
 	event.preventDefault();
 });
-*/
+
 
 // 41:53 События клавиатуры
 /*
