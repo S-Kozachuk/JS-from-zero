@@ -477,7 +477,7 @@ blockForMouse.addEventListener("mouseout", function () {
 });
 */
 
-// 34:50 События mouseover/mouseout и relatedTarget
+// 34:50 Events0 mouseover/mouseout and relatedTarget
 /*
 Эти события являются особенными, потому что у них есть свойство 
 relatedTarget. Оно дополняет target.
