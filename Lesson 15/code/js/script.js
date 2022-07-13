@@ -425,12 +425,12 @@ dblclick - вызывается двойным кликом по элемент�
 обойтись без них. Но работать с ними очень удобно.
 */
 
-// 30:30 Пример использования событий. Нажатие кнопок мыши.
-
+// 30:30 Example of using mouse events. Clicking mouse buttons.
+/*
 const link = document.querySelector('.button');
 
 link.addEventListener("mousedown", function (event) {
-    console.log('Button clicked ${event.which}');
+    console.log(`Clicked button ${event.which}`);
 });
 
 link.addEventListener("click", function (event) {
@@ -440,7 +440,7 @@ link.addEventListener("click", function (event) {
 link.addEventListener("contextmenu", function (event) {
     console.log('Called the context menu (right mouse button)');
 });
-
+*/
 /*
 Дополнительный параметр объекта события which.
 Возвращает цифру, соответствующую номеру нажатой кнопки мыши:
@@ -450,7 +450,7 @@ event.which = 2 - Нажата средняя кнопка мыши (колес�
 event.which = 3 - Нажата не основная кнопка мыши (по умолчанию - правая)
 */
 
-// 32:30 Движения мыши. Координаты clientX/Y, pageX/Y
+// 32:30 Mouse moves. Coordinates clientX/Y, pageX/Y
 /*
 const blockForMouse = document.querySelector('.block-for-mouse');
 
