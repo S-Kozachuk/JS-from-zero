@@ -451,16 +451,16 @@ event.which = 3 - Нажата не основная кнопка мыши (по
 */
 
 // 32:30 Mouse moves. Coordinates clientX/Y, pageX/Y
-
+/*
 const blockForMouse = document.querySelector('.block-for-mouse');
 
 blockForMouse.addEventListener("mousemove", function (event) {
     blockForMouse.innerHTML = 
     `clientX - ${event.clientX} <br> clientY - ${event.clientY}`;
 });
+*/
 
-
-// 33:45 Наведение мыши. События mouseover/mouseout.
+// 33:45 Mouse hover. Events mouseover/mouseout.
 /*
 Событие mouseover происходит в момент, когда курсор оказывается над элементом.
 А событие mouseout - в момент, когда курсор уходит с элемента.
@@ -468,12 +468,12 @@ blockForMouse.addEventListener("mousemove", function (event) {
 /*
 const blockForMouse = document.querySelector('.block-for-mouse');
 
-blockForMouse.addEventListener("mouseover", function (event) {
-    blockForMouse.innerHTML = `Курсор над элементом`;
+blockForMouse.addEventListener("mouseover", function () {
+    blockForMouse.innerHTML = `Cursor over the element`;
 });
 
-blockForMouse.addEventListener("mouseout", function (event) {
-    blockForMouse.innerHTML = `Курсор ушёл с элемента`;
+blockForMouse.addEventListener("mouseout", function () {
+    blockForMouse.innerHTML = `Cursor has left of the element`;
 });
 */
 
