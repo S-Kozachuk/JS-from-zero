@@ -305,10 +305,9 @@ lesson.addEventListener("click", function (event) {
 */
 
 // 21:25 Drop-down menu (delegation)
-const lesson = document.querySelector('.lesson');
+/*
 const menuBody = document.querySelector('.menu');
-console.log(menuBody);
-lesson.addEventListener("click", menu);
+document.addEventListener("click", menu);
 
 function menu(event) {
     if (event.target.closest('.menu__button')) {
@@ -318,32 +317,28 @@ function menu(event) {
         menuBody.classList.remove('_active');
     }
 }
-
-/*
-Разобраться с принципом работы метода closest.
-Почему в данном примере метод closet проверяет 
-дочерний элемент (в этом примере span)?
-
 */
 
-// 25:25 Действия браузера по умолчанию
+// 25:25 Default browser action 
 /*
-Многие события автоматически влекут за собой действия браузера.
-Например:
-- клик (нажатие) по ссылке инициирует переход на новый URL 
-- нажатие на кнопку «отправить» в форме - отправку введённых данных на сервер
-- нажатие и удержание кнопки мыши над текстом и её перемещение
-в таком состоянии - инициирует её выделение
+Many browser events automatic entail actions
 
-Если, мы самостоятельно обрабатываем событие в JS,
-то зачастую такое действие браузера нам не нужно.
-Его можно отменить.
+Example:
+- click (press) to link initialize follow to new URL 
+- clicking to «Send» button in form - sending the entered data to server
+- clicking & keeping mouse button over text and her moving in this condition
+intiliazing her highlighting
+
+
+If event processed independently in JS, 
+then this browser action don't need.
+It can be canceled
 */
 /*
 const link = document.querySelector('.link');
 link.addEventListener("click", function (event) {
-    console.log('Наши действия');
-    // отмена действия браузера (переход по ссылке)
+    console.log('My action');
+    // canceling browser action (follow link)
     event.preventDefault();
 });
 */
@@ -357,13 +352,13 @@ link.addEventListener("click", function (event) {
 /*
 const link = document.querySelector('.link');
 link.onclick = function () {
-    console.log('Наши действия');
-    // отмена действия браузера (переход по ссылке)
-    return false;
+    console.log('Our action');
+    // canceling browser action (follow link)
+     return false;
 }
 */
 
-// 27:30 Параметр passive
+// 27:30 Parameter passive
 /*
 Необязательный параметр passive со значением true. 
 Применяется для метода addEventListener. Значение 
@@ -384,7 +379,7 @@ preventDefault это метод, отменяющий стандартные (�
 нигде не вызовется, браузер может начать прокрутку.
 
 Запуск обработчиков может вызвать нежелательные задержки в пользовательском
-интерфейсе. 
+интерфейсе (UI).
 
 Параметр passive со значением true (passive: true) сообщает браузеру, что 
 обработчик не собирается выполнять прокрутку. Тогда браузер начинает её 
@@ -398,20 +393,19 @@ preventDefault это метод, отменяющий стандартные (�
 const link = document.querySelector('.link');
 
 link.addEventListener("click", function (event) {
-    console.log('Наши действия');
-    // отмена действия браузера (переход по ссылке)
+	console.log('My action');
+    // canceling browser action (follow link)
     event.preventDefault();
 }, { "passive": true });
 */
 
-// 28:50 Основы событий мыши
+// 28:50 Basic mouse events
+// Types mouse events
 
-// Типы событий мыши
-
-// События мыши делятся на две категории: простые и комплексные.
+// Mouse events separation two categories: simple and comprehensive
 
 /*
-Простые события.
+Simple events.
 Наиболее часто используемые простые события:
 mousedown / mouseup - кнопка мыши нажата / отпущена над элементом,
 mouseover / mouseout - курсор мыши появляется и уходит с него,
@@ -432,19 +426,19 @@ dblclick - вызывается двойным кликом по элемент�
 */
 
 // 30:30 Пример использования событий. Нажатие кнопок мыши.
-/*
+
 const link = document.querySelector('.button');
 
 link.addEventListener("mousedown", function (event) {
-    console.log('Нажата кнопка ${event.which}');
+    console.log('Button clicked ${event.which}');
 });
 
 link.addEventListener("click", function (event) {
-    console.log('Нажата основная кнопка мыши');
+    console.log('Clicked the main mouse button');
 });
 
 link.addEventListener("contextmenu", function (event) {
-    console.log('Вызвано контекстное меню (не основная кнопка мыши)');
+    console.log('Called the context menu (right mouse button)');
 });
 
 /*
