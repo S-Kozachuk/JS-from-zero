@@ -219,10 +219,11 @@ button.addEventListener("click", showConsole, options);
 // button.addEventListener('mouseenter', showConsole);
 
 // 12:49 Ascent and dive
-
+/*
 const block = document.querySelector('.block');
 const blockInner = document.querySelector('.block__inner');
 const blockInnerInner = document.querySelector('.block__inner-inner');
+*/
 
 // Ascent
 /*
@@ -304,10 +305,10 @@ lesson.addEventListener("click", function (event) {
 */
 
 // 21:25 Drop-down menu (delegation)
-
+const lesson = document.querySelector('.lesson');
 const menuBody = document.querySelector('.menu');
-
-document.addEventListener("click", menu);
+console.log(menuBody);
+lesson.addEventListener("click", menu);
 
 function menu(event) {
     if (event.target.closest('.menu__button')) {
