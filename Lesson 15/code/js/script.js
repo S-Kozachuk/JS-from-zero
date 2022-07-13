@@ -506,20 +506,20 @@ blockForMouse.addEventListener("mouseout", function (event) {
 });
 */
 
-// 36:15 Эффект "всплытия" у событий mouseover и mouseout
+// 36:15 Effect "ascent" at events mouseover and mouseout
 /*
 const blockForMouse = document.querySelector('.block-for-mouse');
 
 blockForMouse.addEventListener("mouseover", function (event) {
-    console.log(`Курсор над элементом`);
+    console.log(`Cursor over the elements`);
 });
 
 blockForMouse.addEventListener("mouseout", function (event) {
-    console.log(`Курсор ушёл с элемента`);
+    console.log(`Cursor has left of the element`);
 });
 */
 
-// 37:15 События mouseenter и mouseleave
+// 37:15 Events mouseenter and mouseleave
 /*
 Важные отличия 
 1) Переходы внутри элемента, на его потомки и с них, не считаются.
@@ -529,26 +529,27 @@ blockForMouse.addEventListener("mouseout", function (event) {
 const blockForMouse = document.querySelector('.block-for-mouse');
 
 blockForMouse.addEventListener("mouseenter", function (event) {
-    console.log (`Курсор над элементом`);
+    console.log (`Cursor over the element`);
 });
 
 blockForMouse.addEventListener("mouseleave", function (event) {
-    console.log (`Курсор ушёл с элемента`);
+    console.log (`Cursor has left of the document`);
 });
 */
 
-// 38:25 Делегирование событий наведения мыши
+// 38:25 Delegation events of mouse hover
 /*
 const blockForMouse = document.querySelector('.block-for-mouse');
 blockForMouse.addEventListener("mouseover", function (event) {
     let target = event.target.closest('span');
-    // переход не на <span> - игнорировать
+    // switching not to a <span> - ignore
     if (!target) return;
     target.style.cssText = 'background-color: #77608d;';
 });
+
 blockForMouse.addEventListener("mouseout", function (event) {
     let target = event.target.closest('span');
-    // переход не на <span> - игнорировать
+    // swithing not to a <span> - ignore
     if (!target) return;
     target.style.cssText = '';
 });
