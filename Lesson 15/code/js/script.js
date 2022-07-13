@@ -451,14 +451,14 @@ event.which = 3 - Нажата не основная кнопка мыши (по
 */
 
 // 32:30 Mouse moves. Coordinates clientX/Y, pageX/Y
-/*
+
 const blockForMouse = document.querySelector('.block-for-mouse');
 
 blockForMouse.addEventListener("mousemove", function (event) {
     blockForMouse.innerHTML = 
     `clientX - ${event.clientX} <br> clientY - ${event.clientY}`;
 });
-*/
+
 
 // 33:45 Наведение мыши. События mouseover/mouseout.
 /*
