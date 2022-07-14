@@ -278,7 +278,7 @@ blockInnerInner.addEventListener("click", function (event) {
 /*
 Навешивание обработчика на каждый объект (in this example - on button)
 */
-
+/*
 const button = document.querySelectorAll('.button');
 const buttonW = document.getElementById('button2');
 console.log(button);
@@ -299,9 +299,10 @@ function removeAdd () {
 }
 
 buttonW.addEventListener('click', removeAdd);
+*/
 
 // 2-nd variant, delegation (to common parent)
-/*
+
 const lesson = document.querySelector('.lesson');
 
 function showConsole() {
@@ -313,7 +314,7 @@ lesson.addEventListener("click", function (event) {
         showConsole();
     }
 }); 
-*/
+
 
 // 21:25 Drop-down menu (delegation)
 /*
