@@ -230,20 +230,21 @@ const blockInnerInner = document.querySelector('.block__inner-inner');
 Когда на элементе происходит событие, обработчики сначала срабатывают на нём, 
 затем на его родителе, затем выше и так далее, по цепочке предков.
 */
-
-block.addEventListener("click", function () {
-    console.log('Click on block!');
-    // console.log(event.target); 
+/*
+block.addEventListener("click", function (event) {
+    console.log('Click on block!'); 
 });
 
-blockInner.addEventListener("click", function () {
+blockInner.addEventListener("click", function (e) {
 	console.log('Click on 2-nd level block!');
+	e.stopPropagation();
 });
 
-blockInnerInner.addEventListener("click", function () {
+blockInnerInner.addEventListener("click", function (e) {
 	console.log('Click on 3-td level block!');
-	// event.stopPropagation();
+	
 });
+*/
 
 
 // 15:40 Diving
@@ -252,17 +253,17 @@ blockInnerInner.addEventListener("click", function () {
 block.addEventListener("click", function (event) {
     console.log('Click on block!');
     //console.log(event.target);
-}, { "capture": false});
+});
 
 blockInner.addEventListener("click", function (event) {
     console.log('Click on 2-nd level block');
-});
+}, { "capture": true});
+
 blockInnerInner.addEventListener("click", function (event) {
     console.log('Click on 3-rd level block!');
-    // Метод для остановки "всплытия"
-    //event.stopPropagation();
 });
 */
+
 /*
 В современной разработке стадия погружения применяется крайне редко.
 Как правило события обрабатываются во время всплытия.
@@ -277,18 +278,28 @@ blockInnerInner.addEventListener("click", function (event) {
 /*
 Навешивание обработчика на каждый объект (in this example - on button)
 */
-/*
+
 const button = document.querySelectorAll('.button');
-console.log(button)
+const buttonW = document.getElementById('button2');
+console.log(button);
+console.log(buttonW);
 
 function showConsole() {
     console.log('Hurray!');
 }
 
-button.forEach(buttonItem => {
-    buttonItem.addEventListener("click", showConsole);
-}); 
-*/
+button.forEach(item => {
+    item.addEventListener("click", showConsole);
+});
+
+function removeAdd () {
+	button.forEach(button => 
+		button.removeEventListener('click',showConsole))
+	console.log('Listener was remove')
+}
+
+buttonW.addEventListener('click', removeAdd);
+
 // 2-nd variant, delegation (to common parent)
 /*
 const lesson = document.querySelector('.lesson');
