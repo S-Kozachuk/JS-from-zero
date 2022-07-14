@@ -219,18 +219,18 @@ button.addEventListener("click", showConsole, options);
 // button.addEventListener('mouseenter', showConsole);
 
 // 12:49 Ascent and dive
-/*
+
 const block = document.querySelector('.block');
 const blockInner = document.querySelector('.block__inner');
 const blockInnerInner = document.querySelector('.block__inner-inner');
-*/
+
 
 // Ascent
 /*
 Когда на элементе происходит событие, обработчики сначала срабатывают на нём, 
 затем на его родителе, затем выше и так далее, по цепочке предков.
 */
-/*
+
 block.addEventListener("click", function (event) {
     console.log('Click on block!');
     // console.log(event.target); 
@@ -244,7 +244,7 @@ blockInnerInner.addEventListener("click", function (event) {
 	console.log('Click on 3-td level block!');
 	// event.stopPropagation();
 });
-*/
+
 
 // 15:40 Diving
 // Before something is ascent, it must a diving
@@ -581,7 +581,7 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 */
 
 // 41:10 Drag`n`Drop (dragging)
-
+/*
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field__item');
 
@@ -674,7 +674,7 @@ gragItem.addEventListener('mousedown', function (event) {
 gragItem.addEventListener('dragstart', function (event) {
 	event.preventDefault();
 });
-
+*/
 
 // 41:53 События клавиатуры
 /*
