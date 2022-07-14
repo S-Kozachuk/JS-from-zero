@@ -231,16 +231,16 @@ const blockInnerInner = document.querySelector('.block__inner-inner');
 затем на его родителе, затем выше и так далее, по цепочке предков.
 */
 
-block.addEventListener("click", function (event) {
+block.addEventListener("click", function () {
     console.log('Click on block!');
     // console.log(event.target); 
 });
 
-blockInner.addEventListener("click", function (event) {
+blockInner.addEventListener("click", function () {
 	console.log('Click on 2-nd level block!');
 });
 
-blockInnerInner.addEventListener("click", function (event) {
+blockInnerInner.addEventListener("click", function () {
 	console.log('Click on 3-td level block!');
 	// event.stopPropagation();
 });
