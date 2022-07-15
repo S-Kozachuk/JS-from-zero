@@ -593,7 +593,7 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 */
 
 // 41:10 Drag`n`Drop (dragging)
-/*
+
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field__item');
 
@@ -686,9 +686,10 @@ gragItem.addEventListener('mousedown', function (event) {
 gragItem.addEventListener('dragstart', function (event) {
 	event.preventDefault();
 });
-*/
+
 
 // Drag'n'drop by Alexander Lyshenko
+/*
 const areaOne = document.querySelector('.area-1');
 const areaTwo = document.querySelector('.area-2');
 const car = document.querySelector('.area-2 img');
@@ -714,6 +715,7 @@ function drop(e) {
 	console.log(itemId);
 	e.target.append(document.getElementById(itemId))
 }
+*/
 
 // 41:53 События клавиатуры
 /*
