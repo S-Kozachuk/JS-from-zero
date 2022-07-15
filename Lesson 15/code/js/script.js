@@ -593,7 +593,7 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 */
 
 // 41:10 Drag`n`Drop (dragging)
-
+/*
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field__item');
 
@@ -686,7 +686,34 @@ gragItem.addEventListener('mousedown', function (event) {
 gragItem.addEventListener('dragstart', function (event) {
 	event.preventDefault();
 });
+*/
 
+// Drag'n'drop by Alexander Lyshenko
+const areaOne = document.querySelector('.area-1');
+const areaTwo = document.querySelector('.area-2');
+const car = document.querySelector('.area-2 img');
+
+areaOne.ondragover = allowDrop;
+areaTwo.ondragover = allowDrop;
+
+function allowDrop (e) {
+	e.preventDefault();
+}
+
+car.ondragstart = drag;
+
+function drag(e) {
+	e.dataTransfer.setData('id', e.target.id);
+}
+
+areaOne.ondrop = drop;
+areaTwo.ondrop = drop;
+
+function drop(e) {
+	let itemId = e.dataTransfer.getData('id');
+	console.log(itemId);
+	e.target.append(document.getElementById(itemId))
+}
 
 // 41:53 События клавиатуры
 /*

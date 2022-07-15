@@ -184,13 +184,13 @@ a.link {
 
 /* Drag'n'drop by Alexander Lyshenko */
 
-.zone-1,.zone-2 {
+.area-1,.area-2 {
 	margin-bottom: 10px;
 	height: 100px;
 	width: 100%;
 	border: 2px solid #e0ab38;
 }
 
-.zone-2 img {
+img {
 	width: 100px;
 }
