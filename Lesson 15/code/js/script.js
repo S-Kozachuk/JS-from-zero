@@ -617,7 +617,7 @@ gragItem.addEventListener('mousedown', function (event) {
     gragItem.style.position = 'absolute';
     gragItem.style.zIndex = 1000;
     document.body.append(gragItem);
-    
+      
     moveItem(event.pageX, event.pageY);
     
     function moveItem(pageX, pageY) {
