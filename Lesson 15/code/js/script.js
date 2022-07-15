@@ -302,7 +302,7 @@ buttonW.addEventListener('click', removeAdd);
 */
 
 // 2-nd variant, delegation (to common parent)
-
+/*
 const lesson = document.querySelector('.lesson');
 
 function showConsole() {
@@ -314,10 +314,10 @@ lesson.addEventListener("click", function (event) {
         showConsole();
     }
 }); 
-
+*/
 
 // 21:25 Drop-down menu (delegation)
-/*
+
 const menuBody = document.querySelector('.menu');
 document.addEventListener("click", menu);
 
@@ -329,7 +329,7 @@ function menu(event) {
         menuBody.classList.remove('_active');
     }
 }
-*/
+
 
 // 25:25 Default browser action 
 /*
