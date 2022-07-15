@@ -219,11 +219,11 @@ button.addEventListener("click", showConsole, options);
 // button.addEventListener('mouseenter', showConsole);
 
 // 12:49 Ascent and dive
-
+/*
 const block = document.querySelector('.block');
 const blockInner = document.querySelector('.block__inner');
 const blockInnerInner = document.querySelector('.block__inner-inner');
-
+*/
 
 // Ascent
 /*
@@ -593,7 +593,7 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 */
 
 // 41:10 Drag`n`Drop (dragging)
-/*
+
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field__item');
 
@@ -659,7 +659,7 @@ gragItem.addEventListener('mousedown', function (event) {
 
 		gragItem.hidden = true;
 		let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
-		gragItem.hidden = false;
+		gragItem.hidden = false; 
 
 		if (!elemBelow) return;
 		let droppableBelow = elemBelow.closest('.drag-field__point');
@@ -686,7 +686,7 @@ gragItem.addEventListener('mousedown', function (event) {
 gragItem.addEventListener('dragstart', function (event) {
 	event.preventDefault();
 });
-*/
+
 
 // 41:53 События клавиатуры
 /*
