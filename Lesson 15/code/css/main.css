@@ -102,10 +102,10 @@ h1 {
     display: none;
 }
 
-
 .menu__list {
+    margin: 0;
+	padding: 15px;
     background-color: #77608d;
-    padding: 15px;
 }
 
 ul {
@@ -116,13 +116,14 @@ ul {
     margin: 0px 0px 15px 0px;
 }
 
-.menu_link {
+.menu__link {
     color: #fff;
     font-size: 16px;
+	text-decoration: none;
 }
 
-.menu_link:hover {
-    
+.menu__link:hover {
+    color: #eb3a04;
 }
 
 a.link {
