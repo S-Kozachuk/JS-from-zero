@@ -593,7 +593,7 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 */
 
 // 41:10 Drag`n`Drop (dragging)
-/*
+
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field__item');
 
@@ -615,7 +615,7 @@ gragItem.addEventListener('mousedown', function (event) {
     }
     
     gragItem.style.position = 'absolute';
-    gragItem.style.zIndex = 1000;
+    gragItem.style.zIndex = 1;
     document.body.append(gragItem);
       
     moveItem(event.pageX, event.pageY);
@@ -686,8 +686,10 @@ gragItem.addEventListener('mousedown', function (event) {
 gragItem.addEventListener('dragstart', function(event) {
 	event.preventDefault();
 });
-*/
 
+
+/* MDN example "dragstart" */
+/*
 document.addEventListener("dragstart", event => {
   // make it half transparent
   event.target.classList.add("dragging");
@@ -699,7 +701,7 @@ document.addEventListener("dragend", event => {
   event.target.classList.remove("dragging");
   console.log('Dragend');
 });
-
+*/
 
 // Drag'n'drop by Alexander Lyshenko
 /*
