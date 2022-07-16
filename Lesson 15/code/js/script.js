@@ -144,28 +144,23 @@ button.addEventListener("click", showConsole);
 
 // 7:25 Method addEventListener - options (parameters)
 /*
-У метода addEventListener есть некоторые параметры.
+У метода addEventListener есть параметры.
 Существует два способа записи (синтаксиса).
-1. После вызова функции сослаться на объект с параметрами.
+1. После вызова функции сослаться на заранее созданный объект с параметрами.
 Объект это константа, в которую записаны параметры.
-Пример: 
 
 2. Записать параметры напрямую в тело метода addEventListener,
 после вызова функции. Используются фигурные скобки.
-Пример (параметры записаны в строку):
-button.addEventListener("click", showConsole, {"capture": false});
 */
-// First record method
+
+// Example one:
 /*
-const options ={
-    "capture": false, // фаза, на которой должен сработать обработчик 
-    "once": false, // если true, тогда обработчик будет 
-    // автоматически удалён после выполнения.
-    "passive": false // если true, то указывает, что обработчик
-    // никогда не вызовет preventDefault()
+const options = {
+    "capture": false, // фаза, на которой должен сработать обработчик (по умолчанию отключено - false)
+    "once": false, // если true, то обработчик будет автоматически удалён после выполнения.
+    "passive": false // если true, то указывает, что обработчик никогда не вызовет preventDefault()
 }
-*/
-/*
+
 const button = document.querySelector('.button');
 
 function showConsole() {
@@ -174,6 +169,10 @@ function showConsole() {
 
 button.addEventListener("click", showConsole, options);
 */
+
+// Example two (parameters was record to string):
+// button.addEventListener("click", showConsole, {"capture": false});
+
 
 // 9:16 
 /*
@@ -597,7 +596,7 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field__item');
 
-gragItem.addEventListener('mousedown', function (event) {
+gragItem.addEventListener('mousedown', function(event) {
     
     let coordsItemX = event.clientX - gragItem.getBoundingClientRect().left;
     let coordsItemY = event.clientY - gragItem.getBoundingClientRect().top;
@@ -678,9 +677,14 @@ gragItem.addEventListener('mousedown', function (event) {
 	}
 	document.addEventListener('mousemove', onDragItem);
 
-	document.addEventListener('mouseup', function (){
+	/* 
+	Удаляет обработчик (функция onDragItem) с всей страницы (объект document)
+	при отпускании клавиши мыши только один раз {'once': true}
+	
+	*/
+	document.addEventListener('mouseup', function() {
 		document.removeEventListener('mousemove', onDragItem);
-	}, {'once': true});
+	}, {'once': false});
 });
 
 gragItem.addEventListener('dragstart', function(event) {
