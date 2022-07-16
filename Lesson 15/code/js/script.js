@@ -598,6 +598,7 @@ const gragItem = document.querySelector('.drag-field__item');
 
 gragItem.addEventListener('mousedown', function(event) {
     
+	// Preparation to moves gragItem oblect inside the gragField
     let coordsItemX = event.clientX - gragItem.getBoundingClientRect().left;
     let coordsItemY = event.clientY - gragItem.getBoundingClientRect().top;
     
@@ -655,7 +656,7 @@ gragItem.addEventListener('mousedown', function(event) {
 	let currentDroppable = null;
 
 	function onDragItem(event) {
-		moveItem(event.pageX, event.pageY);
+		//moveItem(event.pageX, event.pageY);
 
 		gragItem.hidden = true;
 		let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
