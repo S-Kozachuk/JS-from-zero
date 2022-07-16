@@ -184,6 +184,30 @@ a.link {
 	box-shadow: inset 0px 0px 10px 5px #333f2d;
 }
 
+/* MDN example */
+body {
+	/* Prevent the user selecting text in the example */
+	user-select: none;
+  }
+  
+  #draggable {
+	text-align: center;
+	background: white;
+  }
+  
+  #container {
+	width: 200px;
+	height: 20px;
+	background: blueviolet;
+	padding: 10px;
+  }
+  
+  .dragging {
+	border: 3px solid red;
+  }
+  
+
+
 /* Drag'n'drop by Alexander Lyshenko */
 
 .area-1,.area-2 {

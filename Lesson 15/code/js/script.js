@@ -593,7 +593,7 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 */
 
 // 41:10 Drag`n`Drop (dragging)
-
+/*
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field__item');
 
@@ -683,8 +683,21 @@ gragItem.addEventListener('mousedown', function (event) {
 	}, {'once': true});
 });
 
-gragItem.addEventListener('dragstart', function (event) {
+gragItem.addEventListener('dragstart', function(event) {
 	event.preventDefault();
+});
+*/
+
+document.addEventListener("dragstart", event => {
+  // make it half transparent
+  event.target.classList.add("dragging");
+  console.log('Dragstart');
+});
+
+document.addEventListener("dragend", event => {
+  // reset the transparency
+  event.target.classList.remove("dragging");
+  console.log('Dragend');
 });
 
 
