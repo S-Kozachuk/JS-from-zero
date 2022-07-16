@@ -661,6 +661,7 @@ gragItem.addEventListener('mousedown', function(event) {
 	let currentDroppable = null;
 
 	function onDragItem(event) {
+		// Calling the moveItem function
 		moveItem(event.pageX, event.pageY);
 
 		gragItem.hidden = true;
