@@ -619,6 +619,7 @@ gragItem.addEventListener('mousedown', function(event) {
       
     moveItem(event.pageX, event.pageY);
     
+	// Function moveItem moves (set position) the object gragItem (.drag-field__item')
     function moveItem(pageX, pageY) {
         let currentX = pageX - coordsItemX;
         let currentY = pageY - coordsItemY;
@@ -684,7 +685,7 @@ gragItem.addEventListener('mousedown', function(event) {
 	*/
 	document.addEventListener('mouseup', function() {
 		document.removeEventListener('mousemove', onDragItem);
-	}, {'once': false});
+	}, {'once': true});
 });
 
 gragItem.addEventListener('dragstart', function(event) {
