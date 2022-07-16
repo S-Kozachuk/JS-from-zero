@@ -596,23 +596,28 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field__item');
 
+// Moves the gragItem object if pushing the mouse button
 gragItem.addEventListener('mousedown', function(event) {
     
-	// Preparation to moves gragItem oblect inside the gragField
+	// Preparation to moves gragItem object inside the gragField
     let coordsItemX = event.clientX - gragItem.getBoundingClientRect().left;
     let coordsItemY = event.clientY - gragItem.getBoundingClientRect().top;
     
+	// Get a gragItem sizes as object
     let gragItemSizes = {
         width: gragItem.offsetWidth,
         height: gragItem.offsetHeight
     }
 
+	// Get a gragFieldSizes as object
     let gragFieldSizes = {
         left: gragField.getBoundingClientRect().left + scrollX,
         top: gragField.getBoundingClientRect().top + scrollY,
         right: gragField.getBoundingClientRect().left + scrollX + gragField.offsetWidth,
         bottom: gragField.getBoundingClientRect().top + scrollY + gragField.offsetHeight
     }
+
+	console.log(gragFieldSizes)
     
     gragItem.style.position = 'absolute';
     gragItem.style.zIndex = 1;
@@ -656,7 +661,7 @@ gragItem.addEventListener('mousedown', function(event) {
 	let currentDroppable = null;
 
 	function onDragItem(event) {
-		//moveItem(event.pageX, event.pageY);
+		moveItem(event.pageX, event.pageY);
 
 		gragItem.hidden = true;
 		let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
@@ -689,6 +694,7 @@ gragItem.addEventListener('mousedown', function(event) {
 	}, {'once': true});
 });
 
+// Canceling default browser action if moves the gragItem object
 gragItem.addEventListener('dragstart', function(event) {
 	event.preventDefault();
 });

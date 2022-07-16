@@ -148,8 +148,7 @@ a.link {
    padding: 10px 15px;
 }
 
-/* Drag`n`Drop */
-
+/* Drag & drop example */
 .drag-field {
 	width: 200px;
 	height: 200px;
@@ -209,7 +208,6 @@ body {
   
 
 /* Drag'n'drop by Alexander Lyshenko */
-
 .area-1,.area-2 {
 	margin-bottom: 10px;
 	height: 100px;
