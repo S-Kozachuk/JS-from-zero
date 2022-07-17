@@ -688,7 +688,6 @@ gragItem.addEventListener('mousedown', function(event) {
 	/* 
 	Удаляет обработчик (функция onDragItem) с всей страницы (объект document)
 	при отпускании клавиши мыши только один раз {'once': true}
-	
 	*/
 	document.addEventListener('mouseup', function() {
 		document.removeEventListener('mousemove', onDragItem);
