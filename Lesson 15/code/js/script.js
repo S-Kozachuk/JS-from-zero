@@ -602,6 +602,10 @@ gragItem.addEventListener('mousedown', function(event) {
 	// Preparation to moves gragItem object inside the gragField
     let coordsItemX = event.clientX - gragItem.getBoundingClientRect().left;
     let coordsItemY = event.clientY - gragItem.getBoundingClientRect().top;
+	console.log('event.clientX: ' + event.clientX);
+	console.log(gragItem.getBoundingClientRect().left)
+	console.log('event.clientY: ' + event.clientY);
+	console.log(coordsItemX)
     
 	// Get a gragItem sizes as object
     let gragItemSizes = {
@@ -609,7 +613,7 @@ gragItem.addEventListener('mousedown', function(event) {
         height: gragItem.offsetHeight
     }
 
-	// Get a gragFieldSizes as object
+	// Get a gragFieldSizes position as object (full sizes with offset)
     let gragFieldSizes = {
         left: gragField.getBoundingClientRect().left + scrollX,
         top: gragField.getBoundingClientRect().top + scrollY,
@@ -617,8 +621,6 @@ gragItem.addEventListener('mousedown', function(event) {
         bottom: gragField.getBoundingClientRect().top + scrollY + gragField.offsetHeight
     }
 
-	console.log(gragFieldSizes)
-    
     gragItem.style.position = 'absolute';
     gragItem.style.zIndex = 1;
     document.body.append(gragItem);
