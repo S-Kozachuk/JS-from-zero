@@ -602,10 +602,14 @@ gragItem.addEventListener('mousedown', function(event) {
 	// Preparation to moves gragItem object inside the gragField
     let coordsItemX = event.clientX - gragItem.getBoundingClientRect().left;
     let coordsItemY = event.clientY - gragItem.getBoundingClientRect().top;
-	console.log('event.clientX: ' + event.clientX);
-	console.log(gragItem.getBoundingClientRect().left)
-	console.log('event.clientY: ' + event.clientY);
-	console.log(coordsItemX)
+
+	console.log(event);
+	console.log('event.clientX: ', event.clientX);
+	console.log('itemleft: ', gragItem.getBoundingClientRect().left);
+	console.log('coordsItemX :', coordsItemX)
+	console.log('event.clientY: ', event.clientY);
+	console.log('itemTop: ', gragItem.getBoundingClientRect().top);
+	console.log('coordsIemY: ', coordsItemY);
     
 	// Get a gragItem sizes as object
     let gragItemSizes = {
