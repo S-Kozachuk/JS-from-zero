@@ -605,6 +605,13 @@ gragItem.addEventListener('mousedown', function(event) {
     let coordsItemX = event.clientX - gragItem.getBoundingClientRect().left;
     let coordsItemY = event.clientY - gragItem.getBoundingClientRect().top;
 
+	/*
+	coordsItemX - положение курсора в горизонтальной плоскости (axis X) относительно
+	перемещаемого квадрата (gragItem) в момент захвата (drag).Нужно для
+	дальнейшего расчёта расстояние на котрое будет перемещаться квадрат с
+	учётом внутренних границ родительского поля (gragField)
+	*/
+
 	console.log(event);
 	console.log('event.clientX: ', event.clientX);
 	console.log('itemleft: ', gragItem.getBoundingClientRect().left);
