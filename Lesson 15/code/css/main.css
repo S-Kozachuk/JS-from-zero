@@ -159,7 +159,7 @@ a.link {
 .drag-field__item {
 	width: 40px;
 	height: 40px;
-	cursor: grab;
+	cursor: move;
 	background-color: #77608d;
 }
 

@@ -595,8 +595,10 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field__item');
+const cursorImg = document.querySelector('.cursor-img')
 
 // Moves the gragItem object if pushing the mouse button
+
 gragItem.addEventListener('mousedown', function(event) {
     
 	// Preparation to moves gragItem object inside the gragField
@@ -630,7 +632,9 @@ gragItem.addEventListener('mousedown', function(event) {
     document.body.append(gragItem);
       
     moveItem(event.pageX, event.pageY);
-    
+	console.log('PageX: ',event.pageX);
+	console.log('PageY: ', event.pageY);
+
 	// Function moveItem moves (set position) the object gragItem (.drag-field__item')
     function moveItem(pageX, pageY) {
         let currentX = pageX - coordsItemX;
