@@ -716,6 +716,12 @@ gragItem.addEventListener('dragstart', function(event) {
 	event.preventDefault();
 });
 
+// Client X/Y tested
+let elem = document.getElementById('elem');
+document.addEventListener('mousemove', (e)=>{
+	elem.innerHTML = e.clientX + ':' + e.clientY;
+});
+
 
 /* MDN example "dragstart" */
 /*
