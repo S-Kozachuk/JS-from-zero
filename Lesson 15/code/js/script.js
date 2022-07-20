@@ -634,7 +634,7 @@ gragItem.addEventListener('mousedown', function(event) {
         bottom: gragField.getBoundingClientRect().top + scrollY + gragField.offsetHeight
     }
 
-	document.body.append(gragItem);
+	document.body.append(gragItem); // Why ?
       
     moveItem(event.pageX, event.pageY);	
 
