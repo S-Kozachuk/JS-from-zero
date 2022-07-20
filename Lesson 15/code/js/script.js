@@ -606,10 +606,10 @@ gragItem.addEventListener('mousedown', function(event) {
     let coordsItemY = event.clientY - gragItem.getBoundingClientRect().top;
 
 	/*
-	coordsItemX - положение курсора в горизонтальной плоскости (axis X) относительно
-	перемещаемого квадрата (gragItem) в момент захвата (drag).Нужно для
-	дальнейшего расчёта расстояние на котрое будет перемещаться квадрат с
-	учётом внутренних границ родительского поля (gragField)
+	coordsItemX - положение курсора (axis X) в момент захвата (drag)
+	относительно перетаскиваемого квадрата (gragItem).
+	Используется для расчёта координат во время смещения квадрата с
+	учётом внутренних границ родительского поля (gragField).
 	*/
 
 	console.log(event);
@@ -620,13 +620,13 @@ gragItem.addEventListener('mousedown', function(event) {
 	console.log('itemTop: ', gragItem.getBoundingClientRect().top);
 	console.log('coordsIemY: ', coordsItemY);
     
-	// Get a gragItem sizes as object
+	// Get a gragItem object sizes
     let gragItemSizes = {
         width: gragItem.offsetWidth,
         height: gragItem.offsetHeight
     }
 
-	// Get a gragFieldSizes position as object (full sizes with offset)
+	// Get a gragFieldSizes position as object (full sizes with scroll page)
     let gragFieldSizes = {
         left: gragField.getBoundingClientRect().left + scrollX,
         top: gragField.getBoundingClientRect().top + scrollY,
@@ -634,13 +634,9 @@ gragItem.addEventListener('mousedown', function(event) {
         bottom: gragField.getBoundingClientRect().top + scrollY + gragField.offsetHeight
     }
 
-    gragItem.style.position = 'absolute';
-    gragItem.style.zIndex = 1;
-    document.body.append(gragItem);
+	document.body.append(gragItem);
       
-    moveItem(event.pageX, event.pageY);
-	console.log('PageX: ',event.pageX);
-	console.log('PageY: ', event.pageY);
+    moveItem(event.pageX, event.pageY);	
 
 	// Function moveItem moves (set position) the object gragItem (.drag-field__item')
     function moveItem(pageX, pageY) {
@@ -721,7 +717,6 @@ let elem = document.getElementById('elem');
 document.addEventListener('mousemove', (e)=>{
 	elem.innerHTML = e.clientX + ':' + e.clientY;
 });
-
 
 /* MDN example "dragstart" */
 /*
