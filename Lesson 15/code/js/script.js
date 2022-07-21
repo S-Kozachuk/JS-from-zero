@@ -616,7 +616,6 @@ gragItem.addEventListener('mousedown', function(event) {
         width: gragItem.offsetWidth,
         height: gragItem.offsetHeight
     }
-	console.log(gragItemSizes)
 
 	// Get a gragFieldSizes position as object (full sizes with scroll page)
     let gragFieldSizes = {
@@ -673,8 +672,9 @@ gragItem.addEventListener('mousedown', function(event) {
 	let currentDroppable = null;
 
 	// Changed style 
+	
 	function onDragItem(event) {
-		// Calling the moveItem function if intersecton with droppableBelow elem"
+		// Calling the moveItem function if intersecton with droppableBelow elem
 		moveItem(event.pageX, event.pageY);
 
 		gragItem.hidden = true;
