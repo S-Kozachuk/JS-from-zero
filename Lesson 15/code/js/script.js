@@ -638,7 +638,7 @@ gragItem.addEventListener('mousedown', function(event) {
         let currentY = pageY - coordsItemY;
 
 		console.log(currentX)
-        
+		
         if (currentX + gragItemSizes.width <= gragFieldSizes.right && 
 			currentX >= gragFieldSizes.left
 		) {
