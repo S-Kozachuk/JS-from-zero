@@ -595,7 +595,6 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field__item');
-const cursorImg = document.querySelector('.cursor-img')
 
 // Moves the gragItem object if pushing the mouse button
 
@@ -617,6 +616,7 @@ gragItem.addEventListener('mousedown', function(event) {
         width: gragItem.offsetWidth,
         height: gragItem.offsetHeight
     }
+	console.log(gragItemSizes)
 
 	// Get a gragFieldSizes position as object (full sizes with scroll page)
     let gragFieldSizes = {
@@ -627,35 +627,38 @@ gragItem.addEventListener('mousedown', function(event) {
     }
 
 	document.body.append(gragItem);
-      
+    
     moveItem(event.pageX, event.pageY);
-	// console.log('PageX :', event.pageX, 'PageY :', event.pageY);
-	console.log(event.pageX)
 
 	// Function moveItem moves (set position) the object gragItem (.drag-field__item')
     function moveItem(pageX, pageY) {
         let currentX = pageX - coordsItemX;
         let currentY = pageY - coordsItemY;
-
-		console.log(currentX)
 		
+		// By axis X 
         if (currentX + gragItemSizes.width <= gragFieldSizes.right && 
 			currentX >= gragFieldSizes.left
 		) {
 			gragItem.style.left = `${currentX}px`;
+			console.log('into');
 		} else {
 			if (currentX + gragItemSizes.width > gragFieldSizes.right) {
 				gragItem.style.left = `${gragFieldSizes.right - gragItemSizes.width}px`;
+				console.log('OutputR');
 			}
 			if (currentX < gragFieldSizes.left) {
-				gragItem.style.Left = `${gragFieldSizes.left}px`;
+				gragItem.style.left = `${gragFieldSizes.left}px`;
+				console.assertlog
+				console.log('OutputL :', gragFieldSizes.left);
 			}
 		}
-		if (
-			currentY + gragItemSizes.height <= gragFieldSizes.bottom &&
+
+		// By axis Y
+		if (currentY + gragItemSizes.height <= gragFieldSizes.bottom &&
 			currentY >= gragFieldSizes.top
 		) {
-			gragItem.style.top = `${currentY}px`; 
+			gragItem.style.top = `${currentY}px`;
+			console.log(gragItem.style.left) 
 		} else {
 			if (currentY + gragItemSizes.height > gragFieldSizes.bottom) {
 				gragItem.style.top = `${gragFieldSizes.bottom - gragItemSizes.height}px`;
@@ -666,10 +669,12 @@ gragItem.addEventListener('mousedown', function(event) {
 		}
     }
 
+
 	let currentDroppable = null;
 
+	// Changed style 
 	function onDragItem(event) {
-		// Calling the moveItem function
+		// Calling the moveItem function if intersecton with droppableBelow elem"
 		moveItem(event.pageX, event.pageY);
 
 		gragItem.hidden = true;
@@ -691,21 +696,26 @@ gragItem.addEventListener('mousedown', function(event) {
 			}		
 		}
 	}
-	document.addEventListener('mousemove', onDragItem);
 
+	document.addEventListener('mousemove', onDragItem);
+	
 	/* 
 	Удаляет обработчик (функция onDragItem) с всей страницы (объект document)
 	при отпускании клавиши мыши только один раз {'once': true}
 	*/
+	
 	document.addEventListener('mouseup', function() {
 		document.removeEventListener('mousemove', onDragItem);
 	}, {'once': true});
+	
+	
 });
 
 // Canceling default browser action if moves the gragItem object
 gragItem.addEventListener('dragstart', function(event) {
 	event.preventDefault();
 });
+
 
 // Client X/Y tested
 let elem = document.getElementById('elem');
