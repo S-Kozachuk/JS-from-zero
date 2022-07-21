@@ -612,14 +612,6 @@ gragItem.addEventListener('mousedown', function(event) {
 	учётом внутренних границ родительского поля (gragField).
 	*/
 
-	console.log(event);
-	console.log('event.clientX: ', event.clientX);
-	console.log('itemleft: ', gragItem.getBoundingClientRect().left);
-	console.log('coordsItemX :', coordsItemX)
-	console.log('event.clientY: ', event.clientY);
-	console.log('itemTop: ', gragItem.getBoundingClientRect().top);
-	console.log('coordsIemY: ', coordsItemY);
-    
 	// Get a gragItem object sizes
     let gragItemSizes = {
         width: gragItem.offsetWidth,
@@ -634,17 +626,20 @@ gragItem.addEventListener('mousedown', function(event) {
         bottom: gragField.getBoundingClientRect().top + scrollY + gragField.offsetHeight
     }
 
-	document.body.append(gragItem); // Why ?
+	document.body.append(gragItem);
       
-    moveItem(event.pageX, event.pageY);	
+    moveItem(event.pageX, event.pageY);
+	// console.log('PageX :', event.pageX, 'PageY :', event.pageY);
+	console.log(event.pageX)
 
 	// Function moveItem moves (set position) the object gragItem (.drag-field__item')
     function moveItem(pageX, pageY) {
         let currentX = pageX - coordsItemX;
         let currentY = pageY - coordsItemY;
+
+		console.log(currentX)
         
-        if (
-			currentX + gragItemSizes.width <= gragFieldSizes.right && 
+        if (currentX + gragItemSizes.width <= gragFieldSizes.right && 
 			currentX >= gragFieldSizes.left
 		) {
 			gragItem.style.left = `${currentX}px`;
