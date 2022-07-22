@@ -150,8 +150,8 @@ a.link {
 
 /* Drag & drop example */
 .drag-field {
-	width: 200px;
-	height: 200px;
+	width: 400px;
+	height: 300px;
 	background-color: #7a956b;
 	position: relative;
 }
