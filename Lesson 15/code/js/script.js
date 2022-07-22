@@ -679,7 +679,7 @@ gragItem.addEventListener('mousedown', function(event) {
 		gragItem.hidden = true;
 		let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
 		gragItem.hidden = false; 
-		console.log('ElementBelow: ',elemBelow)
+		console.log('ElementBelow: ', elemBelow)
 
 		if (!elemBelow) return;
 		let droppableBelow = elemBelow.closest('.drag-field__point');
