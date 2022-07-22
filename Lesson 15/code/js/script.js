@@ -592,24 +592,24 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 */
 
 // 41:10 Drag`n`Drop (dragging)
-
+/*
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field__item');
-
+*/
 // Moves the gragItem object if pushing the mouse button
-
+/*
 gragItem.addEventListener('mousedown', function(event) {
     
 	// Preparation to moves gragItem object inside the gragField
     let coordsItemX = event.clientX - gragItem.getBoundingClientRect().left;
     let coordsItemY = event.clientY - gragItem.getBoundingClientRect().top;
 
-	/*
-	coordsItemX - положение курсора (axis X) в момент захвата (drag)
-	относительно перетаскиваемого квадрата (gragItem).
-	Используется для расчёта координат во время смещения квадрата с
-	учётом внутренних границ родительского поля (gragField).
-	*/
+	
+	// coordsItemX - положение курсора (axis X) в момент захвата (drag)
+	// относительно перетаскиваемого квадрата (gragItem).
+	// Используется для расчёта координат во время смещения квадрата с
+	// учётом внутренних границ родительского поля (gragField).
+	
 
 	// Get a gragItem object sizes
     let gragItemSizes = {
@@ -698,12 +698,12 @@ gragItem.addEventListener('mousedown', function(event) {
 	
 	// onDragItem launching
 	document.addEventListener('mousemove', onDragItem);
-	
+	*/
 	/* 
 	Удаляет обработчик (функция onDragItem) с всей страницы (объект document)
 	при отпускании клавиши мыши только один раз {'once': true}
 	*/
-	
+	/*
 	document.addEventListener('mouseup', function() {
 		document.removeEventListener('mousemove', onDragItem);
 	}, {'once': true});
@@ -715,13 +715,15 @@ gragItem.addEventListener('mousedown', function(event) {
 gragItem.addEventListener('dragstart', function(event) {
 	event.preventDefault();
 });
-
+*/
 
 // Client X/Y tested
+/*
 let elem = document.getElementById('elem');
 document.addEventListener('mousemove', (e)=>{
 	elem.innerHTML = e.clientX + ':' + e.clientY;
 });
+*/
 
 /* MDN example "dragstart" */
 /*
@@ -767,7 +769,7 @@ function drop(e) {
 }
 */
 
-// 41:53 События клавиатуры
+// 41:53 Keyboard events
 /*
 Основные события:
     keydown - происходит при нажатии клавиши
@@ -775,7 +777,7 @@ function drop(e) {
 */
 
 // Свойства события event.code и event.key
-/*
+
 document.addEventListener("keydown", function (event) {
     console.log (`Нажата клавиша ${event.code} (${event.key})`);
 });
@@ -783,7 +785,7 @@ document.addEventListener("keydown", function (event) {
 document.addEventListener("keyup", function (event) {
     console.log (`Клавиша отпущена ${event.code} (${event.key})`);
 });
-*/
+
 
 // 43:25
 /*
