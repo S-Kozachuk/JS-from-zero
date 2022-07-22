@@ -164,12 +164,6 @@ a.link {
 	background-color: #77608d;
 }
 
-/*
-.drag-field__item._active {
-	background-color: #54396e;
-}
-*/
-
 .drag-field__point {
 	width: 60px;
 	height: 60px;

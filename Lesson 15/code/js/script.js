@@ -679,23 +679,24 @@ gragItem.addEventListener('mousedown', function(event) {
 		gragItem.hidden = true;
 		let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
 		gragItem.hidden = false; 
+		console.log('ElementBelow: ',elemBelow)
 
 		if (!elemBelow) return;
 		let droppableBelow = elemBelow.closest('.drag-field__point');
+		console.log('DragFieldPoint :', droppableBelow)
 
 		if (currentDroppable !== droppableBelow) {
 			if (currentDroppable) {
 				currentDroppable.classList.remove('_active');
-				gragItem.classList.remove('_active');
 			}
 			currentDroppable = droppableBelow;
 			if (currentDroppable) {
 				currentDroppable.classList.add('_active');
-				gragItem.classList.add('_active');
 			}		
 		}
 	}
 	
+	// onDragItem launching
 	document.addEventListener('mousemove', onDragItem);
 	
 	/* 
