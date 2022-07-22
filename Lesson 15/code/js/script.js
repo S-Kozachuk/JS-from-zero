@@ -771,21 +771,21 @@ function drop(e) {
 
 // 41:53 Keyboard events
 /*
-Основные события:
-    keydown - происходит при нажатии клавиши
-    keyup - происходит при отпускании клавиши
+Main events:
+    keydown - occurs when the key is pressing
+    keyup - occurs when the key is releasing
 */
 
-// Свойства события event.code и event.key
-
-document.addEventListener("keydown", function (event) {
-    console.log (`Нажата клавиша ${event.code} (${event.key})`);
+// Event properties event.code и event.key
+/*
+document.addEventListener("keydown", function (e) {
+    console.log (`The key is pressed ${e.code} (${e.key})`);
 });
 
-document.addEventListener("keyup", function (event) {
-    console.log (`Клавиша отпущена ${event.code} (${event.key})`);
+document.addEventListener("keyup", function (e) {
+    console.log (`The key is released ${e.code} (${e.key})`);
 });
-
+*/
 
 // 43:25
 /*
@@ -794,21 +794,22 @@ document.addEventListener("keyup", function (event) {
 при этом event.code останется с таким же значением (KeyG).
 */
 
-// 43:55 Отслеживание сочетания клавиш
+// 43:55 Tracking keyboard events
 /*
 В примере ниже фукция отслеживает нажатие сочетания клавиш 
 Z и Ctrl или Meta (для ОС Mac). Выбранная раскладка (язык)
 значения не имеет, потому что используется свойство event.code.
 */
-/*
+
 document.addEventListener('keydown', function (event) {
-    if (event.code == 'KeyZ' && (event.ctrlKey || event.metaKey)) {
-        console.log('Отмена действия!');
+	event.preventDefault();
+    if (event.code == 'KeyR' && (event.ctrlKey || event.metaKey)) {
+        console.log('Canceling action!');
     }
 }); 
-*/
 
-// 44:55 Автоповтор
+
+// 44:55 Autorepeat
 /*
 При нажатии у удержании клавиши возникает автоповтор: событие keydown 
 срабатывает снова и снова. Когда клавишу отпускают,
