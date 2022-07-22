@@ -639,16 +639,16 @@ gragItem.addEventListener('mousedown', function(event) {
 			currentX >= gragFieldSizes.left
 		) {
 			gragItem.style.left = `${currentX}px`;
-			console.log('into');
+			console.log('inside horizontal :', gragItem.style.left);
 		} else {
 			if (currentX + gragItemSizes.width > gragFieldSizes.right) {
 				gragItem.style.left = `${gragFieldSizes.right - gragItemSizes.width}px`;
-				console.log('OutputR');
+				console.log('Border Right :', gragItem.style.left);
 			}
 			if (currentX < gragFieldSizes.left) {
 				gragItem.style.left = `${gragFieldSizes.left}px`;
 				console.assertlog
-				console.log('OutputL :', gragFieldSizes.left);
+				console.log('Border Left :', gragFieldSizes.left);
 			}
 		}
 
@@ -657,17 +657,18 @@ gragItem.addEventListener('mousedown', function(event) {
 			currentY >= gragFieldSizes.top
 		) {
 			gragItem.style.top = `${currentY}px`;
-			console.log(gragItem.style.left) 
+			console.log('Inside vertical :', gragFieldSizes.top);
 		} else {
 			if (currentY + gragItemSizes.height > gragFieldSizes.bottom) {
 				gragItem.style.top = `${gragFieldSizes.bottom - gragItemSizes.height}px`;
+				console.log('Border Bottom :', gragFieldSizes.top);
 			}
 			if (currentY < gragFieldSizes.top) {
 				gragItem.style.top = `${gragFieldSizes.top}px`;
+				console.log('Border Top:', gragFieldSizes.top);
 			}
 		}
     }
-
 
 	let currentDroppable = null;
 
