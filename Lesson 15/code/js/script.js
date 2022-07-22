@@ -627,10 +627,12 @@ gragItem.addEventListener('mousedown', function(event) {
 
 	document.body.append(gragItem);
     
-    moveItem(event.pageX, event.pageY);
+    // moveItem(event.pageX, event.pageY);
 
 	// Function moveItem moves (set position) the object gragItem (.drag-field__item')
-    function moveItem(pageX, pageY) {
+    function moveItem(event) {
+		let pageX = event.pageX;
+		let pageY = event.pageY;
         let currentX = pageX - coordsItemX;
         let currentY = pageY - coordsItemY;
 		
@@ -647,8 +649,7 @@ gragItem.addEventListener('mousedown', function(event) {
 			}
 			if (currentX < gragFieldSizes.left) {
 				gragItem.style.left = `${gragFieldSizes.left}px`;
-				console.assertlog
-				console.log('Border Left :', gragFieldSizes.left);
+				console.log('Border Left :', gragItem.style.left);
 			}
 		}
 
@@ -657,15 +658,15 @@ gragItem.addEventListener('mousedown', function(event) {
 			currentY >= gragFieldSizes.top
 		) {
 			gragItem.style.top = `${currentY}px`;
-			console.log('Inside vertical :', gragFieldSizes.top);
+			console.log('Inside vertical :', gragItem.style.top);
 		} else {
 			if (currentY + gragItemSizes.height > gragFieldSizes.bottom) {
 				gragItem.style.top = `${gragFieldSizes.bottom - gragItemSizes.height}px`;
-				console.log('Border Bottom :', gragFieldSizes.top);
+				console.log('Border Bottom :', gragItem.style.top);
 			}
 			if (currentY < gragFieldSizes.top) {
 				gragItem.style.top = `${gragFieldSizes.top}px`;
-				console.log('Border Top:', gragFieldSizes.top);
+				console.log('Border Top:', gragItem.style.top);
 			}
 		}
     }
@@ -673,7 +674,7 @@ gragItem.addEventListener('mousedown', function(event) {
 	let currentDroppable = null;
 
 	// Changed style 
-	
+	/*
 	function onDragItem(event) {
 		// Calling the moveItem function if intersecton with droppableBelow elem
 		moveItem(event.pageX, event.pageY);
@@ -697,8 +698,12 @@ gragItem.addEventListener('mousedown', function(event) {
 			}		
 		}
 	}
+	*/
 
-	document.addEventListener('mousemove', onDragItem);
+
+	
+
+	document.addEventListener('mousemove', moveItem);
 	
 	/* 
 	Удаляет обработчик (функция onDragItem) с всей страницы (объект document)
@@ -706,7 +711,7 @@ gragItem.addEventListener('mousedown', function(event) {
 	*/
 	
 	document.addEventListener('mouseup', function() {
-		document.removeEventListener('mousemove', onDragItem);
+		document.removeEventListener('mousemove', moveItem);
 	}, {'once': true});
 	
 	
