@@ -627,12 +627,10 @@ gragItem.addEventListener('mousedown', function(event) {
 
 	document.body.append(gragItem);
     
-    // moveItem(event.pageX, event.pageY);
+    moveItem(event.pageX, event.pageY);
 
 	// Function moveItem moves (set position) the object gragItem (.drag-field__item')
-    function moveItem(event) {
-		let pageX = event.pageX;
-		let pageY = event.pageY;
+    function moveItem(pageX, pageY) {
         let currentX = pageX - coordsItemX;
         let currentY = pageY - coordsItemY;
 		
@@ -673,8 +671,7 @@ gragItem.addEventListener('mousedown', function(event) {
 
 	let currentDroppable = null;
 
-	// Changed style 
-	/*
+	// Changed .drag-field__point style  
 	function onDragItem(event) {
 		// Calling the moveItem function if intersecton with droppableBelow elem
 		moveItem(event.pageX, event.pageY);
@@ -698,12 +695,8 @@ gragItem.addEventListener('mousedown', function(event) {
 			}		
 		}
 	}
-	*/
-
-
 	
-
-	document.addEventListener('mousemove', moveItem);
+	document.addEventListener('mousemove', onDragItem);
 	
 	/* 
 	Удаляет обработчик (функция onDragItem) с всей страницы (объект document)
@@ -711,7 +704,7 @@ gragItem.addEventListener('mousedown', function(event) {
 	*/
 	
 	document.addEventListener('mouseup', function() {
-		document.removeEventListener('mousemove', moveItem);
+		document.removeEventListener('mousemove', onDragItem);
 	}, {'once': true});
 	
 	
