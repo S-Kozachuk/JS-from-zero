@@ -870,15 +870,16 @@ document.addEventListener('keyup', function(e){
 // 49:40 Scrolling event
 /*
 Количество прокрученных пикселей по вертикали scrollY или pageYOffset (устарел).
-Количество прокрученных пикселей по горизонтали scrollX или pageXOffset (устарел).
+Number of scrolled pixels on vertical or pageYOffset (outdated).
+Number of scrolled pixels on horizontal or pageXOffset (outdated).
 */
-
+/*
 window.addEventListener('scroll', ()=> {
     console.log(`${scrollY}px`);
 });
+*/
 
-
-// 50:40 Предотвращение прокрутки
+// 50:40 Prevent scrolling
 /*
 Прокрутку нельзя предотвратить используя метод event.preventDefault() в 
 обработчике scroll, из-за того что он срабатывает после того, как
@@ -890,10 +891,16 @@ pageUp и pageDown.
 
 Способов инмциализации прокрутки много. Наиболее надёжный - использовать CSS 
 (свойство overflow, значение hidden).
-
 */
 
-// 51:15 Применение события прокрутки (scroll)
+document.addEventListener('keydown', (e)=>{
+	if (e.key == 'Z') {
+		lesson.preventDefault('scroll');
+		console.log('Test');
+	}	
+})
+
+// 51:15 Using the scrolling event 
 /*
 Событие прокрутки (scroll) позволяет реагировать на прокрутку страницы или
 элемента. Благодаря этому можно реализовать множествл полезных сценариев.
