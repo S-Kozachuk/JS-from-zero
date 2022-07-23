@@ -819,15 +819,14 @@ document.addEventListener('keydown', function (event) {
 Для таких событий, вызванных автоповтором у объекта события свойство
 event.repeat имеет значение true.
 */
-
+/*
 document.addEventListener('keydown', function (event) {
 	console.log(`Нажата клавиша ${event.code} (${event.key})`);
     console.log(event.repeat);
-	console.log(event)
 }); 
+*/
 
-
-// 45:44 Закрепление изученного на примере
+// 45:44 Example
 /*
 const txtItem = document.querySelector('.textarea__item');
 const txtItemLimit = txtItem.getAttribute('maxlength');
@@ -840,12 +839,32 @@ txtItem.addEventListener("keydown", function (event) {
 	if(event.repeat) txtSetCounter();
 });
 
-
 function txtSetCounter() {
 	const txtCounterResult = txtItemLimit - txtItem.value.length;
 	txtCounter.innerHTML = txtCounterResult;
 }
 */
+
+// 48:37 Drop-down menu with key events
+
+const menuBody = document.querySelector('.menu');
+document.addEventListener("click", menu);
+
+function menu(event) {
+    if (event.target.closest('.menu__button')) {
+        menuBody.classList.toggle('_active');
+    }
+    if (!event.target.closest('.menu')) {
+        menuBody.classList.remove('_active');
+    }
+}
+
+document.addEventListener('keyup', function(e){
+	if(e.code == 'Escape') {
+		console.log(e.code);
+		menuBody.classList.remove('_active');
+	}
+})
 
 // 48:37 Модернизация выпадающего меню (21:25, 299 строка).
 /*
