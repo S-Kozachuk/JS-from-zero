@@ -800,14 +800,14 @@ document.addEventListener("keyup", function (e) {
 Z и Ctrl или Meta (для ОС Mac). Выбранная раскладка (язык)
 значения не имеет, потому что используется свойство event.code.
 */
-
+/*
 document.addEventListener('keydown', function (event) {
 	event.preventDefault();
     if (event.code == 'KeyR' && (event.ctrlKey || event.metaKey)) {
         console.log('Canceling action!');
     }
 }); 
-
+*/
 
 // 44:55 Autorepeat
 /*
@@ -819,12 +819,13 @@ document.addEventListener('keydown', function (event) {
 Для таких событий, вызванных автоповтором у объекта события свойство
 event.repeat имеет значение true.
 */
-/*
+
 document.addEventListener('keydown', function (event) {
 	console.log(`Нажата клавиша ${event.code} (${event.key})`);
     console.log(event.repeat);
+	console.log(event)
 }); 
-*/
+
 
 // 45:44 Закрепление изученного на примере
 /*
