@@ -846,7 +846,7 @@ function txtSetCounter() {
 */
 
 // 48:37 Drop-down menu with key events
-
+/*
 const menuBody = document.querySelector('.menu');
 document.addEventListener("click", menu);
 
@@ -865,40 +865,18 @@ document.addEventListener('keyup', function(e){
 		menuBody.classList.remove('_active');
 	}
 })
-
-// 48:37 Модернизация выпадающего меню (21:25, 299 строка).
-/*
-const menuBody = document.querySelector('.menu');
-
-document.addEventListener("click", menu);
-
-function menu(event) {
-    if (event.target.closest('.menu__button')) {
-        menuBody.classList.toggle('_active');
-    }
-    if (!event.target.closest('.menu')) {
-        menuBody.classList.remove('_active');
-    }
-}
-
-document.addEventListener('keyup', function (event) {
-   // Получение кода клавиши Escape (нажать на клавиатуре)
-    if(event.code==='Escape'){
-        menuBody.classList.remove('_active');
-    }
-});
 */
 
-// 49:40 Событие при прокрутке (scroll)
+// 49:40 Scrolling event
 /*
 Количество прокрученных пикселей по вертикали scrollY или pageYOffset (устарел).
 Количество прокрученных пикселей по горизонтали scrollX или pageXOffset (устарел).
 */
-/*
-window.addEventListener('scroll', function (event) {
+
+window.addEventListener('scroll', ()=> {
     console.log(`${scrollY}px`);
 });
-*/
+
 
 // 50:40 Предотвращение прокрутки
 /*
