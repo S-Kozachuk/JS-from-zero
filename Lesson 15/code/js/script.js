@@ -488,7 +488,7 @@ blockForMouse.addEventListener("mouseout", function () {
 });
 */
 
-// 34:50 Events0 mouseover/mouseout and relatedTarget
+// 34:50 Events mouseover/mouseout and relatedTarget
 /*
 Эти события являются особенными, потому что у них есть свойство 
 relatedTarget. Оно дополняет target.
@@ -592,7 +592,7 @@ blockForMouse.addEventListener("mouseleave", function (event) {
 */
 
 // 41:10 Drag`n`Drop (dragging)
-
+/*
 const gragField = document.querySelector('.drag-field');
 const gragItem = document.querySelector('.drag-field__item');
 
@@ -603,28 +603,20 @@ gragItem.addEventListener('mousedown', function(event) {
     let coordsItemX = event.clientX - gragItem.getBoundingClientRect().left;
     let coordsItemY = event.clientY - gragItem.getBoundingClientRect().top;
 
-	/*
-	coordsItemX - положение курсора в горизонтальном направлении (axis X) относительно
-	перемещаемого квадрата (gragItem) в момент захвата (drag). Нужно для расчёта
-	позиции в котоую будет перемещаться квадрат с
-	учётом внутренних границ родительского поля (gragField)
-	*/
+	
+	// coordsItemX - положение курсора (axis X) в момент захвата (drag)
+	// относительно перетаскиваемого квадрата (gragItem).
+	// Используется для расчёта координат во время смещения квадрата с
+	// учётом внутренних границ родительского поля (gragField).
+	
 
-	console.log(event);
-	console.log('event.clientX: ', event.clientX);
-	console.log('itemleft: ', gragItem.getBoundingClientRect().left);
-	console.log('coordsItemX :', coordsItemX)
-	console.log('event.clientY: ', event.clientY);
-	console.log('itemTop: ', gragItem.getBoundingClientRect().top);
-	console.log('coordsIemY: ', coordsItemY);
-    
-	// Get a gragItem sizes as object
+	// Get a gragItem object sizes
     let gragItemSizes = {
         width: gragItem.offsetWidth,
         height: gragItem.offsetHeight
     }
 
-	// Get a gragFieldSizes position as object (full sizes with offset)
+	// Get a gragFieldSizes position as object (full sizes with scroll page)
     let gragFieldSizes = {
         left: gragField.getBoundingClientRect().left + scrollX,
         top: gragField.getBoundingClientRect().top + scrollY,
@@ -632,88 +624,105 @@ gragItem.addEventListener('mousedown', function(event) {
         bottom: gragField.getBoundingClientRect().top + scrollY + gragField.offsetHeight
     }
 
-    gragItem.style.position = 'absolute';
-    gragItem.style.zIndex = 1;
-    document.body.append(gragItem);
-      
+	document.body.append(gragItem);
+    
     moveItem(event.pageX, event.pageY);
-	console.log('PageX: ',event.pageX);
-	console.log('PageY: ', event.pageY);
 
 	// Function moveItem moves (set position) the object gragItem (.drag-field__item')
     function moveItem(pageX, pageY) {
         let currentX = pageX - coordsItemX;
         let currentY = pageY - coordsItemY;
-        
-        if (
-			currentX + gragItemSizes.width <= gragFieldSizes.right && 
+		
+		// By axis X 
+        if (currentX + gragItemSizes.width <= gragFieldSizes.right && 
 			currentX >= gragFieldSizes.left
 		) {
 			gragItem.style.left = `${currentX}px`;
+			console.log('inside horizontal :', gragItem.style.left);
 		} else {
 			if (currentX + gragItemSizes.width > gragFieldSizes.right) {
 				gragItem.style.left = `${gragFieldSizes.right - gragItemSizes.width}px`;
+				console.log('Border Right :', gragItem.style.left);
 			}
 			if (currentX < gragFieldSizes.left) {
-				gragItem.style.Left = `${gragFieldSizes.left}px`;
+				gragItem.style.left = `${gragFieldSizes.left}px`;
+				console.log('Border Left :', gragItem.style.left);
 			}
 		}
-		if (
-			currentY + gragItemSizes.height <= gragFieldSizes.bottom &&
+
+		// By axis Y
+		if (currentY + gragItemSizes.height <= gragFieldSizes.bottom &&
 			currentY >= gragFieldSizes.top
 		) {
-			gragItem.style.top = `${currentY}px`; 
+			gragItem.style.top = `${currentY}px`;
+			console.log('Inside vertical :', gragItem.style.top);
 		} else {
 			if (currentY + gragItemSizes.height > gragFieldSizes.bottom) {
 				gragItem.style.top = `${gragFieldSizes.bottom - gragItemSizes.height}px`;
+				console.log('Border Bottom :', gragItem.style.top);
 			}
 			if (currentY < gragFieldSizes.top) {
 				gragItem.style.top = `${gragFieldSizes.top}px`;
+				console.log('Border Top:', gragItem.style.top);
 			}
 		}
     }
 
 	let currentDroppable = null;
 
+	// Changed .drag-field__point style  
 	function onDragItem(event) {
-		// Calling the moveItem function
+		// Calling the moveItem function if intersecton with droppableBelow elem
 		moveItem(event.pageX, event.pageY);
 
 		gragItem.hidden = true;
 		let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
 		gragItem.hidden = false; 
+		console.log('ElementBelow: ', elemBelow)
 
 		if (!elemBelow) return;
 		let droppableBelow = elemBelow.closest('.drag-field__point');
+		console.log('DragFieldPoint :', droppableBelow)
 
 		if (currentDroppable !== droppableBelow) {
 			if (currentDroppable) {
 				currentDroppable.classList.remove('_active');
-				gragItem.classList.remove('_active');
 			}
 			currentDroppable = droppableBelow;
 			if (currentDroppable) {
 				currentDroppable.classList.add('_active');
-				gragItem.classList.add('_active');
 			}		
 		}
 	}
+	
+	// onDragItem launching
 	document.addEventListener('mousemove', onDragItem);
-
+	*/
 	/* 
 	Удаляет обработчик (функция onDragItem) с всей страницы (объект document)
 	при отпускании клавиши мыши только один раз {'once': true}
 	*/
+	/*
 	document.addEventListener('mouseup', function() {
 		document.removeEventListener('mousemove', onDragItem);
 	}, {'once': true});
+	
+	
 });
 
 // Canceling default browser action if moves the gragItem object
 gragItem.addEventListener('dragstart', function(event) {
 	event.preventDefault();
 });
+*/
 
+// Client X/Y tested
+/*
+let elem = document.getElementById('elem');
+document.addEventListener('mousemove', (e)=>{
+	elem.innerHTML = e.clientX + ':' + e.clientY;
+});
+*/
 
 /* MDN example "dragstart" */
 /*
@@ -759,21 +768,21 @@ function drop(e) {
 }
 */
 
-// 41:53 События клавиатуры
+// 41:53 Keyboard events
 /*
-Основные события:
-    keydown - происходит при нажатии клавиши
-    keyup - происходит при отпускании клавиши
+Main events:
+    keydown - occurs when the key is pressing
+    keyup - occurs when the key is releasing
 */
 
-// Свойства события event.code и event.key
+// Event properties event.code и event.key
 /*
-document.addEventListener("keydown", function (event) {
-    console.log (`Нажата клавиша ${event.code} (${event.key})`);
+document.addEventListener("keydown", function (e) {
+    console.log (`The key is pressed ${e.code} (${e.key})`);
 });
 
-document.addEventListener("keyup", function (event) {
-    console.log (`Клавиша отпущена ${event.code} (${event.key})`);
+document.addEventListener("keyup", function (e) {
+    console.log (`The key is released ${e.code} (${e.key})`);
 });
 */
 
@@ -784,7 +793,7 @@ document.addEventListener("keyup", function (event) {
 при этом event.code останется с таким же значением (KeyG).
 */
 
-// 43:55 Отслеживание сочетания клавиш
+// 43:55 Tracking keyboard events
 /*
 В примере ниже фукция отслеживает нажатие сочетания клавиш 
 Z и Ctrl или Meta (для ОС Mac). Выбранная раскладка (язык)
@@ -792,13 +801,14 @@ Z и Ctrl или Meta (для ОС Mac). Выбранная раскладка (
 */
 /*
 document.addEventListener('keydown', function (event) {
-    if (event.code == 'KeyZ' && (event.ctrlKey || event.metaKey)) {
-        console.log('Отмена действия!');
+	event.preventDefault();
+    if (event.code == 'KeyR' && (event.ctrlKey || event.metaKey)) {
+        console.log('Canceling action!');
     }
 }); 
 */
 
-// 44:55 Автоповтор
+// 44:55 Autorepeat
 /*
 При нажатии у удержании клавиши возникает автоповтор: событие keydown 
 срабатывает снова и снова. Когда клавишу отпускают,
@@ -815,7 +825,7 @@ document.addEventListener('keydown', function (event) {
 }); 
 */
 
-// 45:44 Закрепление изученного на примере
+// 45:44 Example
 /*
 const txtItem = document.querySelector('.textarea__item');
 const txtItemLimit = txtItem.getAttribute('maxlength');
@@ -828,17 +838,15 @@ txtItem.addEventListener("keydown", function (event) {
 	if(event.repeat) txtSetCounter();
 });
 
-
 function txtSetCounter() {
 	const txtCounterResult = txtItemLimit - txtItem.value.length;
 	txtCounter.innerHTML = txtCounterResult;
 }
 */
 
-// 48:37 Модернизация выпадающего меню (21:25, 299 строка).
+// 48:37 Drop-down menu with key events
 /*
 const menuBody = document.querySelector('.menu');
-
 document.addEventListener("click", menu);
 
 function menu(event) {
@@ -850,26 +858,27 @@ function menu(event) {
     }
 }
 
-document.addEventListener('keyup', function (event) {
-   // Получение кода клавиши Escape (нажать на клавиатуре)
-    if(event.code==='Escape'){
-        menuBody.classList.remove('_active');
-    }
-});
+document.addEventListener('keyup', function(e){
+	if(e.code == 'Escape') {
+		console.log(e.code);
+		menuBody.classList.remove('_active');
+	}
+})
 */
 
-// 49:40 Событие при прокрутке (scroll)
+// 49:40 Scrolling event
 /*
 Количество прокрученных пикселей по вертикали scrollY или pageYOffset (устарел).
-Количество прокрученных пикселей по горизонтали scrollX или pageXOffset (устарел).
+Number of scrolled pixels on vertical or pageYOffset (outdated).
+Number of scrolled pixels on horizontal or pageXOffset (outdated).
 */
 /*
-window.addEventListener('scroll', function (event) {
+window.addEventListener('scroll', ()=> {
     console.log(`${scrollY}px`);
 });
 */
 
-// 50:40 Предотвращение прокрутки
+// 50:40 Prevent scrolling
 /*
 Прокрутку нельзя предотвратить используя метод event.preventDefault() в 
 обработчике scroll, из-за того что он срабатывает после того, как
@@ -879,15 +888,21 @@ window.addEventListener('scroll', function (event) {
 которое вызывает прокрутку. Например на событии keydown для клавиш 
 pageUp и pageDown.
 
-Способов инмциализации прокрутки много. Наиболее надёжный - использовать CSS 
+Способов инициализации прокрутки много. Наиболее надёжный - использовать CSS 
 (свойство overflow, значение hidden).
-
 */
 
-// 51:15 Применение события прокрутки (scroll)
+document.addEventListener('keydown', (e)=>{
+	if(e.code == 'PageDown') {
+		console.log(`Button "${e.code}"`);
+		e.preventDefault();
+	}
+});
+
+// 51:15 Using the scrolling event 
 /*
 Событие прокрутки (scroll) позволяет реагировать на прокрутку страницы или
-элемента. Благодаря этому можно реализовать множествл полезных сценариев.
+элемента. Благодаря этому можно реализовать множество полезных сценариев.
 
 Например:
 - показать/скрыть дополнительные элементы управления или информации,

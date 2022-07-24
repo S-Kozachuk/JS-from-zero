@@ -150,31 +150,26 @@ a.link {
 
 /* Drag & drop example */
 .drag-field {
-	width: 200px;
-	height: 200px;
+	width: 400px;
+	height: 300px;
 	background-color: #7a956b;
 	position: relative;
 }
 
 .drag-field__item {
+	position: absolute;
 	width: 40px;
 	height: 40px;
 	cursor: move;
 	background-color: #77608d;
 }
 
-/*
-.drag-field__item._active {
-	background-color: #54396e;
-}
-*/
-
 .drag-field__point {
 	width: 60px;
 	height: 60px;
 	position: absolute;
-	left: 50%;
-	top: 10%;
+	left: 20%;
+	top: 40%;
 	background-color: #45553d;
 	transition: all 0.3s ease 0s;
 }
