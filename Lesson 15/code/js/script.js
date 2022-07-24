@@ -868,7 +868,6 @@ document.addEventListener('keyup', function(e){
 
 // 49:40 Scrolling event
 /*
-Количество прокрученных пикселей по вертикали scrollY или pageYOffset (устарел).
 Number of scrolled pixels on vertical or pageYOffset (outdated).
 Number of scrolled pixels on horizontal or pageXOffset (outdated).
 */
@@ -891,14 +890,14 @@ pageUp и pageDown.
 Способов инициализации прокрутки много. Наиболее надёжный - использовать CSS 
 (свойство overflow, значение hidden).
 */
-
+/*
 document.addEventListener('keydown', (e)=>{
 	if(e.code == 'PageDown') {
 		console.log(`Button "${e.code}"`);
 		e.preventDefault();
 	}
 });
-
+*/
 // 51:15 Using the scrolling event 
 /*
 Событие прокрутки (scroll) позволяет реагировать на прокрутку страницы или
