@@ -11,20 +11,23 @@
 let loupe = document.querySelector('.search-img');
 let searchForm = document.querySelector('.search-field');
 
-loupe.addEventListener('click', ()=> {
+loupe.addEventListener('click', searchFieldOpen)
+document.addEventListener('click', searchFieldClose)
+document.addEventListener('keydown', keyFieldClose)
+
+function searchFieldOpen() {
 	searchForm.classList.add('active');
 	console.log('Open');
-	console.log(thisElem);
-});
+}
 
-document.addEventListener('click', (e)=> {
+function searchFieldClose(e) {
 	if(e.target !== loupe && e.target !== searchForm) {
 		searchForm.classList.remove('active');
 	}
-});
+}
 
-/*
-document.addEventListener('click', ()=> {
-	searchForm.classList.remove('active');
-});
-*/
+function keyFieldClose(e) {
+	if(e.code == 'Escape') {
+		searchForm.classList.remove('active');
+	}
+}
