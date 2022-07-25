@@ -916,7 +916,7 @@ intersectionObserver. Он позволяет веб-приложениям ас
 документа.
 */
 
-// 52:20 События загрузки страницы
+// 52:20 Page loading events
 /*
 1. DOMContentLoaded - сработает, после полной загрузки браузером HTML. 
 Значит, что полностью построено DOM-дерево. Но внешние ресурсы, например изображения
@@ -941,26 +941,27 @@ document.readyState - свойство, отслеживающее состоя�
 сразу несколько событий.
 */
 // Событие DOMContentLoaded срабатывает на объекте document
-//document.addEventListener("DOMContentLoaded", readyDom);
+// document.addEventListener("DOMContentLoaded", readyDom);
 
 // Событие Load срабатывает на объекте window
-//window.addEventListener("load", readyLoad);
+// window.addEventListener("load", readyLoad);
 /*
 function readyDom() {
-    const image = document.querySelector(".image");
+	const image = document.querySelector(".image");
     console.log(document.readyState);
-    console.log('DOM загружен!');
+    console.log('DOM is loaded!');
     console.log(image.offsetWidth);
 }
+
 function readyLoad() {
     console.log(document.readyState);
-    const image = document.querySelector(".image");
-    console.log('Страница загружена!');
+	const image = document.querySelector(".image");
+    console.log('Page is loaded!');
     console.log(image.offsetWidth);
 }
 */
 
-// 55:30 Событие beforeunLoad срабатывает на объекте window
+// 55:30 Event beforeunLoad is triggering on window object
 /*
 window.addEventListener("beforeunload", beforeUnLoad);
 
@@ -971,8 +972,7 @@ function beforeUnLoad(event) {
     event.returnValue = '';
 }
 */
-
-// 57:00 Событие unload срабатывает на объекте window
+// 57:00 Event "unload" is triggering on window object
 /*
 Позволяет выполнять действия после того, как пользователь покинул
 страницу (вкладку) в браузере.
@@ -982,6 +982,7 @@ function beforeUnLoad(event) {
 /*
 window.addEventListener("unload", function (e) {
     //navigator.sendBeacon(url, data)
+	// Example use: send statisctics in background mode
 });
 */
 
