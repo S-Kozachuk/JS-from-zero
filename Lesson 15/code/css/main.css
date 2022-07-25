@@ -201,7 +201,6 @@ body {
 	border: 3px solid red;
 }
   
-
 /* Drag'n'drop by Alexander Lyshenko */
 .area-1,.area-2 {
 	margin-bottom: 10px;
@@ -210,3 +209,11 @@ body {
 	border: 2px solid #e0ab38;
 }
 
+/* Home work */
+.search-form {
+	margin: 5px;
+	border: 1.5px solid black;
+	border-radius: 20px;
+	max-width: 200px;
+	height: 20px;
+}
