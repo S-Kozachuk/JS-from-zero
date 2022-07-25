@@ -10,12 +10,19 @@
 // Remove intersection document with loup image. Using a method closest
 let loupe = document.querySelector('.search-img');
 let searchForm = document.querySelector('.search-field');
-let thisElem = searchForm.closest('.search-field');
-loupe.addEventListener('click', ()=>{
-	searchForm.classList.toggle('active');
+
+loupe.addEventListener('click', ()=> {
+	searchForm.classList.add('active');
 	console.log('Open');
 	console.log(thisElem);
 });
+
+document.addEventListener('click', (e)=> {
+	if(e.target !== loupe && e.target !== searchForm) {
+		searchForm.classList.remove('active');
+	}
+});
+
 /*
 document.addEventListener('click', ()=> {
 	searchForm.classList.remove('active');
