@@ -223,3 +223,8 @@ body {
 .search-form.active {
 	visibility:visible;
 }
+
+.search-img {
+	position: absolute;
+	width: 20px;
+}
