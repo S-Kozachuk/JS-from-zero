@@ -7,12 +7,7 @@
 Для поля ввода поискового запроса добавить счётчик символов.
 */
 
-document.addEventListener('click', (e)=>{
+document.addEventListener('click', ()=>{
 	let searchForm = document.querySelector('.search-form');
-	let status = false;
-	searchForm.classList.add('active');
-	// Add close area by click
-	if(status){
-		searchForm.classList.remove('active');
-	}
-})
+	searchForm.classList.toggle('active');
+});
