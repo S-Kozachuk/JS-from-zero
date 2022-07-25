@@ -211,6 +211,13 @@ body {
 
 /* Home work */
 .search-form {
+	display: grid;
+	grid-template-columns: auto auto;
+	align-items: center;
+	width: 300px;
+}
+
+.search-field {
 	visibility: hidden;
 	margin: 5px;
 	padding: 2px 3px;
@@ -220,11 +227,11 @@ body {
 	height: 20px;
 }
 
-.search-form.active {
+.search-field.active {
 	visibility:visible;
 }
 
 .search-img {
-	position: absolute;
+	display: block;
 	width: 20px;
 }

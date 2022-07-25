@@ -7,7 +7,15 @@
 Для поля ввода поискового запроса добавить счётчик символов.
 */
 
-document.addEventListener('click', ()=>{
-	let searchForm = document.querySelector('.search-form');
+// Remove intersection document with loup image. Using a method closest
+let loupe = document.querySelector('.search-img');
+let searchForm = document.querySelector('.search-field');
+loupe.addEventListener('click', ()=>{
 	searchForm.classList.toggle('active');
+	console.log('Open')
 });
+/*
+document.addEventListener('click', ()=> {
+	searchForm.classList.remove('active');
+});
+*/
