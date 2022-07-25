@@ -211,9 +211,15 @@ body {
 
 /* Home work */
 .search-form {
+	visibility: hidden;
 	margin: 5px;
+	padding: 2px 3px;
 	border: 1.5px solid black;
 	border-radius: 20px;
 	max-width: 200px;
 	height: 20px;
+}
+
+.search-form.active {
+	visibility:visible;
 }

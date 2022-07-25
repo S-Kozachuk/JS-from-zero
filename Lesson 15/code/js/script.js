@@ -76,7 +76,7 @@ button.onclick = function () {
     console.log('Clack!');
 }
 */
-// Outoput on window
+// Output on window
 /*
 button.onclick = function (){
 	alert('Victory!');
