@@ -31,6 +31,7 @@ function searchFieldClose(e) {
 		searchForm.classList.remove('active');
 		txtCounter.classList.remove('active');
 		searchForm.value = '';
+		keyCounter();
 	}
 }
 
@@ -42,10 +43,8 @@ function keyFieldClose(e) {
 }
 
 function keyCounter() {
-	txtCounterOut.innerHTML = txtItemLimit;
 	const txtCounterResult = txtItemLimit - searchForm.value.length;
 	txtCounterOut.innerHTML = txtCounterResult;
-	
 }
 
 function keyNoRepeat(e) {
