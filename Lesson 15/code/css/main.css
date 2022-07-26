@@ -211,8 +211,10 @@ body {
 
 /* Home work */
 .search-form {
+	position: relative;
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: auto;
+	justify-content: center;
 	align-items: center;
 	width: 300px;
 }
@@ -232,6 +234,7 @@ body {
 }
 
 .search-img {
+	position: absolute;
 	display: block;
 	width: 20px;
 	cursor: pointer;
