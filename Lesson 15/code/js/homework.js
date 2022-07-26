@@ -21,7 +21,6 @@ searchForm.addEventListener("keyup", keyCounter);
 searchForm.addEventListener("keydown", keyNoRepeat);
 
 function searchFieldOpen() {
-	
 	searchForm.classList.add('active');
 	txtCounter.classList.add('active');
 	console.log('Open');
@@ -38,6 +37,7 @@ function searchFieldClose(e) {
 function keyFieldClose(e) {
 	if(e.code == 'Escape') {
 		searchForm.classList.remove('active');
+		searchForm.value = '';
 	}
 }
 
@@ -45,6 +45,7 @@ function keyCounter() {
 	txtCounterOut.innerHTML = txtItemLimit;
 	const txtCounterResult = txtItemLimit - searchForm.value.length;
 	txtCounterOut.innerHTML = txtCounterResult;
+	
 }
 
 function keyNoRepeat(e) {
