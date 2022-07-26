@@ -11,7 +11,8 @@
 let loupe = document.querySelector('.search-img');
 let searchForm = document.querySelector('.search-field');
 const txtItemLimit = searchForm .getAttribute('maxlength');
-const txtCounter = document.querySelector('.search-counter span');
+const txtCounter = document.querySelector('.search-counter');
+const txtCounterOut = document.querySelector('.search-counter span');
 
 loupe.addEventListener('click', searchFieldOpen);
 document.addEventListener('click', searchFieldClose);
@@ -20,13 +21,17 @@ searchForm.addEventListener("keyup", keyCounter);
 searchForm.addEventListener("keydown", keyNoRepeat);
 
 function searchFieldOpen() {
+	
 	searchForm.classList.add('active');
+	txtCounter.classList.add('active');
 	console.log('Open');
 }
 
 function searchFieldClose(e) {
 	if(e.target !== loupe && e.target !== searchForm) {
 		searchForm.classList.remove('active');
+		txtCounter.classList.remove('active');
+		searchForm.value = '';
 	}
 }
 
@@ -37,9 +42,9 @@ function keyFieldClose(e) {
 }
 
 function keyCounter() {
-	txtCounter.innerHTML = txtItemLimit;
+	txtCounterOut.innerHTML = txtItemLimit;
 	const txtCounterResult = txtItemLimit - searchForm.value.length;
-	txtCounter.innerHTML = txtCounterResult;
+	txtCounterOut.innerHTML = txtCounterResult;
 }
 
 function keyNoRepeat(e) {
