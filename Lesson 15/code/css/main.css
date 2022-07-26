@@ -234,9 +234,11 @@ body {
 .search-img {
 	display: block;
 	width: 20px;
+	cursor: pointer;
 }
 
 .search-counter {
+	padding-left: 20px;
 	display: none;
 }
 
