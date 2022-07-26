@@ -23,6 +23,7 @@ searchForm.addEventListener("keydown", keyNoRepeat);
 function searchFieldOpen() {
 	searchForm.classList.add('active');
 	txtCounter.classList.add('active');
+	loupe.classList.add('active');
 	console.log('Open');
 }
 
@@ -30,6 +31,7 @@ function searchFieldClose(e) {
 	if(e.target !== loupe && e.target !== searchForm) {
 		searchForm.classList.remove('active');
 		txtCounter.classList.remove('active');
+		loupe.classList.remove('active');
 		searchForm.value = '';
 		keyCounter();
 	}
@@ -38,6 +40,7 @@ function searchFieldClose(e) {
 function keyFieldClose(e) {
 	if(e.code == 'Escape') {
 		searchForm.classList.remove('active');
+		txtCounter.classList.remove('active');
 		searchForm.value = '';
 	}
 }
