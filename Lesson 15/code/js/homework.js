@@ -10,10 +10,14 @@
 // Remove intersection document with loup image. Using a method closest
 let loupe = document.querySelector('.search-img');
 let searchForm = document.querySelector('.search-field');
+const txtItemLimit = searchForm .getAttribute('maxlength');
+const txtCounter = document.querySelector('.search__counter span');
 
-loupe.addEventListener('click', searchFieldOpen)
-document.addEventListener('click', searchFieldClose)
-document.addEventListener('keydown', keyFieldClose)
+loupe.addEventListener('click', searchFieldOpen);
+document.addEventListener('click', searchFieldClose);
+document.addEventListener('keydown', keyFieldClose);
+searchForm.addEventListener("keyup", keyCounter);
+searchForm.addEventListener("keydown", keyNoRepeat);
 
 function searchFieldOpen() {
 	searchForm.classList.add('active');
@@ -30,4 +34,14 @@ function keyFieldClose(e) {
 	if(e.code == 'Escape') {
 		searchForm.classList.remove('active');
 	}
+}
+
+function keyCounter() {
+	txtCounter.innerHTML = txtItemLimit;
+	const txtCounterResult = txtItemLimit - searchForm.value.length;
+	txtCounter.innerHTML = txtCounterResult;
+}
+
+function keyNoRepeat(e) {
+	if(e.repeat) keyCounter();
 }
