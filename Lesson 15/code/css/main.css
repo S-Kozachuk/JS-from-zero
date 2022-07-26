@@ -235,3 +235,11 @@ body {
 	display: block;
 	width: 20px;
 }
+
+.search-counter {
+	display: none;
+}
+
+.search-counter.active {
+	display: block;
+}

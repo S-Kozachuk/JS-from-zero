@@ -11,7 +11,7 @@
 let loupe = document.querySelector('.search-img');
 let searchForm = document.querySelector('.search-field');
 const txtItemLimit = searchForm .getAttribute('maxlength');
-const txtCounter = document.querySelector('.search__counter span');
+const txtCounter = document.querySelector('.search-counter span');
 
 loupe.addEventListener('click', searchFieldOpen);
 document.addEventListener('click', searchFieldClose);
