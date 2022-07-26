@@ -219,7 +219,20 @@ body {
 }
 
 .search-form::before {
-	background-image: ;
+	display: none;
+	content: "";
+	position: absolute;
+	top: 8px;
+	right: 59px;
+	background-image: url("../../code/img/remove.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 20px;
+}
+
+.search-form::before.active {
+	display: block;
 }
 
 .search-field {
