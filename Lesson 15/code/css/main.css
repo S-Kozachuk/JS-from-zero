@@ -218,24 +218,8 @@ body {
 	width: 300px;
 }
 
-.search-form::before {
-	display: none;
-	content: "";
-	position: absolute;
-	top: 8px;
-	right: 59px;
-	background-image: url("../../code/img/remove.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	height: 20px;
-	width: 20px;
-}
-
-.search-form::before.active {
-	display: block;
-}
-
 .search-field {
+	position: relative;
 	visibility: hidden;
 	margin: 5px;
 	padding: 2px 10px;
@@ -247,6 +231,18 @@ body {
 
 .search-field.active {
 	visibility:visible;
+}
+
+.search-field:after {
+	content: "";
+	position: absolute;
+	top: 8px;
+	right: 59px;
+	background-image: url("../../code/img/remove.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 20px;
 }
 
 .search-img {
