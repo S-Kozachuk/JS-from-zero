@@ -1,17 +1,17 @@
-// Урок 16. JavaScript и формы. Свойства, события, методы.
+// Lesson 16. JavaScript & forms. Properties, events, methods.
 
-// 0:11 Свойства и методы форм.
+// 0:11 Form properties and methods.
 
-// 0:20 Коллекция всех форм на странице 
-//document.forms
+// 0:20 All form collection on page. 
+document.forms
 
-// Получить коллекцию всех форм на странице.
-//console.log(document.forms);
+// Getting all form collection on page.
+console.log(document.forms);
 
-// 0:38 Получение конкретной формы на странице.
+// 0:38 Getting a form on page.
 /*
-Есть несколько способов.
-Способ 1.
+Is couple methods.
+Way 1.
 Поскольку метод document.forms является коллекцией (по сути массивом),
 можно указать ключ внутри квадратных скобок. Ключ = порядковому номеру
 опредерлённой формы. Нумерация начинается с нуля [0].
@@ -25,7 +25,7 @@ console.log(mainForm);
 
 // 1:20
 /*
-Способ 2.
+Way 2.
 Данный способ удобнее предыдущего. Но требует
 манипуляций в html-коде. Для тега форм нужно указать атрибут 
 name и присвоить ему некое значение. 
@@ -143,22 +143,10 @@ const mainFormTextarea = mainForm.nameTextarea;
 //mainFormTextarea.value = "До встречи"
 
 // 7:30 Работа с другими типами тега input: radio, checkbox и file.
+/*
 const mainForm = document.forms.main;
 
 const mainFormRadioBtn = mainForm.nameRadio;
 const mainFormCheckBox = mainForm.nameCheck;
 const mainFormFile = mainForm.nameFile;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
