@@ -13,6 +13,7 @@ let searchForm = document.querySelector('.search-field');
 const txtItemLimit = searchForm .getAttribute('maxlength');
 const txtCounter = document.querySelector('.search-counter');
 const txtCounterOut = document.querySelector('.search-counter span');
+const closeBtn = document.querySelector('.search-close');
 
 loupe.addEventListener('click', searchFieldOpen);
 document.addEventListener('click', searchFieldClose);
@@ -24,6 +25,7 @@ function searchFieldOpen() {
 	searchForm.classList.add('active');
 	txtCounter.classList.add('active');
 	loupe.classList.add('active');
+	closeBtn.classList.add('active');
 	console.log('Open');
 }
 
@@ -32,6 +34,7 @@ function searchFieldClose(e) {
 		searchForm.classList.remove('active');
 		txtCounter.classList.remove('active');
 		loupe.classList.remove('active');
+		closeBtn.classList.remove('active');
 		searchForm.value = '';
 		keyCounter();
 	}
@@ -41,6 +44,8 @@ function keyFieldClose(e) {
 	if(e.code == 'Escape') {
 		searchForm.classList.remove('active');
 		txtCounter.classList.remove('active');
+		loupe.classList.remove('active');
+		closeBtn.classList.remove('active');
 		searchForm.value = '';
 	}
 }

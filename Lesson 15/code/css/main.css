@@ -247,6 +247,7 @@ body {
 
 .search-close {
 	display: none;
+	cursor: pointer;
 }
 
 .search-close:after {
@@ -261,7 +262,9 @@ body {
 	width: 20px;
 }
 
-
+.search-close.active {
+	display: block;
+}
 
 .search-counter {
 	padding-left: 20px;
