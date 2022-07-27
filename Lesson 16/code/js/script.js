@@ -88,10 +88,11 @@ console.log(mainForm.elements)
 Данную запись можно упростить, убрав ключевое слово elements 
 и обратившись напрямую к значению (nameInput) атрибута name=""
 */
+/*
 const mainForm = document.forms.main;
 const mainFormInput = mainForm.nameInput;
 console.log(mainFormInput);
-
+*/
 
 // 4:40 Получение коллекции радиокнопок (с именем nameRadio)
 //const mainFormRadioButtons = mainForm.nameRadio;
