@@ -5,8 +5,8 @@
 // 0:20 All form collection on page. 
 //document.forms
 
-// Getting all form collection on page.
-console.log(document.forms);
+// Getting all forms collection on page.
+// console.log(document.forms);
 
 // 0:38 Getting a form on page.
 /*
@@ -23,9 +23,8 @@ const mainForm = document.forms[0];
 console.log(mainForm);
 */
 
-// 1:20
+// 1:20 Way 2.
 /*
-Way 2.
 Данный способ удобнее предыдущего. Но требует
 манипуляций в html-коде. Для тега форм нужно указать атрибут 
 name и присвоить ему некое значение. 
