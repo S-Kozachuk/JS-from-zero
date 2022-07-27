@@ -53,35 +53,33 @@ console.log(document.querySelectorAll('form'));
 // Live collection
 console.log(document.forms);
 
-// Добавление новой формы на страницу
+// Added the new form on page (test live and simple collections)
 /*
 document.body.insertAdjacentHTML(
     "beforeend",
     `<form name="some" class="some-form" action="#"></form>`
 );
 */
-// 2:56 Результат
+// 2:56 Output result
 /*
 document.forms в отличии от querySelectorAll вернёт две формы
 (1+1 добавленная) т.к. коллекция - живая.
 Именно поэтому стоит использовать метод document.forms
 */
 
-// 3:05 Элементы форм 
+// 3:05 Forms elements 
 // documents.forms.elements
 
 /*
 Получения списка всех элементов некой конкретной формы.
-При выводе константы в консоль, после точки
-добавляется слово elements.
+При выводе константы в консоль, после точки добавляется слово elements.
 В результате при выводе в консоль будет
-получен список всех элементов, которые расположены
-внутри данной формы.
+получен список всех элементов, которые расположены внутри данной формы.
 */
-/*
+
 const mainForm = document.forms.main;
 console.log(mainForm.elements)
-*/
+
 
 // 3:30 Получение элемента с определённым именем
 // Пример получение элемента с именем nameInput
