@@ -49,9 +49,9 @@ querySelectorAll создаёт обычную коллекцию. А document.f
 // 2:30 Example
 
 // Simple collection
-console.log(document.querySelectorAll('form'));
+// console.log(document.querySelectorAll('form'));
 // Live collection
-console.log(document.forms);
+// console.log(document.forms);
 
 // Added the new form on page (test live and simple collections)
 /*
@@ -76,22 +76,22 @@ document.forms в отличии от querySelectorAll вернёт две фо�
 В результате при выводе в консоль будет
 получен список всех элементов, которые расположены внутри данной формы.
 */
-
+/*
 const mainForm = document.forms.main;
 console.log(mainForm.elements)
+*/
 
-
-// 3:30 Получение элемента с определённым именем
-// Пример получение элемента с именем nameInput
+// 3:30 Getting an element with specific name
+// Example: gettig element with nameInput
 //const mainFormInput = mainForm.elements.nameInput;
 /*
 Данную запись можно упростить, убрав ключевое слово elements 
 и обратившись напрямую к значению (nameInput) атрибута name=""
 */
-/*
+const mainForm = document.forms.main;
 const mainFormInput = mainForm.nameInput;
 console.log(mainFormInput);
-*/
+
 
 // 4:40 Получение коллекции радиокнопок (с именем nameRadio)
 //const mainFormRadioButtons = mainForm.nameRadio;
