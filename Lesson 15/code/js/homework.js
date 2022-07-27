@@ -13,8 +13,6 @@ let searchForm = document.querySelector('.search-field');
 const txtItemLimit = searchForm .getAttribute('maxlength');
 const txtCounter = document.querySelector('.search-counter');
 const txtCounterOut = document.querySelector('.search-counter span');
-let crossIcon = document.querySelector('.search-form::before')
-console.log(crossIcon)
 
 loupe.addEventListener('click', searchFieldOpen);
 document.addEventListener('click', searchFieldClose);
