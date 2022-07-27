@@ -3,7 +3,7 @@
 // 0:11 Form properties and methods.
 
 // 0:20 All form collection on page. 
-document.forms
+//document.forms
 
 // Getting all form collection on page.
 console.log(document.forms);
