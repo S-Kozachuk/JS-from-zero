@@ -37,7 +37,7 @@ const mainForm = document.forms.main;
 console.log(mainForm);
 */
 
-// 1:52 Разница между document.forms и document.querySelectorAll('form')
+// 1:52 Difference between document.forms and document.querySelectorAll('form')
 /*
 Ещё один хорошо известный способ получения списка всех форм на странице.
 Это метод querySelectorAll('form'). В качестве селектора указан тег form.
@@ -46,12 +46,12 @@ console.log(mainForm);
 querySelectorAll создаёт обычную коллекцию. А document.form это живая коллекция.
 */
 
-// 2:30 Пример
+// 2:30 Example
 
-// Обычная коллекция
-//console.log(document.querySelectorAll('form'));
-// Живая коллекция
-//console.log(document.forms);
+// Simple collection
+console.log(document.querySelectorAll('form'));
+// Live collection
+console.log(document.forms);
 
 // Добавление новой формы на страницу
 /*
