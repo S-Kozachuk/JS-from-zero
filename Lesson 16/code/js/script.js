@@ -119,7 +119,7 @@ console.log(secondRadioBtn);
 
 const mainForm = document.forms.main;
 const mainFormInput = mainForm.nameInput;
-console.log(mainFormInput)
+console.log(mainFormInput.form)
 
 // 5:30 Работа с input и textarea
 /*
