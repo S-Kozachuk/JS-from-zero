@@ -225,7 +225,7 @@ console.log(mainFormSelectIndex);
 
 // Get the value of the selected "option" element
 const mainFormSelectValue = mainFormSelect.value;
-console.log(mainFormSelectValue);
+// console.log(mainFormSelectValue);
 
 // Get the text of the selected "option" element
 const mainFormSelectText = mainFormSelect.options[mainFormSelectIndex].text;
@@ -240,14 +240,34 @@ option.index - Option number between oher in the <select> list,
 option.text - Option content (what the user sees)
 */
 
-// Example 
-const mainForm = document.main;
-const mainFormSelect = mainForm.nameSelect;
-
 //  Choose some <option>
 // mainFormSelect.options[2].selected = true;
 // mainFormSelect.selectedIndex = 2;
-mainFormSelect.value = 2;
+// mainFormSelect.value = 2;
 
+// 13:55 Added the new option (new Option)
+// option = new Option (text, value, defaultSelected, selected);
+/*
+Parameters:
+text - text inside <option>,
+value - meaning,
+defaultSelected - if true, add HTML-attribute "selected",
+selected - if true, <option> element will selected
+
+There may be confusion here with defaultSelected & selected.
+All simple: defaultSelected asign HTML- attribute.
+His get as option.getAttribute('selected'),
+selected - defines selected value or no. It is 
+important to correctly set.
+Usually both this properties have a true value
+*/
+
+// 14:45 Example
+/*
+const mainForm = document.main;
+const mainFormSelect = mainForm.nameSelect;
+let newOption = new Option('120', '4', true, true);
+mainFormSelect.append(newOption);
+*/
 
 
