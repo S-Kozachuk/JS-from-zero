@@ -192,3 +192,6 @@ mainFormCheckBox.checked = true;
 
 console.log(mainFormCheckBox.value);
 */
+
+// 10:20 Assign value of field type file (only empty string)
+mainFormFile.value = '';
