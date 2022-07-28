@@ -154,12 +154,12 @@ mainFormTextarea.value = "See you"
 */
 
 // 7:30 Work with other type of input tag: radio, checkbox и file.
-
+/*
 const mainForm = document.forms.main;
 const mainFormRadioBtn = mainForm.nameRadio;
 const mainFormCheckBox = mainForm.nameCheck;
 const mainFormFile = mainForm.nameFile;
-
+*/
 // Getting value of field type radio
 /*
 console.log(mainFormRadioBtn[0].value);
@@ -196,7 +196,7 @@ console.log(mainFormCheckBox.value);
 // 10:20 Assign value of field type file (only empty string)
 // mainFormFile.value = '';
 
-// 10:35 Wor with element select and option
+// 10:35 Work with element select and option
 /*
 Elem select have a three important properties:
 select.options - collection of pseudo-elements <option>,
@@ -212,3 +212,23 @@ value true,
 The 1-st method is the most undersandable, but 2-nd & 3-rd ways
 are more comfortable in work.
 */
+
+const mainForm = document.forms.main;
+const mainFormSelect = mainForm.nameSelect;
+
+// Getting the all options
+console.log(mainFormSelect.options);
+
+// Get the index of the selected "option" element
+const mainFormSelectIndex = mainFormSelect.selectedIndex;
+console.log(mainFormSelectIndex);
+
+// Get the value of the selected "option" element
+const mainFormSelectValue = mainFormSelect.value;
+console.log(mainFormSelectValue);
+
+// Get the text of the selected "option" element
+const mainFormSelectText = mainFormSelect.options[mainFormSelectIndex].text;
+console.log(mainFormSelectText);
+
+
