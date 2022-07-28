@@ -116,29 +116,31 @@ console.log(secondRadioBtn);
 Затем поставить .  и написать ключевое слово form.
 При воводе значения в консоль будет получен объект родительской формы элемента.
 */
-
+/*
 const mainForm = document.forms.main;
 const mainFormInput = mainForm.nameInput;
 console.log(mainFormInput.form)
+*/
 
-// 5:30 Работа с input и textarea
+// 5:30 Work with input and textarea
 /*
 Значения таких элементов можно получить через свойство
-input.value(строка) или input.checked (boolean) для 
+input.value(string) или input.checked (boolean) для 
 чекбоксов и радиокнопок.
 */
-/*
-const mainForm = document.forms.main;
 
+const mainForm = document.forms.main;
 const mainFormInput = mainForm.nameInput;
 const mainFormTextarea = mainForm.nameTextarea;
-*/
+const mainFormRadio = mainForm.nameRadio;
 
-// 6:00 Получение зачений из Input и textarea
+
+// 6:00 Getting value from Input и textarea
 // Получение значение (содержимое) поля:
-//console.log(mainFormInput.value);
+console.log(mainFormInput.value);
 // Получить значение (содержимое) текстового поля:
-//console.log(mainFormTextarea.value);
+console.log(mainFormTextarea.value);
+console.log(mainFormRadio.value);
 
 
 // 7:05 Заполнение/изменение значения поля средствами JS.
