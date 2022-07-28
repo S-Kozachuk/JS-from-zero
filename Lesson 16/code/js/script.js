@@ -194,4 +194,21 @@ console.log(mainFormCheckBox.value);
 */
 
 // 10:20 Assign value of field type file (only empty string)
-mainFormFile.value = '';
+// mainFormFile.value = '';
+
+// 10:35 Wor with element select and option
+/*
+Elem select have a three important properties:
+select.options - collection of pseudo-elements <option>,
+select.value - the value of the currently selected <option> element,
+select.selectedIndex - number of current <option> element.
+
+They give a three different ways set the value of elem <select>:
+- search the appropriate element <option> and set in option.selected
+value true,
+- set to select.value the value of the desired <option>,
+- set to select.selectedIndex number of desired <option>.
+
+The 1-st method is the most undersandable, but 2-nd & 3-rd ways
+are more comfortable in work.
+*/
