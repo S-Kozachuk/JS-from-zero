@@ -169,7 +169,8 @@ console.log(mainFormRadioBtn[1].checked);
 */
 
 // 9:00 Getting value of field type checkbox
-console.log(mainFormCheckBox.value);
-console.log(mainFormCheckBox.checked);
+// console.log(mainFormCheckBox.value);
+// console.log(mainFormCheckBox.checked);
 
 // 9:25 Getting value of field type file
+console.log(mainFormFile.value);
