@@ -153,8 +153,7 @@ mainFormInput.value = "Good buy!";
 mainFormTextarea.value = "See you"
 */
 
-// 7:30 Work with other  type of input tag: radio, checkbox и file.
-// Radio
+// 7:30 Work with other type of input tag: radio, checkbox и file.
 
 const mainForm = document.forms.main;
 const mainFormRadioBtn = mainForm.nameRadio;
@@ -162,8 +161,15 @@ const mainFormCheckBox = mainForm.nameCheck;
 const mainFormFile = mainForm.nameFile;
 
 // Getting value of field type radio
-
+/*
 console.log(mainFormRadioBtn[0].value);
 console.log(mainFormRadioBtn[1].value);
 console.log(mainFormRadioBtn[0].checked);
 console.log(mainFormRadioBtn[1].checked);
+*/
+
+// 9:00 Getting value of field type checkbox
+console.log(mainFormCheckBox.value);
+console.log(mainFormCheckBox.checked);
+
+// 9:25 Getting value of field type file
