@@ -212,7 +212,7 @@ value true,
 The 1-st method is the most undersandable, but 2-nd & 3-rd ways
 are more comfortable in work.
 */
-
+/*
 const mainForm = document.forms.main;
 const mainFormSelect = mainForm.nameSelect;
 
@@ -230,5 +230,24 @@ console.log(mainFormSelectValue);
 // Get the text of the selected "option" element
 const mainFormSelectText = mainFormSelect.options[mainFormSelectIndex].text;
 console.log(mainFormSelectText);
+*/
+
+// 12:52 Elements <options>
+/*
+Elements <option> have the next properties:
+option.selected - Is the option selected,
+option.index - Option number between oher in the <select> list,
+option.text - Option content (what the user sees)
+*/
+
+// Example 
+const mainForm = document.main;
+const mainFormSelect = mainForm.nameSelect;
+
+//  Choose some <option>
+// mainFormSelect.options[2].selected = true;
+// mainFormSelect.selectedIndex = 2;
+mainFormSelect.value = 2;
+
 
 
