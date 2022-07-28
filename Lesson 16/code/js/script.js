@@ -176,9 +176,19 @@ console.log(mainFormRadioBtn[1].checked);
 // console.log(mainFormFile.value);
 
 // 9:40 Assign value for field type radio
+/*
 mainFormRadioBtn[0].value = 'left';
 mainFormRadioBtn[1].value = 'right';
 mainFormRadioBtn[1].checked = true;
 
 console.log(mainFormRadioBtn[0].value);
 console.log(mainFormRadioBtn[1].value);
+*/
+
+// 10:10 Assign value of field type checkbox
+/*
+mainFormCheckBox.value = 'save';
+mainFormCheckBox.checked = true;
+
+console.log(mainFormCheckBox.value);
+*/
