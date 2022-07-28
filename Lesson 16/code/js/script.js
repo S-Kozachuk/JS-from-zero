@@ -145,17 +145,25 @@ const mainFormRadio = mainForm.nameRadio;
 
 // 7:05 Filling/changing field values by means of JS.
 // Assign a value (content) field. Overwriting the value of placeholder attribute.
+/*
 const mainForm = document.forms.main;
 const mainFormInput = mainForm.nameInput;
 const mainFormTextarea = mainForm.nameTextarea;
 mainFormInput.value = "Good buy!";
 mainFormTextarea.value = "See you"
+*/
 
-// 7:30 Работа с другими типами тега input: radio, checkbox и file.
-/*
+// 7:30 Work with other  type of input tag: radio, checkbox и file.
+// Radio
+
 const mainForm = document.forms.main;
-
 const mainFormRadioBtn = mainForm.nameRadio;
 const mainFormCheckBox = mainForm.nameCheck;
 const mainFormFile = mainForm.nameFile;
-*/
+
+// Getting value of field type radio
+
+console.log(mainFormRadioBtn[0].value);
+console.log(mainFormRadioBtn[1].value);
+console.log(mainFormRadioBtn[0].checked);
+console.log(mainFormRadioBtn[1].checked);
