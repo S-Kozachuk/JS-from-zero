@@ -95,29 +95,31 @@ console.log(mainFormInput);
 */
 
 // 4:40 Getting the radio buttons collection (with name nameRadio)
-
+/*
 const mainForm = document.forms.main;
 const mainFormRadioButtons = mainForm.nameRadio;
-
+*/
 // or advanced record variant: mainForm.еlements.nameRadio;
-console.log(mainFormRadioButtons);
+// console.log(mainFormRadioButtons);
 
 // Next, refer to a specific element from collection in one way or another (see 0:38) 
-
+/*
 const secondRadioBtn = mainForm.nameRadio[1];
 console.log(secondRadioBtn);
-
+*/
 
 // 5:05 Backlink element.form 
 /*
 Работая с любым элементом формы можно легко и быстро
-получить объект родительской формы этого элемента.
-Для этого нужно обратиться к элементу формы, например mainFormInput,
-который был получен раннее (см. 3:03).
+получить объект родительской формы этого элемента. Обратная операция (подъём к родителю).
+Для этого нужно обратиться к элементу формы, например mainFormInput.
 Затем поставить .  и написать ключевое слово form.
 При воводе значения в консоль будет получен объект родительской формы элемента.
 */
-// console.log(mainFormInput.form)
+
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+console.log(mainFormInput)
 
 // 5:30 Работа с input и textarea
 /*
