@@ -305,6 +305,7 @@ entries data or sending this datas on server etc.
 */
 
 // Focus work example
+/*
 const mainForm = document.main;
 const mainFormInput = mainForm.nameInput;
 console.log(mainFormInput);
@@ -318,4 +319,14 @@ mainFormInput.addEventListener('focus', function(e) {
 mainFormInput.addEventListener('blur', function(e) {
 	mainFormInput.placeholder = mainFormInputPlaceholder
 });
+*/
 
+// 18:47 Methods elem.focus() and elem.blur()
+// This methods set and remove the focus
+const mainForm = document.main;
+const mainFormInput = mainForm.nameInput;
+
+mainFormInput.focus();
+setTimeout(() => {
+	mainFormInput.blur();
+}, 3000);
