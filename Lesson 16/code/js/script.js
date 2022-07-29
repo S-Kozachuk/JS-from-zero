@@ -323,6 +323,7 @@ mainFormInput.addEventListener('blur', function(e) {
 
 // 18:47 Methods elem.focus() and elem.blur()
 // This methods set and remove the focus
+/*
 const mainForm = document.main;
 const mainFormInput = mainForm.nameInput;
 
@@ -330,3 +331,36 @@ mainFormInput.focus();
 setTimeout(() => {
 	mainFormInput.blur();
 }, 3000);
+*/
+
+// 19:13 Focusing on any objects with tabindex
+/*
+In default many objects don't support focusing.
+Which ones exactly - depends by browser. 
+But it is known for sure: that focus/blur support is guaranteed
+for elements with wich the visitor can interact:
+- <button>,
+- <input>,
+- <select>,
+- <a> and etc
+
+On other side, elements of formatting <div>, <span> -
+don't get a focus in default.
+
+Method elem.focus() don't working for them,
+and focus/blur events never fire.
+
+This is can change with HTML-attribute tabindex.
+
+tabindex = '0' puts elements "in a row" with 
+elements without a tabindex.
+It's mean this elemnts will after elements with tabindex >= 1.
+It is usually used to enable focus on an element without
+changing the switching order.
+This is necesarry so that element can participate in
+the form on par with the usual <input>
+
+tabindex = '-1' can focus on an element only programmatically. 
+Key Tab is ignored this element, but elem.focus method will work.
+*/
+
