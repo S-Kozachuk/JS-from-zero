@@ -365,6 +365,7 @@ Key Tab is ignored this element, but elem.focus method will work.
 */
 
 // Tabindex example
+
 const lesson = document.querySelector('.lesson');
 
 // Reacts on event "in focus"
