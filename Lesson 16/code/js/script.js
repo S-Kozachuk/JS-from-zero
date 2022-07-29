@@ -354,7 +354,7 @@ This is can change with HTML-attribute tabindex.
 
 tabindex = '0' puts elements "in a row" with 
 elements without a tabindex.
-It's mean this elemnts will after elements with tabindex >= 1.
+It's mean this elements will after elements with tabindex >= 1.
 It is usually used to enable focus on an element without
 changing the switching order.
 This is necesarry so that element can participate in
@@ -364,3 +364,15 @@ tabindex = '-1' can focus on an element only programmatically.
 Key Tab is ignored this element, but elem.focus method will work.
 */
 
+// Tabindex example
+const lesson = document.querySelector('.lesson');
+
+// Reacts on event "in focus"
+lesson.addEventListener('focus', function(e){
+	lesson.classList.add('_focus');
+	console.log('Div .lesson in focus!');
+});
+// Reacts on event "focus luse"
+lesson.addEventListener('blur', function(e) {
+	lesson.classList.remove('_focus');
+})
