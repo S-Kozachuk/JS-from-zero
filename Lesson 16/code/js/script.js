@@ -271,12 +271,35 @@ mainFormSelect.append(newOption);
 */
 
 // 15:25 Multi select
+/*
 const mainForm = document.main;
 const mainFormSelect = mainForm.nameSelect;
 console.log(mainFormSelect)
-
+*/
 // Getting all the selected values from <select> with "multiple"
+/*
 let selectedOptions = Array.from(mainFormSelect.options)
 	.filter(option => option.selected)
 	.map(option => option.value);
 console.log(selectedOptions);
+*/
+
+// 16:15 Events of forms ot their elements
+// Focusing focus and blur 
+/*
+Element getting the focus, when user clicking of this or use 
+Tab key.
+Also exist a HTML-attribute "autofocus", which set focus on
+element, when page is loading. There are other ways to get focus.
+
+Usually focusing means:
+"get ready to enter data on this element", this is a
+good moment to initialization or loading something.
+
+Moment for focus losing (blur) - it's moment, when user clicking
+somewhere more or pushing Tab, to toggle for next form field.
+There are other reasons to losing focus.
+
+In moment of event "losing focus" we can make a checking of 
+entries data or sending this datas on server etc.
+*/
