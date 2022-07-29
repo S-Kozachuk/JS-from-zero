@@ -368,15 +368,26 @@ Key Tab is ignored this element, but elem.focus method will work.
 /*
 const lesson = document.querySelector('.lesson');
 // Reacts on event "in focus"
-lesson.addEventListener('focus', function(e){
+lesson.addEventListener('focus', function(){
 	lesson.classList.add('_focus');
 	console.log('Div .lesson in focus!');
 });
 // Reacts on event "focus luse"
-lesson.addEventListener('blur', function(e) {
+lesson.addEventListener('blur', function() {
 	lesson.classList.remove('_focus');
 })
 */
 
 // 21:15 Can get a current element with focus from document.activeElement 
-console.log(document.activeElement);
+// console.log(document.activeElement);
+
+// 21:20 Events focusin & focusout
+// Works like focus/blur, but at the same time is pop up (bulbing)
+const mainForm = document.forms.main;
+// Setting the focus on the form when wokking with elements
+mainForm.addEventListener('focusout', function() {
+	mainForm.classList.add('_active');
+});
+
+// Catch this event on diving (with event focus)
+// , {'capture': true}

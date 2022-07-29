@@ -99,7 +99,7 @@ button:hover {
 }
 
 .main-form._active {
-    outline: 1px solid red;
+    outline: 1px solid rgba(66, 165, 247, 0.945);
 }
 
 .main-form__column {
