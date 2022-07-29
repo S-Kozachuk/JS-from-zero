@@ -365,9 +365,8 @@ Key Tab is ignored this element, but elem.focus method will work.
 */
 
 // Tabindex example
-
+/*
 const lesson = document.querySelector('.lesson');
-
 // Reacts on event "in focus"
 lesson.addEventListener('focus', function(e){
 	lesson.classList.add('_focus');
@@ -377,3 +376,7 @@ lesson.addEventListener('focus', function(e){
 lesson.addEventListener('blur', function(e) {
 	lesson.classList.remove('_focus');
 })
+*/
+
+// 21:15 Can get a current element with focus from document.activeElement 
+console.log(document.activeElement);
