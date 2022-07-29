@@ -303,3 +303,19 @@ There are other reasons to losing focus.
 In moment of event "losing focus" we can make a checking of 
 entries data or sending this datas on server etc.
 */
+
+// Focus work example
+const mainForm = document.main;
+const mainFormInput = mainForm.nameInput;
+console.log(mainFormInput);
+const mainFormInputPlaceholder = mainFormInput.placeholder;
+console.log(mainFormInputPlaceholder);
+
+mainFormInput.addEventListener('focus', function(e) {
+	mainFormInput.placeholder = '';
+	mainFormInput.value = '';
+});
+mainFormInput.addEventListener('blur', function(e) {
+	mainFormInput.placeholder = mainFormInputPlaceholder
+});
+
