@@ -271,5 +271,12 @@ mainFormSelect.append(newOption);
 */
 
 // 15:25 Multi select
+const mainForm = document.main;
+const mainFormSelect = mainForm.nameSelect;
+console.log(mainFormSelect)
 
-
+// Getting all the selected values from <select> with "multiple"
+let selectedOptions = Array.from(mainFormSelect.options)
+	.filter(option => option.selected)
+	.map(option => option.value);
+console.log(selectedOptions);
