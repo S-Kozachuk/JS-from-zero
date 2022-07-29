@@ -383,11 +383,33 @@ lesson.addEventListener('blur', function() {
 
 // 21:20 Events focusin & focusout
 // Works like focus/blur, but at the same time is pop up (bulbing)
-const mainForm = document.forms.main;
+// const mainForm = document.forms.main;
 // Setting the focus on the form when wokking with elements
+/*
 mainForm.addEventListener('focusout', function() {
 	mainForm.classList.add('_active');
 });
-
+*/
 // Catch this event on diving (with event focus)
 // , {'capture': true}
+
+// 22:35 Event change
+// Triggered when the element change is completed
+/*
+In text <input> and <textarea> working as event "blur",
+In select, radio, checkbox elements is works immediatly
+*/
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+const mainFormSelect = mainForm.nameSelect;
+const mainFormFile = mainForm.nameFile;
+
+mainFormInput.addEventListener('change', function() {
+	console.log('Event "change" worked in "input"')
+});
+mainFormSelect.addEventListener('change', ()=> {
+	console.log('Event "change" worked in "select"')
+});
+mainFormFile.addEventListener('change', ()=> {
+	console.log('Event "change" worked in file')
+});
