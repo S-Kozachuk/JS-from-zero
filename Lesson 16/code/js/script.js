@@ -399,6 +399,7 @@ mainForm.addEventListener('focusout', function() {
 In text <input> and <textarea> working as event "blur",
 In select, radio, checkbox elements is works immediatly
 */
+/*
 const mainForm = document.forms.main;
 const mainFormInput = mainForm.nameInput;
 const mainFormSelect = mainForm.nameSelect;
@@ -413,3 +414,25 @@ mainFormSelect.addEventListener('change', ()=> {
 mainFormFile.addEventListener('change', ()=> {
 	console.log('Event "change" worked in file')
 });
+*/
+
+// 23:50 Event input
+/*
+Event input triggered every once, when value is changed.
+Unlike keyboard events, it works for any value changes.
+Even if they are not related to keyboard actions.
+Example: paste with mouse, recognizing speech, dictation of the text.
+*/
+/*
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+
+mainFormInput.addEventListener('input', ()=> {
+	console.log(`value: ${mainFormInput.value}`);
+});
+*/
+
+// 24:34 Example
+// Gettting a 2-nd text area (input_2, string 23)
+const txtItem = document.form.nameTextarea;
+console.log(txtItem);
