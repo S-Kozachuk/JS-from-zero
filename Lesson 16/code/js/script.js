@@ -434,6 +434,7 @@ mainFormInput.addEventListener('input', ()=> {
 
 // 24:34 Example
 // Gettting a 2-nd text area (input_2, string 23)
+/*
 const mainForm = document.forms.main;
 const txtItem = mainForm.nameTextarea;
 const txtCounter = document.querySelector('.textarea__counter span');
@@ -446,3 +447,27 @@ function txtSetCounter() {
 	const txtCounterResult = txtItemLimit - txtItem.value.length;
 	txtCounter.innerHTML = txtCounterResult;
 }
+*/
+
+// 25:25 Events cut, copy and paste
+// This events are working if cutting, copying, pasting data.
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+
+mainFormInput.addEventListener('copy', ()=>{
+	console.log('Copying');
+});
+
+mainFormInput.addEventListener('cut', ()=> {
+	console.log('Cutting');
+});
+
+mainFormInput.addEventListener('paste', ()=>{
+	console.log('Pasting');
+});
+
+mainFormInput.addEventListener('paste', (e)=>{
+	console.log('No paste');
+	e.preventDefault();
+	console.log(e);
+})
