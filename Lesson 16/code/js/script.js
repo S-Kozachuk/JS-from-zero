@@ -471,3 +471,5 @@ mainFormInput.addEventListener('paste', (e)=>{
 	e.preventDefault();
 	console.log(e);
 })
+
+// 26:45 Sending a form - event & method "submit"
