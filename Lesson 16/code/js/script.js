@@ -436,9 +436,17 @@ mainFormInput.addEventListener('input', ()=> {
 // Gettting a 2-nd text area (input_2, string 23)
 const mainForm = document.forms.main;
 const txtItem = mainForm.nameTextarea;
-const txtCounter = document.querySelector('.textarea__counter');
-console.log(txtCounter);
+const txtCounter = document.querySelector('.textarea__counter span');
+const txtItemLimit = txtItem.getAttribute('maxlength');
+txtCounter.innerHTML = txtItemLimit;
 
+txtItem.addEventListener("keyup", txtSetCounter);
 
+txtItem.addEventListener("keydown", function (event) {
+	if(event.repeat) txtSetCounter();
+});
 
-//txtItem
+function txtSetCounter() {
+	const txtCounterResult = txtItemLimit - txtItem.value.length;
+	txtCounter.innerHTML = txtCounterResult;
+}
