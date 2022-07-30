@@ -475,14 +475,14 @@ mainFormInput.addEventListener('paste', (e)=>{
 */
 
 // 26:45 Sending a form - event & method "submit"
-
+/*
 const mainForm = document.forms.main;
 const mainFormInput = mainForm.nameInput;
 
 mainFormInput.addEventListener('focusin', ()=> {
 	mainFormInput.value = '';
 })
-	
+
 mainForm.addEventListener('submit', (e)=> {
 	console.log('Form is sending...');
 
@@ -492,3 +492,15 @@ mainForm.addEventListener('submit', (e)=> {
 		e.preventDefault();
 	}
 });
+*/
+
+// 28:12 Send the form to the server manually
+// Use the form.submit()
+
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+
+// Sending form when nameInput loses focus
+mainFormInput.addEventListener('blur', ()=>{
+	mainForm.submit();
+})
