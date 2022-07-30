@@ -434,5 +434,11 @@ mainFormInput.addEventListener('input', ()=> {
 
 // 24:34 Example
 // Gettting a 2-nd text area (input_2, string 23)
-const txtItem = document.form.nameTextarea;
-console.log(txtItem);
+const mainForm = document.forms.main;
+const txtItem = mainForm.nameTextarea;
+const txtCounter = document.querySelector('.textarea__counter');
+console.log(txtCounter);
+
+
+
+//txtItem
