@@ -496,11 +496,39 @@ mainForm.addEventListener('submit', (e)=> {
 
 // 28:12 Send the form to the server manually
 // Use the form.submit()
-
+/*
 const mainForm = document.forms.main;
 const mainFormInput = mainForm.nameInput;
 
 // Sending form when nameInput loses focus
 mainFormInput.addEventListener('blur', ()=>{
 	mainForm.submit();
-})
+});
+*/
+
+// 28:40 Example
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+
+mainForm.addEventListener('submit', (e)=>{
+	if(emailTest(mainFormInput)) {
+		mainFormInput.parentElement.insertAdjacentHTML(
+			'beforeend',
+			`<div.main-form__error>
+				Enter email
+			</div>`
+		);
+		e.preventDefault();
+	}
+});
+
+mainFormInput.addEventListener('focus', ()=> {
+	if(mainFormInput.nextElementSibling) {
+		mainFormInput.nextElementSibling.remove();
+	}
+});
+
+// Email check function
+function emailTest(input) {
+	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+}
