@@ -451,6 +451,7 @@ function txtSetCounter() {
 
 // 25:25 Events cut, copy and paste
 // This events are working if cutting, copying, pasting data.
+/*
 const mainForm = document.forms.main;
 const mainFormInput = mainForm.nameInput;
 
@@ -471,5 +472,23 @@ mainFormInput.addEventListener('paste', (e)=>{
 	e.preventDefault();
 	console.log(e);
 })
+*/
 
 // 26:45 Sending a form - event & method "submit"
+
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
+
+mainFormInput.addEventListener('focusin', ()=> {
+	mainFormInput.value = '';
+})
+	
+mainForm.addEventListener('submit', (e)=> {
+	console.log('Form is sending...');
+
+	// Checking fields. If there are errors, the sending is canceled.
+	if (!mainFormInput.value) {
+		console.log('Field nameInput is not filled in');
+		e.preventDefault();
+	}
+});
