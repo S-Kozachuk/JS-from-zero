@@ -506,7 +506,8 @@ mainFormInput.addEventListener('blur', ()=>{
 });
 */
 
-// 28:40 Example
+// 28:40 Example (email checking)
+/*
 const mainForm = document.forms.main;
 const mainFormInput = mainForm.nameInput;
 
@@ -531,3 +532,24 @@ mainFormInput.addEventListener('focus', ()=> {
 function emailTest(input) {
 	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
+*/
+
+// 30:26 Example (show image after it select)
+const mainForm = document.forms.main;
+const mainFormFile = mainForm.nameFile;
+
+mainFormFile.addEventListener('change', ()=> {
+	let selectedFile = mainFormFile.files[0];
+	console.log(selectedFile);
+
+	// Getting the URL of image
+	let fileUrl = URL.createObjectURL(selectedFile); 
+	mainFormFile.parentElement.insertAdjacentHTML(
+		'beforeend',
+		`<div class="main-form__image">
+			<img src="${fileUrl}" title="${selectedFile.name}" alt="">
+			<p>${selectedFile.name}</p>
+		</div>`
+	);	
+
+});
