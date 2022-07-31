@@ -514,9 +514,7 @@ mainForm.addEventListener('submit', (e)=>{
 	if(emailTest(mainFormInput)) {
 		mainFormInput.parentElement.insertAdjacentHTML(
 			'beforeend',
-			`<div.main-form__error>
-				Enter email
-			</div>`
+			`<div class="main-form__error">Enter email</div>`
 		);
 		e.preventDefault();
 	}
