@@ -520,6 +520,7 @@ mainForm.addEventListener('submit', (e)=>{
 	}
 });
 
+// Removed the error message if feild get a focus
 mainFormInput.addEventListener('focus', ()=> {
 	if(mainFormInput.nextElementSibling) {
 		mainFormInput.nextElementSibling.remove();
