@@ -550,6 +550,6 @@ mainFormFile.addEventListener('change', ()=> {
 			<img src="${fileUrl}" title="${selectedFile.name}" alt="">
 			<p>${selectedFile.name}</p>
 		</div>`
-	);	
-
+	);
+	console.log(mainFormFile.parentElement);
 });
