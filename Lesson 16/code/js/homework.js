@@ -6,5 +6,19 @@ with it.
 3. Prohibit the text insertion to textarea object this form.
 */
 
-const basicForm = document.forms.basic;
-console.log(basicForm);
+const basicForm = document.forms.basic,
+		 fieldName = basicForm.field_1,
+		fieldEmail = basicForm.field_2,
+		fieldPhone = basicForm.field_3,
+	  fieldMessage = basicForm.field_4,
+	  choiceGender = basicForm.choiceGender,
+	   choiceHabit = basicForm.checkHabits,
+		experience = basicForm.selectAge;
+
+// Gender & habits choice manipulation 
+choiceGender[1].checked = true;
+choiceHabit[0].checked = true;
+choiceHabit[1].value = 'test';
+		
+
+		
