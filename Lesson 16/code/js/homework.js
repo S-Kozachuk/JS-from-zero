@@ -25,15 +25,25 @@ Make next checks:
 */
 
 
-/*
-let fieldPlaceholder = fieldName.placeholder;
+// Basic varian (for 2-th fields)
+let namelPlaceholder = fieldName.placeholder;
 fieldName.addEventListener('focus', ()=> {
 	fieldName.placeholder = '';
-})
+});
 fieldName.addEventListener('blur', ()=> {
-	fieldName.placeholder = fieldPlaceholder;
-})
-*/
+	fieldName.placeholder = namelPlaceholder;
+});
+
+let emailPlaceholderE = fieldEmail.placeholder;
+fieldEmail.addEventListener('focus', ()=> {
+	fieldEmail.placeholder = '';
+});
+fieldEmail.addEventListener('blur', ()=> {
+	fieldEmail.placeholder = emailPlaceholderE;
+});
+
+
+/*
 function placeholder() {
 	
 	let basicFormArr = Array.from(basicForm);
@@ -52,6 +62,6 @@ function placeholder() {
 }
 
 document.addEventListener('click', placeholder())
-
+*/
 
 		
