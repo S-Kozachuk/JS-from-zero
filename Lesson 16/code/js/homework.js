@@ -43,7 +43,7 @@ fieldEmail.addEventListener('blur', ()=> {
 });
 */
 
-function placeholder() {
+function placeholderChange() {
 	let placeholdersArr = [
 		"What's your name",
 		"Your email",
@@ -64,7 +64,7 @@ function placeholder() {
 	});
 }
 
-document.addEventListener('click', placeholder())
+document.addEventListener('click', placeholderChange())
 
 
 		
