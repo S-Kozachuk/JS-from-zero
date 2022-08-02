@@ -24,8 +24,8 @@ Make next checks:
 - add error messages (as string)
 */
 
-
-// Basic varian (for 2-th fields)
+// Basic variant (for 2-th fields)
+/*
 let namelPlaceholder = fieldName.placeholder;
 fieldName.addEventListener('focus', ()=> {
 	fieldName.placeholder = '';
@@ -41,27 +41,30 @@ fieldEmail.addEventListener('focus', ()=> {
 fieldEmail.addEventListener('blur', ()=> {
 	fieldEmail.placeholder = emailPlaceholderE;
 });
+*/
 
-
-/*
 function placeholder() {
-	
+	let placeholdersArr = [
+		"What's your name",
+		"Your email",
+		"Your phone number",
+		"Tell about you"
+	];
+	//console.log(placeholdersArr);
+
 	let basicFormArr = Array.from(basicForm);
-	basicFormArr.forEach(elem => {
-		let index = 1;
-		let fieldPlaceholder = fieldName.placeholder;
+	basicFormArr.forEach((elem, index) => {
 		elem.addEventListener('focus', ()=> {
 			elem.placeholder = '';
-			index ++;
-			console.log(index);
+			// console.log(index);
 		});
 		elem.addEventListener('blur', ()=> {
-			elem.placeholder = fieldPlaceholder;
+			elem.placeholder = placeholdersArr[index];
 		});
 	});
 }
 
 document.addEventListener('click', placeholder())
-*/
+
 
 		
