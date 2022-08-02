@@ -236,7 +236,7 @@ console.log(mainFormSelectText);
 /*
 Elements <option> have the next properties:
 option.selected - Is the option selected,
-option.index - Option number between oher in the <select> list,
+option.index - Option number between other in the <select> list,
 option.text - Option content (what the user sees)
 */
 
