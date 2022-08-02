@@ -51,7 +51,6 @@ function placeholderChange() {
 		"Tell about you"
 	];
 	//console.log(placeholdersArr);
-
 	let basicFormArr = Array.from(basicForm);
 	basicFormArr.forEach((elem, index) => {
 		elem.addEventListener('focus', ()=> {
@@ -63,22 +62,26 @@ function placeholderChange() {
 		});
 	});
 }
-
 setTimeout(placeholderChange, 3000);
 	
 
-function fillCheck() {
-	// checked value about empty
-	// listen of even sent - if sending > check value mean
-	let basicFormArr = Array.from(basicForm);
-	basicFormArr.forEach((elem) => {
-		elem.addEventListener('submit', (e)=>{
-			console.log("Try sending");
-			e.preventDefault;
-		});
-	})
+function checkFillFileds() {
+	basicForm.addEventListener('submit', (e)=>{
+		let basicFormArr = Array.from(basicForm);
+		console.log(basicFormArr);
+		let fieldValue = [];
+		for(i=0;i<4;i++) {
+			fieldValue = basicForm[i].value;
+			console.log(fieldValue);
+			if(fieldValue == "") {
+				console.log("Fill this field");
+				basicForm[i].parentElement.insertAdjacentHTML(
+					'beforeend',
+					`<div class="main-form__error">Enter this field</div>`
+				);
+				e.preventDefault();
+			};
+		};
+	});
 }
-
-fillCheck()
-
-// Geet a button! buuton > elem ?
+checkFillFileds();
