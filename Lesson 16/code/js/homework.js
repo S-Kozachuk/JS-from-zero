@@ -15,10 +15,43 @@ const basicForm = document.forms.basic,
 	   choiceHabit = basicForm.checkHabits,
 		experience = basicForm.selectAge;
 
-// Gender & habits choice manipulation 
-choiceGender[1].checked = true;
-choiceHabit[0].checked = true;
-choiceHabit[1].value = 'test';
-		
+// Remove placeholder to click on fieild (focus)
+/*
+Make next checks:
+- to an empy value (all fields),
+- numbers of symbols, min-max (field name, message),
+- correct email emtry (field email)
+- add error messages (as string)
+*/
+
+
+/*
+let fieldPlaceholder = fieldName.placeholder;
+fieldName.addEventListener('focus', ()=> {
+	fieldName.placeholder = '';
+})
+fieldName.addEventListener('blur', ()=> {
+	fieldName.placeholder = fieldPlaceholder;
+})
+*/
+function placeholder() {
+	
+	let basicFormArr = Array.from(basicForm);
+	basicFormArr.forEach(elem => {
+		let index = 1;
+		let fieldPlaceholder = fieldName.placeholder;
+		elem.addEventListener('focus', ()=> {
+			elem.placeholder = '';
+			index ++;
+			console.log(index);
+		});
+		elem.addEventListener('blur', ()=> {
+			elem.placeholder = fieldPlaceholder;
+		});
+	});
+}
+
+document.addEventListener('click', placeholder())
+
 
 		
