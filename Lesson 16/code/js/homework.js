@@ -64,7 +64,21 @@ function placeholderChange() {
 	});
 }
 
-document.addEventListener('click', placeholderChange())
+setTimeout(placeholderChange, 3000);
+	
 
+function fillCheck() {
+	// checked value about empty
+	// listen of even sent - if sending > check value mean
+	let basicFormArr = Array.from(basicForm);
+	basicFormArr.forEach((elem) => {
+		elem.addEventListener('submit', (e)=>{
+			console.log("Try sending");
+			e.preventDefault;
+		});
+	})
+}
 
-		
+fillCheck()
+
+// Geet a button! buuton > elem ?
