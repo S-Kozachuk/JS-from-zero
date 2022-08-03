@@ -91,13 +91,13 @@ checkFillFileds();
 
 // 2-nd variant (check only select fields(after filtering))
 // forEach cycle version, callback (nonworking)
-/*
+
 function checkFillFileds() {
 	basicForm.addEventListener('submit', (e) => {
 		let basicFormArr = Array.from(basicForm);
 		console.log(basicFormArr);
 		
-		function arrFiltering(h) {
+		function arrFiltering() {
 			let currentArr = basicFormArr.filter((item, index) =>{
 				if(index !== 4 && index !== 5 && index !== 6 && index !== 9) {
 					return item;
@@ -106,10 +106,9 @@ function checkFillFileds() {
 			console.log(currentArr);
 		};
 		
-		function showCheckMessage(h) {
-			arrFiltering(h);
+		function showCheckMessage() {
 			let fieldValue = [];
-			h.forEach((elem,index) => {
+			currentArr.forEach((elem,index) => {
 				fieldValue = basicForm[index].value;
 				if(fieldValue == "") {
 					console.log("Fill this field");
@@ -117,17 +116,18 @@ function checkFillFileds() {
 						'beforeend',
 						`<div class="main-form__error">Enter this field</div>`
 					);
-					e.preventDefault();
+					
 				}
 			});
 		}
-
+		e.preventDefault();
 		showCheckMessage(arrFiltering);
 	});
 }
 checkFillFileds();
-*/
 
+
+/*
 function checkFillFileds() {
 	basicForm.addEventListener('submit', (e) => {
 		let basicFormArr = Array.from(basicForm);
@@ -153,3 +153,4 @@ function checkFillFileds() {
 	});
 }
 checkFillFileds();
+*/
