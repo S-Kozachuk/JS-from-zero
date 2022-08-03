@@ -64,7 +64,7 @@ function placeholderChange() {
 }
 setTimeout(placeholderChange, 3000);
 	
-
+/*
 function checkFillFileds() {
 	basicForm.addEventListener('submit', (e)=>{
 		let basicFormArr = Array.from(basicForm);
@@ -85,3 +85,40 @@ function checkFillFileds() {
 	});
 }
 checkFillFileds();
+*/
+
+// forEach cycle version
+/* 
+function checkFillFileds() {
+	basicForm.addEventListener('submit', (e)=>{
+		let basicFormArr = Array.from(basicForm);
+		console.log(basicFormArr);
+		let fieldValue = [];
+		forEach(i) {
+			fieldValue = basicForm[i].value;
+			console.log(fieldValue);
+			if(fieldValue == "") {
+				console.log("Fill this field");
+				basicForm[i].parentElement.insertAdjacentHTML(
+					'beforeend',
+					`<div class="main-form__error">Enter this field</div>`
+				);
+				e.preventDefault();
+			};
+		};
+	});
+}
+checkFillFileds();
+*/
+
+// forEach example
+const arrSparse = [2,4,6,,12];
+let numCallbackRuns = 0;
+
+arrSparse.forEach(elem => {
+ console.log(elem);
+ numCallbackRuns++;	
+});
+
+console.log({numCallbackRuns});
+
