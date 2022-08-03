@@ -88,37 +88,33 @@ checkFillFileds();
 */
 
 // forEach cycle version
-/* 
+// I need array without 4-th element!
+
 function checkFillFileds() {
-	basicForm.addEventListener('submit', (e)=>{
+	basicForm.addEventListener('submit', (e) => {
 		let basicFormArr = Array.from(basicForm);
 		console.log(basicFormArr);
-		let fieldValue = [];
-		forEach(i) {
-			fieldValue = basicForm[i].value;
-			console.log(fieldValue);
-			if(fieldValue == "") {
+		let currentArr = [];
+		basicFormArr.forEach((elem, i)=>{
+			if(i !== 4) {
+				currentArr = basicFormArr.map((item)=>{
+					return item;
+				});
+			}
+		});
+		console.log(currentArr);
+		/*
+		currentArr.forEach((elem,index) => {
+			if(elem == "") {
 				console.log("Fill this field");
-				basicForm[i].parentElement.insertAdjacentHTML(
+				basicForm[index].parentElement.insertAdjacentHTML(
 					'beforeend',
 					`<div class="main-form__error">Enter this field</div>`
 				);
 				e.preventDefault();
-			};
-		};
+			}
+		});
+		*/
 	});
 }
 checkFillFileds();
-*/
-
-// forEach example
-const arrSparse = [2,4,6,,12];
-let numCallbackRuns = 0;
-
-arrSparse.forEach(elem => {
- console.log(elem);
- numCallbackRuns++;	
-});
-
-console.log({numCallbackRuns});
-
