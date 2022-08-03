@@ -64,6 +64,8 @@ function placeholderChange() {
 }
 setTimeout(placeholderChange, 3000);
 	
+// Show error message fuction
+// 1-st variant (check the all fields)
 /*
 function checkFillFileds() {
 	basicForm.addEventListener('submit', (e)=>{
@@ -87,34 +89,39 @@ function checkFillFileds() {
 checkFillFileds();
 */
 
-// forEach cycle version
-// I need array without 4-th element!
-
+// 2-nd variant (check only select fields(after filtering))
+// forEach cycle version, callback (nonworking)
 function checkFillFileds() {
 	basicForm.addEventListener('submit', (e) => {
 		let basicFormArr = Array.from(basicForm);
 		console.log(basicFormArr);
-		let currentArr = [];
-		basicFormArr.forEach((elem, i)=>{
-			if(i !== 4) {
-				currentArr = basicFormArr.map((item)=>{
+		
+		function filterArr() {
+			let currentArr = basicFormArr.filter((item, index) =>{
+				if(index !== 4 && index !== 5 && index !== 6 && index !== 9) {
 					return item;
-				});
-			}
-		});
-		console.log(currentArr);
-		/*
-		currentArr.forEach((elem,index) => {
-			if(elem == "") {
-				console.log("Fill this field");
-				basicForm[index].parentElement.insertAdjacentHTML(
-					'beforeend',
-					`<div class="main-form__error">Enter this field</div>`
-				);
-				e.preventDefault();
-			}
-		});
-		*/
+				}
+			});
+			console.log(currentArr);
+		};
+		
+		function showCheckMessage(sortingArr) {
+			let fieldValue = [];
+			sortingArr.forEach((elem,index) => {
+				fieldValue = basicForm[index].value;
+				if(elem == "") {
+					console.log("Fill this field");
+					basicForm[index].parentElement.insertAdjacentHTML(
+						'beforeend',
+						`<div class="main-form__error">Enter this field</div>`
+					);
+					e.preventDefault();
+				}
+			});
+		}
+
+		showCheckMessage(filterArr);
 	});
 }
 checkFillFileds();
+
