@@ -133,7 +133,7 @@ function checkFillFileds() {
 		let basicFormArr = Array.from(basicForm);
 		console.log(basicFormArr);
 		let currentArr = basicFormArr.filter((item, index) =>{
-			if(index !== 4 && index !== 5 && index !== 6 && index !== 9) {
+			if(index < 4) {
 				return item;
 			}
 		});
