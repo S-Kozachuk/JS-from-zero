@@ -6,6 +6,14 @@ with it.
 3. Prohibit the text insertion to textarea object this form.
 */
 
+/*
+Make next checks:
+- to an empy value (all fields),
+- numbers of symbols, min-max (field name, message),
+- correct email emtry (field email)
+- add error messages (as string)
+*/
+
 const basicForm = document.forms.basic,
 		 fieldName = basicForm.field_1,
 		fieldEmail = basicForm.field_2,
@@ -16,14 +24,6 @@ const basicForm = document.forms.basic,
 		experience = basicForm.selectAge;
 
 // Remove placeholder to click on fieild (focus)
-/*
-Make next checks:
-- to an empy value (all fields),
-- numbers of symbols, min-max (field name, message),
-- correct email emtry (field email)
-- add error messages (as string)
-*/
-
 // Basic variant (for 2-th fields)
 /*
 let namelPlaceholder = fieldName.placeholder;
@@ -42,7 +42,7 @@ fieldEmail.addEventListener('blur', ()=> {
 	fieldEmail.placeholder = emailPlaceholderE;
 });
 */
-
+// 2-nd variant (dynamics)
 function placeholderChange() {
 	let placeholdersArr = [
 		"What's your name",
