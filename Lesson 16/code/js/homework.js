@@ -91,12 +91,13 @@ checkFillFileds();
 
 // 2-nd variant (check only select fields(after filtering))
 // forEach cycle version, callback (nonworking)
+/*
 function checkFillFileds() {
 	basicForm.addEventListener('submit', (e) => {
 		let basicFormArr = Array.from(basicForm);
 		console.log(basicFormArr);
 		
-		function filterArr() {
+		function arrFiltering(h) {
 			let currentArr = basicFormArr.filter((item, index) =>{
 				if(index !== 4 && index !== 5 && index !== 6 && index !== 9) {
 					return item;
@@ -105,11 +106,12 @@ function checkFillFileds() {
 			console.log(currentArr);
 		};
 		
-		function showCheckMessage(sortingArr) {
+		function showCheckMessage(h) {
+			arrFiltering(h);
 			let fieldValue = [];
-			sortingArr.forEach((elem,index) => {
+			h.forEach((elem,index) => {
 				fieldValue = basicForm[index].value;
-				if(elem == "") {
+				if(fieldValue == "") {
 					console.log("Fill this field");
 					basicForm[index].parentElement.insertAdjacentHTML(
 						'beforeend',
@@ -120,8 +122,34 @@ function checkFillFileds() {
 			});
 		}
 
-		showCheckMessage(filterArr);
+		showCheckMessage(arrFiltering);
 	});
 }
 checkFillFileds();
+*/
 
+function checkFillFileds() {
+	basicForm.addEventListener('submit', (e) => {
+		let basicFormArr = Array.from(basicForm);
+		console.log(basicFormArr);
+		let currentArr = basicFormArr.filter((item, index) =>{
+			if(index !== 4 && index !== 5 && index !== 6 && index !== 9) {
+				return item;
+			}
+		});
+		console.log(currentArr);
+		let fieldValue = [];
+		currentArr.forEach((elem,index) => {
+			fieldValue = currentArr[index].value;
+			if(fieldValue == "") {
+				console.log("Fill this field");
+				basicForm[index].parentElement.insertAdjacentHTML(
+					'beforeend',
+					`<div class="main-form__error">Enter this field</div>`
+				);
+				e.preventDefault();
+			}
+		});
+	});
+}
+checkFillFileds();
