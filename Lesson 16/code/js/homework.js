@@ -60,6 +60,8 @@ function checkFillFileds() {
 			console.log(currentArr);
 		};
 
+		console.log(arrFiltering(currentArr))
+
 		function showCheckMessage() {
 			arrFiltering();
 			currentArr.forEach((elem, index) => {
@@ -79,3 +81,15 @@ function checkFillFileds() {
 	});
 }
 checkFillFileds();
+
+function one() {
+    var kek = 12;
+    return kek;
+};
+ 
+function second() {
+    var lol = one();
+	console.log(lol);
+};
+ 
+second()
