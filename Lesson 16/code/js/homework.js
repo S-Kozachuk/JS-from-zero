@@ -64,7 +64,7 @@ function placeholderChange() {
 }
 setTimeout(placeholderChange, 3000);
 	
-// Show error message fuction
+// Show error message function
 // 1-st variant (check the all fields)
 /*
 function checkFillFileds() {
@@ -95,20 +95,21 @@ checkFillFileds();
 function checkFillFileds() {
 	basicForm.addEventListener('submit', (e) => {
 		let basicFormArr = Array.from(basicForm);
+		let currentArr = [];
 		console.log(basicFormArr);
 		
 		function arrFiltering() {
-			let currentArr = basicFormArr.filter((item, index) =>{
-				if(index !== 4 && index !== 5 && index !== 6 && index !== 9) {
+			currentArr = basicFormArr.filter((item, index) =>{
+				if(index < 4) {
 					return item;
 				}
 			});
 			console.log(currentArr);
 		};
-		
+
 		function showCheckMessage() {
-			let fieldValue = [];
-			currentArr.forEach((elem,index) => {
+			arrFiltering();
+			currentArr.forEach((elem, index) => {
 				fieldValue = basicForm[index].value;
 				if(fieldValue == "") {
 					console.log("Fill this field");
@@ -120,8 +121,8 @@ function checkFillFileds() {
 				}
 			});
 		}
-		e.preventDefault();
-		showCheckMessage(arrFiltering);
+		showCheckMessage();
+		e.preventDefault();	
 	});
 }
 checkFillFileds();
