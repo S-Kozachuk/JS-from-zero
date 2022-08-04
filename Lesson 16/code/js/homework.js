@@ -60,36 +60,36 @@ function checkFillFileds() {
 			console.log(currentArr);
 		};
 
-		console.log(arrFiltering(currentArr))
-
 		function showCheckMessage() {
 			arrFiltering();
 			currentArr.forEach((elem, index) => {
 				fieldValue = basicForm[index].value;
-				if(fieldValue == "") {
-					console.log("Fill this field");
-					basicForm[index].parentElement.insertAdjacentHTML(
-						'beforeend',
-						`<div class="main-form__error">Enter this field</div>`
-					);
-					
+				function errorMessage(){
+					if(fieldValue == "") {
+						console.log("Fill this field");
+						basicForm[index].parentElement.insertAdjacentHTML(
+							'beforeend',
+							`<div class="main-form__error">Enter this field</div>`
+						);
+					}
 				}
+				errorMessage();
+				currentArr[index].addEventListener('focus', ()=> {
+					if(currentArr[index].nextElementSibling) {
+						currentArr[index].nextElementSibling.remove();
+					}
+				});
+				currentArr[index].addEventListener('blur', ()=> {
+					if(fieldValue == "") {
+						errorMessage()
+					}
+				});
+
 			});
+			
 		}
 		showCheckMessage();
 		e.preventDefault();	
 	});
 }
 checkFillFileds();
-
-function one() {
-    var kek = 12;
-    return kek;
-};
- 
-function second() {
-    var lol = one();
-	console.log(lol);
-};
- 
-second()
