@@ -63,7 +63,8 @@ function checkFillFileds() {
 		function showCheckMessage() {
 			arrFiltering();
 			currentArr.forEach((elem, index) => {
-				fieldValue = basicForm[index].value;
+				fieldValue = currentArr[index].value;
+				console.log(fieldValue)
 				function errorMessage(){
 					if(fieldValue == "") {
 						console.log("Fill this field");
@@ -71,6 +72,7 @@ function checkFillFileds() {
 							'beforeend',
 							`<div class="main-form__error">Enter this field</div>`
 						);
+						e.preventDefault();	
 					}
 				}
 				errorMessage();
@@ -81,15 +83,14 @@ function checkFillFileds() {
 				});
 				currentArr[index].addEventListener('blur', ()=> {
 					if(fieldValue == "") {
-						errorMessage()
+						errorMessage();
 					}
 				});
-
 			});
 			
 		}
+		
 		showCheckMessage();
-		e.preventDefault();	
 	});
 }
 checkFillFileds();
