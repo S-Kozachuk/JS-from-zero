@@ -23,26 +23,7 @@ const basicForm = document.forms.basic,
 	   choiceHabit = basicForm.checkHabits,
 		experience = basicForm.selectAge;
 
-// Remove placeholder to click on fieild (focus)
-// Basic variant (for 2-th fields)
-/*
-let namelPlaceholder = fieldName.placeholder;
-fieldName.addEventListener('focus', ()=> {
-	fieldName.placeholder = '';
-});
-fieldName.addEventListener('blur', ()=> {
-	fieldName.placeholder = namelPlaceholder;
-});
-
-let emailPlaceholderE = fieldEmail.placeholder;
-fieldEmail.addEventListener('focus', ()=> {
-	fieldEmail.placeholder = '';
-});
-fieldEmail.addEventListener('blur', ()=> {
-	fieldEmail.placeholder = emailPlaceholderE;
-});
-*/
-// 2-nd variant (dynamics)
+// Dynamic placeholder
 function placeholderChange() {
 	let placeholdersArr = [
 		"What's your name",
@@ -50,7 +31,6 @@ function placeholderChange() {
 		"Your phone number",
 		"Tell about you"
 	];
-	//console.log(placeholdersArr);
 	let basicFormArr = Array.from(basicForm);
 	basicFormArr.forEach((elem, index) => {
 		elem.addEventListener('focus', ()=> {
@@ -64,34 +44,7 @@ function placeholderChange() {
 }
 setTimeout(placeholderChange, 3000);
 	
-// Show error message function
-// 1-st variant (check the all fields)
-/*
-function checkFillFileds() {
-	basicForm.addEventListener('submit', (e)=>{
-		let basicFormArr = Array.from(basicForm);
-		console.log(basicFormArr);
-		let fieldValue = [];
-		for(i=0;i<4;i++) {
-			fieldValue = basicForm[i].value;
-			console.log(fieldValue);
-			if(fieldValue == "") {
-				console.log("Fill this field");
-				basicForm[i].parentElement.insertAdjacentHTML(
-					'beforeend',
-					`<div class="main-form__error">Enter this field</div>`
-				);
-				e.preventDefault();
-			};
-		};
-	});
-}
-checkFillFileds();
-*/
-
-// 2-nd variant (check only select fields(after filtering))
-// forEach cycle version, callback (nonworking)
-
+// Show error messages function
 function checkFillFileds() {
 	basicForm.addEventListener('submit', (e) => {
 		let basicFormArr = Array.from(basicForm);
@@ -126,32 +79,3 @@ function checkFillFileds() {
 	});
 }
 checkFillFileds();
-
-
-/*
-function checkFillFileds() {
-	basicForm.addEventListener('submit', (e) => {
-		let basicFormArr = Array.from(basicForm);
-		console.log(basicFormArr);
-		let currentArr = basicFormArr.filter((item, index) =>{
-			if(index < 4) {
-				return item;
-			}
-		});
-		console.log(currentArr);
-		let fieldValue = [];
-		currentArr.forEach((elem,index) => {
-			fieldValue = currentArr[index].value;
-			if(fieldValue == "") {
-				console.log("Fill this field");
-				basicForm[index].parentElement.insertAdjacentHTML(
-					'beforeend',
-					`<div class="main-form__error">Enter this field</div>`
-				);
-				e.preventDefault();
-			}
-		});
-	});
-}
-checkFillFileds();
-*/
