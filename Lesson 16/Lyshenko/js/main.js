@@ -1,5 +1,7 @@
 let btn = document.querySelector('button');
-let input = document.querySelector('#one')
+let btnOne = document.querySelector('#btn-1')
+let input = document.querySelector('#one');
+let output = document.querySelector('span');
 
 btn.onclick = ()=>{
 	console.log(input.value);
@@ -7,4 +9,6 @@ btn.onclick = ()=>{
 
 document.querySelector('#one').oninput = ()=>{
 	console.log(input.value);
+	output.innerHTML = input.value;
 }
+
