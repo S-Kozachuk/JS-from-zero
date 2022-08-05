@@ -1,4 +1,3 @@
 document.querySelector('button').onclick = ()=>{
-	console.log(document.querySelector('#one').value);
-	document.querySelector('button').style.backgroundColor = document.querySelector('#one').value
+	console.log(color = document.querySelector('#one').value);
 }
