@@ -62,30 +62,35 @@ function checkFillFileds() {
 
 		function showCheckMessage() {
 			arrFiltering();
+			
 			currentArr.forEach((elem, index) => {
 				fieldValue = currentArr[index].value;
-				console.log(fieldValue)
-				function errorMessage(){
-					if(fieldValue == "") {
+				console.log(fieldValue);
+				let errorMessage = document.querySelector('.main-form__error');
+				console.log(errorMessage);
+				function showErrorMessage(){
+					if(fieldValue == "" && !errorMessage) {
 						console.log("Fill this field");
 						basicForm[index].parentElement.insertAdjacentHTML(
 							'beforeend',
 							`<div class="main-form__error">Enter this field</div>`
 						);
-						e.preventDefault();	
+						e.preventDefault();
 					}
 				}
-				errorMessage();
+				showErrorMessage();
 				currentArr[index].addEventListener('focus', ()=> {
 					if(currentArr[index].nextElementSibling) {
 						currentArr[index].nextElementSibling.remove();
 					}
 				});
+				/*
 				currentArr[index].addEventListener('blur', ()=> {
 					if(fieldValue == "") {
-						errorMessage();
+						showErrorMessage();
 					}
 				});
+				*/
 			});
 			
 		}
