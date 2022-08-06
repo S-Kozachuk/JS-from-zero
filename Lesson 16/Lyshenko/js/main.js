@@ -25,8 +25,10 @@ btnOne.onclick = () => {
 }
 
 btnTwo.onclick = (e)=>{
-	let textField = document.querySelector('#two');
-	console.log(textField.value);
-	textField.value = 'Test';
+	// let textField = document.querySelector('#two');
+	// console.log(textField.value);
+	// textField.value = 'Test';
 	e.preventDefault();
+	let form = document.querySelector('form');
+	console.log(form);
 }
