@@ -1,6 +1,7 @@
 let btn = document.querySelector('button');
 let btnPush = document.querySelector('#i2');
-let btnOne = document.querySelector('#btn-1')
+let btnOne = document.querySelector('#btn-1');
+let btnTwo = document.querySelector('#btn-2');
 let input = document.querySelector('#one');
 let output = document.querySelector('span');
 
@@ -23,3 +24,8 @@ btnOne.onclick = () => {
 		}
 }
 
+btnTwo.onclick = ()=>{
+	let textField = document.querySelector('#two');
+	console.log(textField.value);
+	textField.value = 'Test';
+}
