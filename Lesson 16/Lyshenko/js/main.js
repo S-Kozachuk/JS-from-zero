@@ -24,8 +24,9 @@ btnOne.onclick = () => {
 		}
 }
 
-btnTwo.onclick = ()=>{
+btnTwo.onclick = (e)=>{
 	let textField = document.querySelector('#two');
 	console.log(textField.value);
 	textField.value = 'Test';
+	e.preventDefault();
 }
