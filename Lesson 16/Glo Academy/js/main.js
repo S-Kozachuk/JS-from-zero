@@ -28,7 +28,17 @@ document.addEventListener("DOMContentLoaded", () => {
 	};
 
 	const validateElem = (elem) => {
-		console.log(elem);
+		if (elem.name == 'username'){
+			if(!regExpName.test(elem.value)){
+				elem.nextElementSibling.textContent = 'Enter the correct user name';
+			}
+		}
+		if (elem.name == 'email'){
+
+		}
+		if (elem.password) {
+
+		}
 	}
  
 	for(let elem of form.elements) {
