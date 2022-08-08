@@ -11,5 +11,20 @@ document.addEventListener("DOMContentLoaded", () => {
 	const regExpEmail = /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/;
 	const regExpPass = /^(?=^.{8,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/;
 
-	
-})
+	const submith = ()=>{
+		alert('Data was send');
+		for(let elem of form.elements) {
+			if(
+				!elem.classList.contains('btn') &&
+				!elem.classList.contains('form-check-input')
+			) {
+				elem.value = "";
+			}
+			
+			if(elem.classList.contains('form-check-input')){
+				elem.checked = false;
+			}}
+		}
+	}
+
+});
