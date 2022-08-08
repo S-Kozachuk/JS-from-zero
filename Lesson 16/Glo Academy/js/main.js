@@ -8,5 +8,5 @@ document.addEventListener("DOMContentLoaded", () => {
 	let isSubmit = false;
 
 	const regExpName = /^[a-z0-9_-]{3,16}$/;
-	const regExpEmail = /^
+	const regExpEmail = /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/;
 })
