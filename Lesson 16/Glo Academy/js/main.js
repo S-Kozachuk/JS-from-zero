@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		for(let elem of form.elements) {
 			if(!elem.classList.contains('form-check-input') && elem.tagName != 'BUTTON') {
 				if(elem.value == '') {
-					console.log(elem);
+					elem.nextElementSibling.textContent = 'This field didnt fill';
 				}
 			}
 		}
