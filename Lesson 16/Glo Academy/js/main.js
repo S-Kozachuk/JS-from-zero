@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			if(!elem.classList.contains('form-check-input') && elem.tagName != 'BUTTON') {
 				if(elem.value == '') {
 					elem.nextElementSibling.textContent = 'This field didnt fill';
+				} else {
+					elem.nextElementSibling.textContent = '';
 				}
 			}
 		}

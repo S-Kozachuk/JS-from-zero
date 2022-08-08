@@ -78,6 +78,7 @@ function checkFillFileds() {
 						e.preventDefault();
 					}
 				}
+				// Transfer this code out of "Submit" handler (see https://youtu.be/pdEauqv-thk?t=997)
 				showErrorMessage();
 				currentArr[index].addEventListener('focus', ()=> {
 					if(currentArr[index].nextElementSibling) {
