@@ -23,8 +23,19 @@ document.addEventListener("DOMContentLoaded", () => {
 			
 			if(elem.classList.contains('form-check-input')){
 				elem.checked = false;
-			}}
+			}
 		}
-	}
+	};
 
+	form.addEventListener('submit', (e)=> {
+		e.preventDefault();
+		console.dir(form);
+		for(let elem of form.elements) {
+			if(!elem.classList.contains('form-check-input') && elem.tagName != 'BUTTON') {
+				if(elem.value == '') {
+					console.log(elem);
+				}
+			}
+		}
+	});
 });
