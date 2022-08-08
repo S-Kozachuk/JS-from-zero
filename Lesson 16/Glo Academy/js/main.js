@@ -27,9 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	};
 
+	const validateElem = (elem) => {
+		console.log(elem);
+	}
+ 
 	for(let elem of form.elements) {
 		if(!elem.classList.contains('form-check-input') && elem.tagName != 'BUTTON') {
-			elem.addEventListener('blur', validateElem(elem))
+			elem.addEventListener('blur', ()=>{
+				validateElem(elem);
+			});
 		}
 	}
 
