@@ -9,4 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const regExpName = /^[a-z0-9_-]{3,16}$/;
 	const regExpEmail = /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/;
+	const regExpPass = /^(?=^.{8,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/;
+
+	
 })
