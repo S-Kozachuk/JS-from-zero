@@ -48,9 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
 				elem.nextElementSibling.textContent = '';
 			}
 		}
-		if (elem.password) {
+		if (elem.name == 'password') {
 			if(!regExpPass.test(elem.value) && elem.value != ''){
-				elem.nextElementSibling.textContent = 'Enter the password';
+				elem.nextElementSibling.textContent = 'Enter the correct password';
 				if(elem.value.length < 8) {
 					elem.nextElementSibling.textContent = "From 8 symbols"
 				}
