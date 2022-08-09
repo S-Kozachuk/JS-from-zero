@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const check = document.querySelector('.form-check-input');
 	let isSubmit = false;
 
-	const regExpName = /^[a-z0-9_-]{3,16}$/;
+	const regExpName = /^[a-z0-9_-][A-z0-9]{3,16}$/;
 	const regExpEmail = /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/;
 	const regExpPass = /^(?=^.{8,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/;
 
@@ -39,7 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		}
 		if (elem.name == 'email'){
-
+			if(!regExpEmail.test(elem.value) && elem.value != ''){
+				elem.nextElementSibling.textContent = 'Enter the correct mail';
+				if(elem.value.length < 3 || elem.value.length > 16) {
+					elem.nextElementSibling.textContent = "From 3 to 16 symbols"
+				}
+			} else {
+				elem.nextElementSibling.textContent = '';
+			}
 		}
 		if (elem.password) {
 
