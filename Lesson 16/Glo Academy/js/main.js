@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const validateElem = (elem)=> {
 		if (elem.name == 'username'){
-			if(!regExpName.test(elem.value) && elem.value != ''){
+			if(!regExpName.test(elem.value) && elem.value !== ''){
 				elem.nextElementSibling.textContent = 'Enter the correct user name';
 				if(elem.value.length < 3 || elem.value.length > 16) {
 					elem.nextElementSibling.textContent = "From 3 to 16 symbols"
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		}
 		if (elem.name == 'email'){
-			if(!regExpEmail.test(elem.value) && elem.value != ''){
+			if(!regExpEmail.test(elem.value) && elem.value !== ''){
 				elem.nextElementSibling.textContent = 'Enter the correct mail';
 				if(elem.value.length < 3 || elem.value.length > 16) {
 					elem.nextElementSibling.textContent = "From 3 to 16 symbols"
@@ -49,7 +49,20 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		}
 		if (elem.name == 'password') {
-			if(!regExpPass.test(elem.value) && elem.value != ''){
+			if(!regExpPass.test(elem.value) && elem.value !== ''){
+				elem.nextElementSibling.textContent = 'Enter the correct password';
+				if(elem.value.length < 8) {
+					elem.nextElementSibling.textContent = "From 8 symbols"
+				}
+			} else {
+				elem.nextElementSibling.textContent = '';
+			}
+		}
+		if (elem.name == 'passwordConfirmation') {
+			if(pass.value !== passConf.value && passConf.value !== ''){
+				elem.nextElementSibling.textConten = "Password didn't coincidence";
+			};
+			if(!regExpPass.test(elem.value) && elem.value !== ''){
 				elem.nextElementSibling.textContent = 'Enter the correct password';
 				if(elem.value.length < 8) {
 					elem.nextElementSibling.textContent = "From 8 symbols"
@@ -59,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		}
 	}
+	
  
 	for(let elem of form.elements) {
 		if(!elem.classList.contains('form-check-input') && elem.tagName != 'BUTTON') {
