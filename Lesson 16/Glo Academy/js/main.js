@@ -49,7 +49,14 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		}
 		if (elem.password) {
-
+			if(!regExpPass.test(elem.value) && elem.value != ''){
+				elem.nextElementSibling.textContent = 'Enter the password';
+				if(elem.value.length < 8) {
+					elem.nextElementSibling.textContent = "From 8 symbols"
+				}
+			} else {
+				elem.nextElementSibling.textContent = '';
+			}
 		}
 	}
  
