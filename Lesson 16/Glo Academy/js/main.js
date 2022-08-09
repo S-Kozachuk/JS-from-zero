@@ -29,8 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const validateElem = (elem)=> {
 		if (elem.name == 'username'){
-			if(!regExpName.test(elem.value)){
+			if(!regExpName.test(elem.value) && elem.value != ''){
 				elem.nextElementSibling.textContent = 'Enter the correct user name';
+				if(elem.value.length < 3 || elem.value.length > 16) {
+					elem.nextElementSibling.textContent = "From 3 to 16 symbols"
+				}
 			} else {
 				elem.nextElementSibling.textContent = '';
 			}
