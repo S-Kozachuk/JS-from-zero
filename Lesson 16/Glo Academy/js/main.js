@@ -13,18 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const submit = ()=> {
 		alert('Data was send');
-		// for(let elem of form.elements) {
-		// 	if(
-		// 		!elem.classList.contains('btn') &&
-		// 		!elem.classList.contains('form-check-input')
-		// 	) {
-		// 		elem.value = "";
-		// 	}
-			
-		// 	if(elem.classList.contains('form-check-input')){
-		// 		elem.checked = false;
-		// 	}
-		// }
 	};
 
 	const maskPhone = () => {
@@ -43,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			let matrix = "+7 (___) ___ ____",
 				i = 0,
 				def = matrix.replace(/\D/g, ""),
-				newValue = matrix.replace(/[_\d]/g, (a)=>{
+				val = input.value.replace(/\D/g, ""),
+				newValue = matrix.replace(/[_\d]/g, (a) => {
 					if(i < val.length) {
 						return val.charAt(i++) || def.charAt(i);
 					} else {
@@ -80,7 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		input.addEventListener('blur', mask, false);
 		input.addEventListener('keydown', mask, false);
 		});
-	}
+	};
+
+	maskPhone();
 
 	const validateElem = (elem)=> {
 		if (elem.name == 'username'){
