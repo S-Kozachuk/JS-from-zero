@@ -60,16 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 		if (elem.name == 'passwordConfirmation') {
 			if(pass.value !== passConf.value && passConf.value !== ''){
-				elem.nextElementSibling.textConten = "Password didn't coincidence";
-			};
-			if(!regExpPass.test(elem.value) && elem.value !== ''){
-				elem.nextElementSibling.textContent = 'Enter the correct password';
-				if(elem.value.length < 8) {
-					elem.nextElementSibling.textContent = "From 8 symbols"
-				}
+				elem.nextElementSibling.textContent = "Password didn't coincidence";
 			} else {
 				elem.nextElementSibling.textContent = '';
-			}
+			}	
 		}
 	}
 	
