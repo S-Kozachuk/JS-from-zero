@@ -105,5 +105,14 @@ document.addEventListener("DOMContentLoaded", () => {
 				}
 			}
 		}
+		if(isSubmit){
+			if(check.checked) {
+				submit();
+			}
+			else {
+				alert('Accept the terms')
+			}
+			
+		}
 	});
 });
