@@ -34,8 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
 				if(elem.value.length < 3 || elem.value.length > 16) {
 					elem.nextElementSibling.textContent = "From 3 to 16 symbols"
 				}
+				isSubmit = false;
 			} else {
 				elem.nextElementSibling.textContent = '';
+				isSubmit = true;
 			}
 		}
 		if (elem.name == 'email'){
@@ -44,8 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
 				if(elem.value.length < 3 || elem.value.length > 16) {
 					elem.nextElementSibling.textContent = "From 3 to 16 symbols"
 				}
+				isSubmit = false;
 			} else {
 				elem.nextElementSibling.textContent = '';
+				isSubmit = true;
 			}
 		}
 		if (elem.name == 'password') {
@@ -58,8 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
 				if(pass.value !== passConf.value && passConf.value !== ''){
 					elem.nextElementSibling.textContent = "Password didn't coincidence";
 				}
+				isSubmit = false;
 			} else {
 				elem.nextElementSibling.textContent = '';
+				isSubmit = true;
 			}
 			console.log(elem.value)	
 		}
@@ -67,15 +73,16 @@ document.addEventListener("DOMContentLoaded", () => {
 			if(pass.value !== passConf.value && passConf.value !== ''){
 				pass.nextElementSibling.textContent = "Password didn't coincidence";
 				passConf.nextElementSibling.textContent = "Password didn't coincidence";
+				isSubmit = false;
 			} else {
 				pass.nextElementSibling.textContent = '';
 				passConf.nextElementSibling.textContent = '';
+				isSubmit = true;
 			}
 			console.log(elem.value)	
 		}
 	}
 	
- 
 	for(let elem of form.elements) {
 		if(!elem.classList.contains('form-check-input') && elem.tagName != 'BUTTON') {
 			elem.addEventListener('blur', ()=>{
@@ -91,8 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
 			if(!elem.classList.contains('form-check-input') && elem.tagName != 'BUTTON') {
 				if(elem.value == '') {
 					elem.nextElementSibling.textContent = 'This field didnt fill';
+					isSubmit = false;
 				} else {
 					elem.nextElementSibling.textContent = '';
+					isSubmit = true;
 				}
 			}
 		}
