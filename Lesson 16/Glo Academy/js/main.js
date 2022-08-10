@@ -50,7 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 		if (elem.name == 'password') {
 			if(!regExpPass.test(elem.value) && elem.value !== ''){
-				elem.nextElementSibling.textContent = 'Enter the correct password';
+				pass.nextElementSibling.textContent = "Enter correct password";
+				passConf.nextElementSibling.textContent = "Enter correct password";
 				if(elem.value.length < 8) {
 					elem.nextElementSibling.textContent = "From 8 symbols"
 				}
@@ -64,9 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 		if (elem.name == 'passwordConfirmation') {
 			if(pass.value !== passConf.value && passConf.value !== ''){
-				elem.nextElementSibling.textContent = "Password didn't coincidence";
+				pass.nextElementSibling.textContent = "Password didn't coincidence";
+				passConf.nextElementSibling.textContent = "Password didn't coincidence";
 			} else {
-				elem.nextElementSibling.textContent = '';
+				pass.nextElementSibling.textContent = '';
+				passConf.nextElementSibling.textContent = '';
 			}
 			console.log(elem.value)	
 		}
