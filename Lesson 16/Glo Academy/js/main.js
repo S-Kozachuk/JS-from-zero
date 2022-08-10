@@ -13,18 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const submit = ()=> {
 		alert('Data was send');
-		for(let elem of form.elements) {
-			if(
-				!elem.classList.contains('btn') &&
-				!elem.classList.contains('form-check-input')
-			) {
-				elem.value = "";
-			}
+		// for(let elem of form.elements) {
+		// 	if(
+		// 		!elem.classList.contains('btn') &&
+		// 		!elem.classList.contains('form-check-input')
+		// 	) {
+		// 		elem.value = "";
+		// 	}
 			
-			if(elem.classList.contains('form-check-input')){
-				elem.checked = false;
-			}
-		}
+		// 	if(elem.classList.contains('form-check-input')){
+		// 		elem.checked = false;
+		// 	}
+		// }
 	};
 
 	const validateElem = (elem)=> {
@@ -108,6 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		if(isSubmit){
 			if(check.checked) {
 				submit();
+				form.reset();
 			}
 			else {
 				alert('Accept the terms')
