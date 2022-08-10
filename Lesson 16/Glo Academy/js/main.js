@@ -27,6 +27,61 @@ document.addEventListener("DOMContentLoaded", () => {
 		// }
 	};
 
+	const maskPhone = () => {
+		const inputsPhone = document.querySelectorAll('input[name="phone"]');
+
+		inputsPhone.forEach((input) => {
+			let keyCode;
+
+			const mask = (e) => {
+				e.keyCode && (keyCode = e.keyCode);
+				let pos = input.selectionStart;
+
+			if (pos < 3) {
+				e.preventDefault();
+			}
+			let matrix = "+7 (___) ___ ____",
+				i = 0,
+				def = matrix.replace(/\D/g, ""),
+				newValue = matrix.replace(/[_\d]/g, (a)=>{
+					if(i < val.length) {
+						return val.charAt(i++) || def.charAt(i);
+					} else {
+						return a;
+					}
+				});
+			i = newValue.indexOf('_');
+			if(i != -1) {
+				i < 5 && (i =3 );
+				newValue = newValue.slice(0,i);
+			}
+
+			let reg =  matrix 
+				.substr(0, input.value.length)
+				.replace(/_+/g, (a)=>{
+					return "\\d{1," + a.length + "}";
+				})
+				.replace(/[+()]/g, "\\$6");
+			reg = new RegExp("^" + reg + "$");
+			if (
+				!reg.test(input.value) || 
+				input.value.length < 5 ||
+				(keyCode > 47 && keyCode < 58)
+			) {
+				input.value = newValue;
+			}
+			if (e.type == "blur" && input.value.length < 5) {
+				input.value = "";
+			}
+		};
+
+		input.addEventListener('input', mask, false);
+		input.addEventListener('focus', mask, false);
+		input.addEventListener('blur', mask, false);
+		input.addEventListener('keydown', mask, false);
+		});
+	}
+
 	const validateElem = (elem)=> {
 		if (elem.name == 'username'){
 			if(!regExpName.test(elem.value) && elem.value !== ''){
