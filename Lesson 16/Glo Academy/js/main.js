@@ -54,16 +54,21 @@ document.addEventListener("DOMContentLoaded", () => {
 				if(elem.value.length < 8) {
 					elem.nextElementSibling.textContent = "From 8 symbols"
 				}
+				if(pass.value !== passConf.value && passConf.value !== ''){
+					elem.nextElementSibling.textContent = "Password didn't coincidence";
+				}
 			} else {
 				elem.nextElementSibling.textContent = '';
 			}
+			console.log(elem.value)	
 		}
 		if (elem.name == 'passwordConfirmation') {
 			if(pass.value !== passConf.value && passConf.value !== ''){
 				elem.nextElementSibling.textContent = "Password didn't coincidence";
 			} else {
 				elem.nextElementSibling.textContent = '';
-			}	
+			}
+			console.log(elem.value)	
 		}
 	}
 	
