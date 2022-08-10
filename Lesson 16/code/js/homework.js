@@ -66,10 +66,8 @@ function checkFillFileds() {
 			currentArr.forEach((elem, index) => {
 				fieldValue = currentArr[index].value;
 				console.log(fieldValue);
-				let errorMessage = document.querySelector('.main-form__error');
-				console.log(errorMessage);
 				function showErrorMessage(){
-					if(fieldValue == "" && !errorMessage) {
+					if(fieldValue == "") {
 						console.log("Fill this field");
 						basicForm[index].parentElement.insertAdjacentHTML(
 							'beforeend',
@@ -83,15 +81,16 @@ function checkFillFileds() {
 				currentArr[index].addEventListener('focus', ()=> {
 					if(currentArr[index].nextElementSibling) {
 						currentArr[index].nextElementSibling.remove();
-					}
+					} 
 				});
-				/*
+				
 				currentArr[index].addEventListener('blur', ()=> {
-					if(fieldValue == "") {
-						showErrorMessage();
+					if(fieldValue !== "") {
+						currentArr.nextElementSibling.remove();
 					}
+						
 				});
-				*/
+				
 			});
 			
 		}
