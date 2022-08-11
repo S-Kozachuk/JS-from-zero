@@ -22,9 +22,13 @@ const basicForm = document.forms.basic,
 	  choiceGender = basicForm.choiceGender,
 	   choiceHabit = basicForm.checkHabits,
 		experience = basicForm.selectAge;
+
 let currentArr = [],
 	fieldValue,
-	fieldError = false;
+	fieldError = false,
+	fieldItem = document.getElementsByName('error');
+
+
 
 // Dynamic placeholder
 function placeholderChange() {
@@ -46,6 +50,8 @@ function placeholderChange() {
 	});
 }
 setTimeout(placeholderChange, 3000);
+
+Array.from
 	
 function arrFiltering() {
 	let basicFormArr = Array.from(basicForm);
@@ -61,10 +67,11 @@ function showCheckMessage() {
 	arrFiltering();
 	currentArr.forEach((elem, index) => {
 		fieldValue = currentArr[index].value;
+		console.log(fieldItem.length);
 			if(fieldValue == "") {
 				basicForm[index].parentElement.insertAdjacentHTML(
 					'beforeend',
-					`<div class="main-form__error">Enter this field</div>`
+					`<div class="main-form__error" name='error'>Enter this field</div>`
 				);
 				fieldError = false;
 			} else {
@@ -84,7 +91,7 @@ function showCheckMessage() {
 				
 	});	
 };
-		
+
 basicForm.addEventListener('submit', (e) => {
 	showCheckMessage();
 	if(fieldError == false) {
@@ -92,3 +99,5 @@ basicForm.addEventListener('submit', (e) => {
 	}
 	console.log(fieldError);
 });
+
+// Removed the repeteatly show error message
