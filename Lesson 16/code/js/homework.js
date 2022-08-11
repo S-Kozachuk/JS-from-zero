@@ -22,6 +22,9 @@ const basicForm = document.forms.basic,
 	  choiceGender = basicForm.choiceGender,
 	   choiceHabit = basicForm.checkHabits,
 		experience = basicForm.selectAge;
+let currentArr = [],
+	fieldValue,
+	fieldError = false;
 
 // Dynamic placeholder
 function placeholderChange() {
@@ -44,58 +47,48 @@ function placeholderChange() {
 }
 setTimeout(placeholderChange, 3000);
 	
-// Show error messages function
-function checkFillFileds() {
-	basicForm.addEventListener('submit', (e) => {
-		let basicFormArr = Array.from(basicForm);
-		let currentArr = [];
-		console.log(basicFormArr);
-		
-		function arrFiltering() {
-			currentArr = basicFormArr.filter((item, index) =>{
-				if(index < 4) {
-					return item;
-				}
-			});
-			console.log(currentArr);
-		};
-
-		function showCheckMessage() {
-			arrFiltering();
-			
-			currentArr.forEach((elem, index) => {
-				fieldValue = currentArr[index].value;
-				console.log(fieldValue);
-				function showErrorMessage(){
-					if(fieldValue == "") {
-						console.log("Fill this field");
-						basicForm[index].parentElement.insertAdjacentHTML(
-							'beforeend',
-							`<div class="main-form__error">Enter this field</div>`
-						);
-						e.preventDefault();
-					}
-				}
-				// Transfer this code out of "Submit" handler (see https://youtu.be/pdEauqv-thk?t=997)
-				showErrorMessage();
-				currentArr[index].addEventListener('focus', ()=> {
-					if(currentArr[index].nextElementSibling) {
-						currentArr[index].nextElementSibling.remove();
-					} 
-				});
-				
-				currentArr[index].addEventListener('blur', ()=> {
-					if(fieldValue !== "") {
-						currentArr.nextElementSibling.remove();
-					}
-						
-				});
-				
-			});
-			
+function arrFiltering() {
+	let basicFormArr = Array.from(basicForm);
+	currentArr = basicFormArr.filter((item, index) =>{
+		if(index < 4) {
+			return item;
 		}
-		
-		showCheckMessage();
 	});
-}
-checkFillFileds();
+	console.log(currentArr);
+};
+
+function showCheckMessage() {
+	arrFiltering();
+	currentArr.forEach((elem, index) => {
+		fieldValue = currentArr[index].value;
+			if(fieldValue == "") {
+				basicForm[index].parentElement.insertAdjacentHTML(
+					'beforeend',
+					`<div class="main-form__error">Enter this field</div>`
+				);
+				fieldError = false;
+			} else {
+				fieldError = true;
+			}
+		currentArr[index].addEventListener('focus', ()=> {
+			if(currentArr[index].nextElementSibling) {
+				currentArr[index].nextElementSibling.remove();
+			} 
+		});
+				
+		currentArr[index].addEventListener('blur', ()=> {
+			if(fieldValue !== "") {
+				currentArr.nextElementSibling.remove();
+			}
+		});
+				
+	});	
+};
+		
+basicForm.addEventListener('submit', (e) => {
+	showCheckMessage();
+	if(fieldError == false) {
+		e.preventDefault();
+	}
+	console.log(fieldError);
+});
