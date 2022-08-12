@@ -51,8 +51,7 @@ function placeholderChange() {
 }
 setTimeout(placeholderChange, 3000);
 
-Array.from
-	
+// Checking fields
 function arrFiltering() {
 	let basicFormArr = Array.from(basicForm);
 	currentArr = basicFormArr.filter((item, index) =>{
@@ -65,39 +64,36 @@ function arrFiltering() {
 
 function showCheckMessage() {
 	arrFiltering();
+	let fieldItemLength = fieldItem.length;
 	currentArr.forEach((elem, index) => {
 		fieldValue = currentArr[index].value;
-		console.log(fieldItem.length);
-			if(fieldValue == "") {
+			if(fieldValue == "" && fieldItemLength <= 0) {
 				basicForm[index].parentElement.insertAdjacentHTML(
 					'beforeend',
 					`<div class="main-form__error" name='error'>Enter this field</div>`
 				);
-				fieldError = false;
-			} else {
-				fieldError = true;
 			}
 		currentArr[index].addEventListener('focus', ()=> {
 			if(currentArr[index].nextElementSibling) {
 				currentArr[index].nextElementSibling.remove();
 			} 
 		});
-				
 		currentArr[index].addEventListener('blur', ()=> {
 			if(fieldValue !== "") {
 				currentArr.nextElementSibling.remove();
 			}
 		});
 				
-	});	
+	});
+	
 };
 
 basicForm.addEventListener('submit', (e) => {
 	showCheckMessage();
-	if(fieldError == false) {
+	if(fieldValue == "") {
 		e.preventDefault();
 	}
-	console.log(fieldError);
+	if(fieldValue !== "") {
+		alert('Data sent!')
+	}
 });
-
-// Removed the repeteatly show error message
