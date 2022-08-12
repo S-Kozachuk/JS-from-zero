@@ -10,7 +10,7 @@
 // Remove intersection document with loup image. Using a method closest
 let loupe = document.querySelector('.search-img');
 let searchForm = document.querySelector('.search-field');
-const txtItemLimit = searchForm .getAttribute('maxlength');
+const txtItemLimit = searchForm.getAttribute('maxlength');
 const txtCounter = document.querySelector('.search-counter');
 const txtCounterOut = document.querySelector('.search-counter span');
 const closeBtn = document.querySelector('.search-close');

@@ -19,6 +19,8 @@ const basicForm = document.forms.basic,
 		fieldEmail = basicForm.field_2,
 		fieldPhone = basicForm.field_3,
 	  fieldMessage = basicForm.field_4,
+	  txtItemLimit = fieldMessage.getAttribute('maxlength'),
+	  txtCounterOut = document.querySelector('.symbol__counter span'),
 	  choiceGender = basicForm.choiceGender,
 	   choiceHabit = basicForm.checkHabits,
 		experience = basicForm.selectAge;
@@ -27,8 +29,6 @@ let currentArr = [],
 	fieldValue,
 	fieldError = false,
 	fieldItem = document.getElementsByName('error');
-
-
 
 // Dynamic placeholder
 function placeholderChange() {
@@ -97,3 +97,16 @@ basicForm.addEventListener('submit', (e) => {
 		alert('Data sent!')
 	}
 });
+
+
+fieldMessage.addEventListener("keyup", keyCounter);
+fieldMessage.addEventListener("keydown", keyNoRepeat);
+
+function keyCounter() {
+	const txtCounterResult = txtItemLimit - fieldMessage.value.length;
+	txtCounterOut.innerHTML = txtCounterResult;
+}
+
+function keyNoRepeat(e) {
+	if(e.repeat) keyCounter();
+}
